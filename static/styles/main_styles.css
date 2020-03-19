@@ -709,9 +709,9 @@ section
 {
 	width: calc(100% / 3);
 	padding-left: 47px;
-	padding-top: 52px;
+	padding-top: 20px;
 	padding-right: 37px;
-	padding-bottom: 71px;
+	padding-bottom: 20px;
 	margin-left: 10px;
 }
 .box:first-child
@@ -742,7 +742,7 @@ section
 	font-weight: 400;
 	color: #fff;
 	line-height: 1.2;
-	margin-top: 27px;
+	margin-top: 20px;
 }
 .box_text
 {

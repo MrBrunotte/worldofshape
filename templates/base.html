@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 
 <head>
@@ -6,21 +7,16 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="description" content="SportFIT template project">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- Style links
-	<link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap-4.1.2/bootstrap.min.css' %}">
+	<!-- Style links-->
 	<link href="{% static 'plugins/font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
 	<link href="{% static 'plugins/colorbox/colorbox.css' %}" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap-4.1.2/bootstrap.min.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'styles/main_styles.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'styles/responsive.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'styles/elements.css' %}">
-	<link rel="stylesheet" type="text/css" href="{% static 'styles/elements_responsive.css' %}">-->
-	<link rel="stylesheet" type="text/css" href="/static/styles/bootstrap-4.1.2/bootstrap.min.css">
-	<link href="/static/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<link href="/static/plugins/colorbox/colorbox.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" type="text/css" href="/static/styles/main_styles.css">
-	<link rel="stylesheet" type="text/css" href="/static/styles/responsive.css">
-	<link rel="stylesheet" type="text/css" href="/static/styles/elements.css">
-	<link rel="stylesheet" type="text/css" href="/static/styles/elements_responsive.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'styles/elements_responsive.css' %}">
+
+
 
 	<title>WoS base.html</title>
 </head>
@@ -35,7 +31,7 @@
 				<div class="row">
 					<div class="col">
 						<div class="header_content d-flex flex-row align-items-center justify-content-start trans_400">
-							<a href="#">
+							<a href="{% url 'main-home' %}">
 								<div class="logo d-flex flex-row align-items-center justify-content-start"><img
 										src="/static/images/dot.png" alt="World of Shape">
 									<div>World<span>of</span>Shape</div>
@@ -44,11 +40,11 @@
 							<!-- Navbar -->
 							<nav class="main_nav">
 								<ul class="d-flex flex-row align-items-center justify-content-start">
-									<li class="active"><a href="index.html">Home</a></li>
-									<li><a href="about.html">About</a></li>
-									<li><a href="services.html">Products</a></li>
-									<li><a href="#testimonials">Testimonials</a></li>
-									<li><a href="contact.html">Contact</a></li>
+									<li class="active"><a href="{% url 'main-home' %}">Home</a></li>
+									<li><a href="#">About</a></li>
+									<li><a href="#">Training</a></li>
+									<li><a href="#">Testimonials</a></li>
+									<li><a href="#">Contact</a></li>
 									<li><a href="#">Login</a></li>
 									<li><a href="#">Register</a></li>
 								</ul>
@@ -59,7 +55,7 @@
 			</div>
 		</header>
 
-		<!-- Hamburger -->
+		<!-- Hamburger animation -->
 
 		<div class="hamburger_bar trans_400 d-flex flex-row align-items-center justify-content-start">
 			<div class="hamburger">
@@ -83,7 +79,7 @@
 				<ul>
 					<li><a href="index.html">Home</a></li>
 					<li><a href="about.html">About</a></li>
-					<li><a href="services.html">Products</a></li>
+					<li><a href="services.html">Training</a></li>
 					<li><a href="#testimonials">Testimonials</a></li>
 					<li><a href="contact.html">Contact</a></li>
 					<li><a href="#">Login</a></li>
@@ -113,7 +109,7 @@
 									class="d-flex flex-sm-row flex-column align-items-sm-start align-items-center justify-content-center">
 									<li class="active"><a href="index.html">Home</a></li>
 									<li><a href="about.html">About</a></li>
-									<li><a href="services.html">Products</a></li>
+									<li><a href="services.html">Training</a></li>
 									<li><a href="#testimonials">Testimonials</a></li>
 									<li><a href="contact.html">Contact</a></li>
 									<li><a href="#">Login</a></li>
@@ -137,7 +133,7 @@
 								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 							</div>
 						</div>
-						<div class="footer_image text-center"><img src="images/footer.png" alt=""></div>
+						<div class="footer_image text-center"><img src="/static/images/footer.png" alt=""></div>
 					</div>
 				</div>
 			</div>

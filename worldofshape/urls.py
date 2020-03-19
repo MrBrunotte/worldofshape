@@ -21,20 +21,21 @@ from django.conf.urls.static import static
 from users import views as user_views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('register/', user_views.register, name='register'),
-    path('profile/', user_views.profile, name='profile'),
-    path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
-    path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
+    path('admin/', admin.site.urls),                                                                    #admin temlpate
+    path('', include('home.urls')),                                                                     #home app
+    path('register/', user_views.register, name='register'),                                            #users app
+    path('profile/', user_views.profile, name='profile'),                                               #users app
+    path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),       #users app
+    path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),   #users app
     path('password-reset/', auth_views.PasswordResetView.as_view(
-        template_name='users/password_reset.html'), name='password_reset'),
+        template_name='users/password_reset.html'), name='password_reset'),                             #users app
     path('password-reset/done', auth_views.PasswordResetDoneView.as_view(
-        template_name='users/password_reset_done.html'), name='password_reset_done'),
+        template_name='users/password_reset_done.html'), name='password_reset_done'),                   #users app
     path('password-reset-confirm/<uidb64>/<token>', auth_views.PasswordResetConfirmView.as_view(
-        template_name='users/password_reset_confirm.html'), name='password_reset_confirm'),
+        template_name='users/password_reset_confirm.html'), name='password_reset_confirm'),             #users app
     path('password-reset-complete/', auth_views.PasswordResetCompleteView.as_view(
-        template_name='users/password_reset_complete.html'), name='password_reset_complete'),
-    path('', include('blog.urls')),
+        template_name='users/password_reset_complete.html'), name='password_reset_complete'),           #users app
+    path('blog/', include('blog.urls')),                                                                # blog app
 ]
 
 if settings.DEBUG:
