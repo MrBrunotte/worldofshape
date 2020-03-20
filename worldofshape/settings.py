@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'users.apps.UsersConfig',
     'home.apps.HomeConfig',
+    'products.apps.ProductsConfig',
     'crispy_forms',
 ]
 

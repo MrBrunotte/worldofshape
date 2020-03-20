@@ -5,20 +5,28 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="description" content="SportFIT template project">
+	<meta name="author" content="Stefan Brunotte, mrbrunotte@gmail.com">
+	<meta name="description" content="Django porject - World of Shape - Milestone four project, Code Institute">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Style links-->
-	<link href="{% static 'plugins/font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
-	<link href="{% static 'plugins/colorbox/colorbox.css' %}" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="{% static 'plugins/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'plugins/colorbox/colorbox.css' %}">
+
+	<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/owl.carousel.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/owl.theme.default.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/animate.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'plugins/colorbox/colorbox.css' %}">
+
 	<link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap-4.1.2/bootstrap.min.css' %}">
-	<link rel="stylesheet" type="text/css" href="{% static 'styles/main_styles.css' %}">
-	<link rel="stylesheet" type="text/css" href="{% static 'styles/responsive.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'styles/compiled_styles.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'styles/elements.css' %}">
-	<link rel="stylesheet" type="text/css" href="{% static 'styles/elements_responsive.css' %}">
 
 
-
-	<title>WoS base.html</title>
+	{% if title %}
+	<title>World of Shape - {{ title }}</title>
+	{% else %}
+	<title>World of Shape</title>
+	{% endif %}
 </head>
 
 
@@ -40,9 +48,9 @@
 							<!-- Navbar -->
 							<nav class="main_nav">
 								<ul class="d-flex flex-row align-items-center justify-content-start">
-									<li class="active"><a href="{% url 'main-home' %}">Home</a></li>
-									<li><a href="#">About</a></li>
-									<li><a href="#">Training</a></li>
+									<li><a href="{% url 'main-home' %}">Home</a></li>
+									<li><a href="{% url 'main-about' %}">About</a></li>
+									<li><a href="{% url 'programs' %}">Training</a></li>
 									<li><a href="#">Testimonials</a></li>
 									<li><a href="#">Contact</a></li>
 									<li><a href="#">Login</a></li>
@@ -77,9 +85,9 @@
 		<div class="menu trans_800">
 			<div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
 				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="services.html">Training</a></li>
+					<li><a href="{% url 'main-home' %}">Home</a></li>
+					<li><a href="{% url 'main-about' %}">About</a></li>
+					<li><a href="{% url 'programs' %}">Training</a></li>
 					<li><a href="#testimonials">Testimonials</a></li>
 					<li><a href="contact.html">Contact</a></li>
 					<li><a href="#">Login</a></li>
@@ -97,19 +105,19 @@
 					<div class="footer_container">
 						<div class="footer_content">
 							<div class="footer_logo">
-								<a href="#">
+								<a href="{% url 'main-home' %}">
 									<div class="logo d-flex flex-row align-items-center justify-content-center"><img
 											src="/static/images/dot.png" alt="">
-										<div>Sport<span>fit</span></div>
+										<div>World<span>of</span>Shape</div>
 									</div>
 								</a>
 							</div>
 							<nav class="footer_nav">
 								<ul
 									class="d-flex flex-sm-row flex-column align-items-sm-start align-items-center justify-content-center">
-									<li class="active"><a href="index.html">Home</a></li>
-									<li><a href="about.html">About</a></li>
-									<li><a href="services.html">Training</a></li>
+									<li class="active"><a href="{% url 'main-home' %}">Home</a></li>
+									<li><a href="{% url 'main-about' %}">About</a></li>
+									<li><a href="{% url 'programs' %}">Training</a></li>
 									<li><a href="#testimonials">Testimonials</a></li>
 									<li><a href="contact.html">Contact</a></li>
 									<li><a href="#">Login</a></li>
@@ -139,20 +147,19 @@
 			</div>
 		</div>
 	</footer>
-	<script src="/static/js/jquery-3.2.1.min.js"></script>
-	<script src="/static/styles/bootstrap-4.1.2/popper.js"></script>
-	<script src="/static/styles/bootstrap-4.1.2/bootstrap.min.js"></script>
-	<script src="/static/plugins/greensock/TweenMax.min.js"></script>
-	<script src="/static/plugins/greensock/TimelineMax.min.js"></script>
-	<script src="/static/plugins/scrollmagic/ScrollMagic.min.js"></script>
-	<script src="/static/plugins/greensock/animation.gsap.min.js"></script>
-	<script src="/static/plugins/greensock/ScrollToPlugin.min.js"></script>
-	<script src="/static/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-	<script src="/static/plugins/easing/easing.js"></script>
-	<script src="/static/plugins/progressbar/progressbar.min.js"></script>
-	<script src="/static/plugins/parallax-js-master/parallax.min.js"></script>
-	<script src="/static/plugins/colorbox/jquery.colorbox-min.js"></script>
-	<script src="/static/js/custom.js"></script>
+	<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+	<script src="{% static 'styles/bootstrap-4.1.2/popper.js' %}"></script>
+	<script src="{% static 'styles/bootstrap-4.1.2/bootstrap.min.js' %}"></script>
+	<script src="{% static 'plugins/greensock/TweenMax.min.js' %}"></script>
+	<script src="{% static 'plugins/greensock/TimelineMax.min.js' %}"></script>
+	<script src="{% static 'plugins/scrollmagic/ScrollMagic.min.js' %}"></script>
+	<script src="{% static 'plugins/greensock/animation.gsap.min.js' %}"></script>
+	<script src="{% static 'plugins/greensock/ScrollToPlugin.min.js' %}"></script>
+	<script src="{% static 'plugins/easing/easing.js' %}"></script>
+	<script src="{% static 'plugins/progressbar/progressbar.min.js' %}"></script>
+	<script src="{% static 'plugins/parallax-js-master/parallax.min.js' %}"></script>
+	<script src="{% static 'plugins/colorbox/jquery.colorbox-min.js' %}"></script>
+	<script src="{% static 'js/custom.js' %}"></script>
 </body>
 
 </html>
