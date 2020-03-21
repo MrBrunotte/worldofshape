@@ -8,7 +8,6 @@ def all_programs(request):
     programs = Program.objects.all()
     return render(request, 'products/programs.html', {'programs': programs})
 
-"""
-def about(request):
-    return render(request, 'blog/about.html', {'title': 'About'})
-"""
+
+def program_section(request):
+    return render(request, 'products/programs.html', {'program_section': program_section})
