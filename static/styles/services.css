@@ -657,8 +657,7 @@ section
 	padding-bottom: 34px;
 	background: #FFFFFF;
 }
-.services_row
-{
+.services_row {
 	margin-top: 87px;
 }
 .service_col:nth-last-child(n+4)

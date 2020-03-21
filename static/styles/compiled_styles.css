@@ -323,6 +323,7 @@ section
 	text-transform: uppercase;
 	color: #ff9711;
 	line-height: 0.75;
+	margin-top: 50px;
 }
 .section_title
 {
@@ -331,6 +332,7 @@ section
 	color: #262626;
 	line-height: 1.1;
 	margin-top: 3px;
+	text-transform: capitalize;
 }
 .section_title span
 {
@@ -612,7 +614,8 @@ section
 
 
 .home,
-.about_home {
+.about_home,
+.training_home {
 	width: 100%;
 	overflow: hidden;
 }
@@ -690,35 +693,35 @@ section
 	color: #ff9711;
 }
 .home_title,
-.about_home_title {
+.about_home_title,
+.training_home_title {
     font-weight: 200;
     color: #fff;
     line-height: 1.2;
 	margin-top: -9px;
 }
-.home_title
-{
+.home_title {
 	font-size: 100px;
 }
 .about_home_title,
-.training_home_title
-{
+.training_home_title,
+.training_home_title {
 	font-size: 72px;
 }
 .home_subtitle,
 .about_home_subtitle,
+.training_home_subtitle,
 .training_home_subtitle {
     font-size: 16px;
 	font-weight: 500;
 	color: #fff;
 }
-.home_subtitle
-{
+.home_subtitle {
 	margin-top: -6px;
 }
 .about_home_subtitle,
-.training_home_subtitle
-{
+.training_home_subtitle,
+.training_home_subtitle {
 	margin-top: 1px;
 }
 .home_button
@@ -833,7 +836,8 @@ section
 {
 	padding-top: 94px;
 }
-.about_about
+.about_about,
+.about_services
 {
 	padding-top: 69px;
 	padding-bottom: 50px;
@@ -1196,6 +1200,48 @@ section
 {
 	border: solid 1px #FFFFFF;
 	margin-top: 47px;
+}
+
+/*********************************
+10. Services
+*********************************/
+
+.services
+{
+	padding-top: 42px;
+	padding-bottom: 34px;
+	background: #FFFFFF;
+}
+.services_row {
+	margin-top: 87px;
+}
+.service_col:nth-last-child(n+4)
+{
+	margin-bottom: 79px;
+}
+.service_icon
+{
+	width: 62px;
+	height: 62px;
+}
+.service_icon img
+{
+	max-width: 100%;
+}
+.service_title
+{
+	padding-left: 37px;
+	font-size: 24px;
+	font-weight: 400;
+	color: #262626;
+	text-transform: uppercase;
+}
+.service_text
+{
+	margin-top: 17px;
+}
+.service_text p{
+	height: 340px;
 }
 
 /*********************************
