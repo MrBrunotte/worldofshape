@@ -11,6 +11,8 @@ def register(request):
         form = UserRegisterForm(request.POST)
         if form.is_valid():
             form.save()
+            last_name = form.cleaned_data.get('last_name')
+            last_name = form.cleaned_data.get('last_name')
             username = form.cleaned_data.get('username')
             messages.success(
                 request, f'Your account has been created! You are now able to log in!')
@@ -24,8 +26,8 @@ def register(request):
 def profile(request):
     if request.method == 'POST':
         u_form = UserUpdateForm(request.POST, instance=request.user)
-        p_form = ProfileUpdateForm(request.POST, 
-                                   request.FILES, 
+        p_form = ProfileUpdateForm(request.POST,
+                                   request.FILES,
                                    instance=request.user.profile)
         if u_form.is_valid() and p_form.is_valid():
             u_form.save()
