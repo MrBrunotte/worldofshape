@@ -1,26 +1,37 @@
 <!DOCTYPE html>
 
-{% extends "blog/base_blog.html" %}
+{% extends "base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
-<div class="content-section">
-    <form method="POST">
-        {% csrf_token %}
-        <fieldset class="form-group">
-            <legend class="border-bottom mb-4">Log In</legend>
-            {{ form|crispy }}
-        </fieldset>
-        <div class="form-group">
-            <button class="btn btn-outline-info" type="submit">Login</button>
-            <small class="text-muted ml-2">
-                <a href="{% url 'password_reset' %}">Forgot Password?</a>
-            </small>
+<div class="register_home">
+    <div class="background_image" style="background-image:url(/static/images/services.jpg)"></div>
+    <div class="register_container">
+        <div class="container"></div>
+        <div class="row">
+            <div class="col">
+                <div class="register_content">
+                    <div class="register_title mb-4">Login</div>
+                    <form method="POST">
+                        {% csrf_token %}
+                        <fieldset class="form_group">
+                            {{ form.errors }}
+                            {{ form }}
+                        </fieldset>
+                        <div class="form_group">
+                            <button class="button home_button ml-auto mr-auto mb-4" type="submit">Login</button>
+                            <small class="text-muted ml-2">
+                                <a class="anchor_color" href="{% url 'password_reset' %}">Forgot Password?</a>
+                            </small>
+                        </div>
+                    </form>
+                    <div class="border-top pt-3">
+                        <small class="text-muted">
+                            Need An Account? <a class="ml-2 anchor_color" href="{% url 'register' %}">Sign Up Now</a>
+                        </small>
+                    </div>
+                </div>
+            </div>
         </div>
-    </form>
-    <div class="border-top pt-3">
-        <small class="text-muted">
-            Need An Account? <a class="ml-2" href="{% url 'register' %}">Sign Up Now</a>
-        </small>
     </div>
 </div>
 {% endblock content %}

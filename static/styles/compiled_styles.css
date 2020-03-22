@@ -1125,6 +1125,31 @@ li:hover {
 }
 
 
+/* alert messages */
+
+.alert-success {
+	background: rgb(255, 151, 17);
+	color: white;
+}
+
+.alert {
+	position: relative;
+	margin: 100px 0 0 !important;
+	padding: 0;
+	border: 1px solid transparent;
+	border-radius: .25rem;
+	text-align: center;
+	text-transform: capitalize;
+	background-color: rgb(255, 151, 17);
+	font-size: 1.125rem;
+	font-weight: 600;
+}
+
+.errorlist li {
+	font-size: 1rem;
+	color: rgb(255, 151, 17);
+}
+
 
 
 
