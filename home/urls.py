@@ -6,4 +6,6 @@ urlpatterns = [
     path('', views.home, name='main-home'),  # from home view
     path('about/', views.about, name='main-about'),  # from about view
     path('contact/', views.contact, name='contact'),  # from contact view
+    path('testimonials/', views.testimonials,
+         name='testimonials'),  # from contact view
 ]

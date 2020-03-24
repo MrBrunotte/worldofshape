@@ -14,3 +14,16 @@ As a continuous integration platform, Travis CI supports your development proces
 ### CI Builds and Automation: Building, Testing, Deploying
 
 When you run a build, Travis CI clones your GitHub repository into a brand-new virtual environment, and carries out a series of tasks to build and test your code. If one or more of those tasks fail, the build is considered **broken**. If none of the tasks fail, the build is considered **passed** and Travis CI can deploy your code to a web server or application host.
+
+## SETTING UP URLs
+
+Steps to set up url patterns and getting it to work!
+
+**Testimonials example**
+1)  Create html page - set Codeblock and DOCTYPE
+2) Go to Project urls (WorldofShape) and set urlpattern: path('testimonials/', home_views.contact, name='testimonials'),
+3) Go to Home/Views: def testimonials(request):
+    """ Contact view takes us to our contactpage """
+    return render(request, 'home/testimonials.html')
+4) Set urlpattern in Home: path('testimonials/', views.testimonials,
+         name='testimonials'),  # from contact view

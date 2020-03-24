@@ -32,6 +32,8 @@ urlpatterns = [
     path('profile/', user_views.profile, name='profile'),
     # home app view
     path('contact/', home_views.contact, name='contact'),
+    # home app view
+    path('testimonials/', home_views.contact, name='testimonials'),
     # users app login view
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'),
          name='login'),

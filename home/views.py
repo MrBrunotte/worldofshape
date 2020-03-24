@@ -17,3 +17,8 @@ def about(request):
 def contact(request):
     """ Contact view takes us to our contactpage """
     return render(request, 'home/contact.html')
+
+
+def testimonials(request):
+    """ Contact view takes us to our contactpage """
+    return render(request, 'home/testimonials.html')
