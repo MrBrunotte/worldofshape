@@ -7,6 +7,9 @@ from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
 
 
 def register(request):
+    """
+    Register form that renders the form on the register page, Crispy form is used with custom style
+    """
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
         if form.is_valid():
@@ -22,6 +25,11 @@ def register(request):
 
 @login_required
 def profile(request):
+    """
+    Profile account form on profile.html
+    @login_required is a decorator that adds functionality
+    see the forms in forms.py 
+    """
     if request.method == 'POST':
         u_form = UserUpdateForm(request.POST, instance=request.user)
         p_form = ProfileUpdateForm(request.POST,
@@ -41,4 +49,4 @@ def profile(request):
         'p_form': p_form
     }
 
-    return render(request, 'profile.html', context)
+    return render(request, 'users/profile.html', context)

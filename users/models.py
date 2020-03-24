@@ -6,6 +6,10 @@ from PIL import Image
 
 
 class Profile(models.Model):
+    """
+    one-to-one model, one user can have one account
+    
+    """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     image = models.ImageField(default='default.jpg', upload_to='profile_pics')
 

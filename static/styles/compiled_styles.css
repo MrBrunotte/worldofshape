@@ -425,6 +425,9 @@ section
 {
 	color: #ff9711;
 }
+.nav_list {
+	text-align: center;
+}
 .phone
 {
 	height: 43px;
@@ -620,12 +623,14 @@ section
 
 .home,
 .about_home,
-.training_home {
+.training_home,
+.profile_home {
 	width: 100%;
 	overflow: hidden;
 }
 /* index.html*/
-.home {
+.home,
+.profile_home {
     height: 100vh;
 }
 /* about.html*/
@@ -653,15 +658,16 @@ section
 	left: 0;
 	width: 100%;
 }
-.home_container
-{
-	top: 30.61%;
+.home_container {
+	top: 31.61%;
 }
 .about_home_container,
 .training_home_container {
     top: 48.1%;
 }
-
+.profile_container {
+	top: 15%;
+}
 .logout_home_container {
 	top: 30%;
 }
@@ -704,7 +710,8 @@ section
 }
 .home_title,
 .about_home_title,
-.training_home_title {
+.training_home_title,
+.username_title {
     font-weight: 200;
     color: #fff;
     line-height: 1.2;
@@ -715,13 +722,15 @@ section
 }
 .about_home_title,
 .training_home_title,
-.training_home_title {
+.training_home_title,
+.profile_home_title {
 	font-size: 72px;
 }
 .home_subtitle,
 .about_home_subtitle,
 .training_home_subtitle,
-.training_home_subtitle {
+.username_email_subtitle,
+.username_title {
     font-size: 16px;
 	font-weight: 500;
 	color: #fff;
@@ -1066,9 +1075,15 @@ section
 .register_content {
 	padding-top: 310px;
 }
+.profile_content {
+	padding-top: 0;
+	margin:0 auto;
+	width: 60%;
+}
 
 .login_title,
-.register_title {
+.register_title,
+.profile_title {
 	font-size: 72px;
 	font-weight: 200;
 	color: #fff;
@@ -1077,11 +1092,17 @@ section
 	text-align: center;
 }
 
+.profile_image {
+	justify-content: center;
+}
+
 /* the form */
 
 .form_group p {
 	margin-bottom: 0;
 }
+
+
 label {
 	margin-bottom: 0;
 	color: white !important;
@@ -1092,19 +1113,20 @@ label {
 }
 input {
 	width: 50%;
-	border-radius: 25px;
-	border: solid 1px #f98c00;
-	padding:0 15px;
-	background-color: transparent;
-	color:#FFFFFF;
-	text-align: center;
+	border-radius: 25px !important;
+	border: solid 1px #f98c00 !important;
+	padding:0 15px !important;
+	background-color: transparent !important;
+	color:#FFFFFF !important;
+	text-align: center !important;
 	margin-bottom: 0;
 }
 
+
 input:hover {
-	background-color: black;
-	color:#FFFFFF;
-	border: solid 1px #FFFFFF;
+	background-color: black !important;
+	color:#FFFFFF !important;
+	border: solid 1px #FFFFFF !important;
 }
 form {
 	margin: 0 auto;
@@ -1128,11 +1150,23 @@ li {
 	display: inherit;
 	font-size: .6rem;
 }
-
 .helptext:hover,
 li:hover {
 	color: white;
 	font-size: .7rem;
+}
+#hint_id_username {
+	color: gray;
+	display: inherit;
+	font-size: .6rem;
+}
+#hint_id_username:hover {
+	font-size: .7rem;
+}
+#text {
+	font-size: 16px !important;
+	font-weight: 500 !important;
+	color: #fff !important;
 }
 .anchor_color {
 	color: #f98c00;
@@ -1140,6 +1174,10 @@ li:hover {
 .anchor_color:hover {
 	font-size: 1rem;
 	color: #f98c00;
+}
+
+a:hover {
+    color: #f98c00;
 }
 
 

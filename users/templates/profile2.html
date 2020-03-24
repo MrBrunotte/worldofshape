@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<div class="profile_home">
+    <div class="background_image" style="background-image:url(/static/images/about_page.jpg)"></div>
+    <div class="profile_container">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="profile_content">
+                        <img class="rounded-circle account-img right" src="{{ user.profile.image.url }}">
+                        <div class="profile_home_title">{{ user.username }}
+                            <p class="profile_home_subtitle">{{ user.email }}</p>
+                        </div>
+                        <div class="">Click below to update your username and email.
+                        </div>
+                        <!--<div class="button home_button mt-4">
+                            <a href="#profile_section">
+                                Update Profile</a>
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="profile_form_container">
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <fieldset class="form-group">
+                    <legend class="border-bottom mb-4">Profile Info</legend>
+                    {{ u_form|crispy }}
+                    {{ p_form|crispy }}
+                </fieldset>
+                <div class="form-group">
+                    <button class="button home_button mt-2" type="submit">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}

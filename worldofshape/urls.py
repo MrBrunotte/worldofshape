@@ -27,7 +27,7 @@ urlpatterns = [
     path('', include('home.urls')),
     # users app register view
     path('register/', user_views.register, name='register'),
-    # users app
+    # users app profile view
     path('profile/', user_views.profile, name='profile'),
     # users app login view
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'),
@@ -53,6 +53,7 @@ urlpatterns = [
     path('blog/', include('blog.urls')),
 ]
 
+# We use this urlpattern when we are in DEBUG mode, We will us AWS S3 Bucket in production
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,
                           document_root=settings.MEDIA_ROOT)

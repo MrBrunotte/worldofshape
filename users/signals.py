@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.dispatch import receiver
 from .models import Profile
 
+# We use this so that a new profile is created when a user registers
 
 @receiver(post_save, sender=User)
 def create_profile(sender, instance, created, **kwargs):

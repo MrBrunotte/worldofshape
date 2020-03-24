@@ -130,10 +130,12 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-MEDIA_URL = '/media/'
+# MEDIA_ROOT is the full path to a directory where we want Django to store our uploaded files, they are not stored in the Database
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_URL is the public directory of the the MEDIA_ROOT. how we we will access our media directory
+MEDIA_URL = '/media/'
 
-CRISPY_TMEPLATE_PACK = 'bootstrap4'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_REDIRECT_URL = '/'
 LOGIN_URL = 'login'
