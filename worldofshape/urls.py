@@ -19,6 +19,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from users import views as user_views
+from home import views as home_views
 
 urlpatterns = [
     # admin temlpate
@@ -29,6 +30,8 @@ urlpatterns = [
     path('register/', user_views.register, name='register'),
     # users app profile view
     path('profile/', user_views.profile, name='profile'),
+    # home app view
+    path('contact/', home_views.contact, name='contact'),
     # users app login view
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'),
          name='login'),

@@ -406,6 +406,7 @@ section
 	font-weight: 300;
 	text-transform: uppercase;
 }
+
 .main_nav
 {
 	margin-left: 120px;
@@ -653,7 +654,8 @@ section
 }
 .home_container,
 .about_home_container,
-.logout_home_container {
+.logout_home_container,
+.contact_container {
     position: absolute;
 	left: 0;
 	width: 100%;
@@ -662,7 +664,8 @@ section
 	top: 31.61%;
 }
 .about_home_container,
-.training_home_container {
+.training_home_container,
+.contact_container  {
     top: 48.1%;
 }
 .profile_container {
@@ -711,7 +714,8 @@ section
 .home_title,
 .about_home_title,
 .training_home_title,
-.username_title {
+.username_title,
+.contact_home_title {
     font-weight: 200;
     color: #fff;
     line-height: 1.2;
@@ -723,14 +727,16 @@ section
 .about_home_title,
 .training_home_title,
 .training_home_title,
-.profile_home_title {
+.profile_home_title,
+.contact_home_title {
 	font-size: 72px;
 }
 .home_subtitle,
 .about_home_subtitle,
 .training_home_subtitle,
 .username_email_subtitle,
-.username_title {
+.username_title,
+.contact_home_subtitle  {
     font-size: 16px;
 	font-weight: 500;
 	color: #fff;
@@ -751,6 +757,97 @@ section
 .home_button a
 {
 	line-height: 41px;
+}
+.my_logo > div
+{
+	font-size: 28.3px;
+	line-height: 0.75;
+	color: black;
+	font-weight: 700;
+}
+.my_logo > div span
+{
+	font-weight: 300;
+	text-transform: uppercase;
+}
+.contact {
+	background: #FFFFFF;
+	padding-top: 42px;
+	padding-bottom: 100px;
+}
+.contact_title {
+    font-size: 24px;
+    font-weight: 400;
+    color: #262626;
+    line-height: 0.75;
+}
+.contact_text {
+	margin-top: 30px;
+}
+p:last-of-type {
+	margin-bottom: 0;
+}
+.contact_list {
+	padding-left: 34px;
+	margin-top: 51px;
+	max-width: 230px;
+}
+.contact_list ul li > div:first-of-type > div {
+    width: 30px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #ff9711;
+    line-height: 1.714;
+}
+.contact_list ul li > div:last-of-type {
+    font-size: 14px;
+    font-weight: 400;
+    color: #535353;
+    line-height: 1.714;
+}
+.contact_option {
+	text-transform: uppercase;
+	font-size: 1rem;
+	color: rgba(249,140,0,0.75);
+}
+.contact_option_size {
+	width: 200px;
+	padding-left: 25px;
+}
+.contact_form_container {
+    margin-top: 45px;
+}
+.input_item {
+    margin-bottom: 17px;
+}
+.my_contact_input {
+    width: 100%;
+    height: 52px;
+    border: none !important;
+        border-left-color: currentcolor !important;
+        border-left-style: none !important;
+        border-left-width: medium !important;
+    outline: none;
+    background: #eff4f6;
+    padding-left: 25px !important;
+    border-left: solid 2px transparent !important;
+}
+.my_contact_input:focus, 
+.my_contact_input:hover {
+    border-left: solid 2px #ff9711 !important;
+}
+.my_contact_input::placeholder {
+    font-size: 12px;
+    font-weight: 400;
+    font-style: italic;
+    color: #bdbdbd;
+}
+.trans_200 {
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
 }
 
 /*********************************
@@ -1045,7 +1142,9 @@ section
 /*********************************
 9. login/register/logout
 *********************************/
-.logout_home {
+.logout_home,
+.login_home,
+.register_home {
 	height: 100vh;
 }
 
@@ -1060,15 +1159,18 @@ section
 }
 
 .login_home,
-.register_home {
+.register_home,
+.contact_home {
 	width: 100%;
-	height: 100vh;
 	overflow: hidden;
 }
 .login_container,
 .register_container {
 	width: 60%;
 	margin: 0 auto;
+}
+.contact_home{
+	height: 667px;
 }
 
 .login_content,
@@ -1205,8 +1307,98 @@ a:hover {
 	font-size: 1rem;
 	color: rgb(255, 151, 17);
 }
+.my_container{
+	width: 80%;
+}
+.contact {
+	background: #FFFFFF;
+	padding-top: 42px;
+	padding-bottom: 100px;
+}
+.contact_title {
+    font-size: 24px;
+    font-weight: 400;
+    color: #262626;
+    line-height: 0.75;
+}
+.contact_text {
+	margin-top: 30px;
+}
+p:last-of-type {
+	margin-bottom: 0;
+}
+.contact_list {
+	padding-left: 34px;
+	margin-top: 51px;
+	max-width: 230px;
+}
+.contact_list ul li > div:first-of-type > div {
+    width: 30px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #ff9711;
+    line-height: 1.714;
+}
+.contact_list ul li > div:last-of-type {
+    font-size: 14px;
+    font-weight: 400;
+    color: #535353;
+    line-height: 1.714;
+}
+.contact_option {
+	text-transform: uppercase;
+	font-size: 1rem;
+	color: rgba(249,140,0,0.75);
+}
+.contact_option_size {
+	width: 200px;
+	padding-left: 25px;
+}
+.contact_form_container {
+    margin-top: 45px;
+}
+.input_item {
+    margin-bottom: 17px;
+}
 
+/* Purposly used !important here because I wanted to overwrite the Crispy form and Bootstrap style settings*/
 
+.my_contact_input {
+    width: 100%;
+	height: 52px;
+	border-radius: 0px !important;
+    border: none !important;
+        border-left-color: currentcolor !important;
+        border-left-style: none !important;
+        border-left-width: medium !important;
+    outline: none !important;
+    background: #eff4f6 !important;
+    padding-left: 25px !important;
+	border-left: solid 2px transparent !important;
+	text-align: left !important;
+}
+.my_contact_input:focus, 
+.my_contact_input:hover {
+	border-left: solid 2px #ff9711 !important;
+	background-color: #bdbdbd !important;
+}
+.my_contact_input::placeholder {
+    font-size: 12px;
+    font-weight: 400;
+    font-style: italic;
+    color: #0b0b0b;
+}
+.trans_200 {
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.contact_textarea {
+    padding-top: 15px;
+	height: 190px;
+}
 
 
 

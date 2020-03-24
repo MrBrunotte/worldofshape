@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block content %}
+<!-- Home -->
+
+<div class="contact_home">
+    <div class="background_image" style="background-image:url(/static/images/contact.jpg)"></div>
+    <div class="overlay"></div>
+    <div class="contact_container">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="contact_content">
+                        <div class="contact_home_title">Contact Us</div>
+                        <div class="contact_home_subtitle">Please feel free to contact us with any questions.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Contact -->
+
+<div class="contact">
+    <div class="container my_container">
+        <div class="row">
+            <!-- Contact Content -->
+            <div class="col-lg-4">
+                <div class="contact_content">
+                    <div class="contact_logo">
+                        <div class="my_logo d-flex flex-row align-items-center justify-content-start"><img
+                                src="/static/images/dot.png" alt="World of shape logo">
+                            <div>World<span>of</span>Shape</div>
+                        </div>
+                    </div>
+                    <div class="contact_text">
+                        <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit amet tellus
+                            blandit. Odio vestibulum est mattis effic iturut.</p>
+                    </div>
+                    <div class="contact_list">
+                        <ul>
+                            <li class="d-flex flex-row align-items-start justify-content-start">
+                                <div>
+                                    <div class="contact_option">a: </div>
+                                </div>
+                                <div class="contact_option_size"><strong>World of Shape</strong>, Fitness lane 12,
+                                    <br>110
+                                    10 Stockholm</div>
+                            </li>
+                            <li class="d-flex flex-row align-items-start justify-content-start">
+                                <div>
+                                    <div class="contact_option">p: </div>
+                                </div>
+                                <div class="contact_option_size">+46 708 82 11 55</div>
+                            </li>
+                            <li class="d-flex flex-row align-items-start justify-content-start">
+                                <div>
+                                    <div class="contact_option">E: </div>
+                                </div>
+                                <div class="contact_option_size">info@worldofshape.com</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="col-lg-8 contact_col">
+                <div class="contact_title">Get in touch</div>
+                <div class="contact_form_container">
+                    <form action="#" id="contact_form" class="contact_form">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="input_item"><input type="text" class="my_contact_input trans_200"
+                                        placeholder="Name" required="required"></div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="input_item"><input type="email" class="my_contact_input trans_200"
+                                        placeholder="E-mail" required="required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input_item"><textarea class="my_contact_input contact_textarea trans_200"
+                                placeholder="Message" required="required"></textarea></div>
+                        <button class="contact_button button">Send<span></span></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

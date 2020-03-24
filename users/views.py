@@ -3,6 +3,11 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
 
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.contrib.auth.models import User
+from django.views.generic import DeleteView
+
+
 # Create your views here.
 
 
@@ -50,3 +55,17 @@ def profile(request):
     }
 
     return render(request, 'users/profile.html', context)
+
+
+class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    """
+    Delete user view
+    """
+    model = User
+    success_url = '/'
+
+    def test_func(self):
+        post = self.get_object()
+        if self.request.user == post.author:
+            return True
+        return False
