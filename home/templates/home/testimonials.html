@@ -1,5 +1,273 @@
 <!DOCTYPE html>
 {% extends "base.html" %}
 {% block content %}
+<!-- Home about.html -->
 
-{% endblock content %}
+<div class="testimonials_home">
+    <div class="background_image" style="background-image:url(/static/images/about_page.jpg)"></div>
+    <div class="testimonials_home_container">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <div class="testimonials_home_title">Testimonials</div>
+                        <div class="testimonials_home_subtitle">What our members are saying about us...
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <p class="text_highlight_testimonials">
+                        Below you will find just a few of our fantastic World of Shape members!<br> Scroll down and read
+                        about all these fantastic people and their amazing results! <br>There are over 45.000 clients
+                        that
+                        have registered for our unique training method and have benefited from our 30 day training
+                        period.<br>Read about some of the fantastic stories and see the transformation in just 30
+                        days!<br>The only thing that is standing between you and results like these are that you need to
+                        start
+                        you journey. We at World of Shape would love to help you acheive the body that you always wanted
+                        and deserved.
+                    </p>
+                    <div class="button home_button ml-auto mr-auto"><a href="{% url 'programs' %}">Join Now</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Testimonials -->
+
+<div class="testimonials testimonials_section" id="testimonials">
+    <div class="parallax_background parallax-window" data-parallax="scroll"
+        data-image-src="/static/images/testimonials.jpg" data-speed="0.8"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section_title_container">
+                    <div class="section_subtitle">world of shape</div>
+                    <div class="section_title testimonials_section_title">Testimonials</div>
+                    <div class="testimonials_home_subtitle">Meet a few of our fantastic members and see what they are
+                        saying
+                        about us...
+                    </div>
+                </div>
+                <!-- Testimonial -->
+                <div class="test test_1 d-flex flex-row align-items-start justify-content-start break_line">
+                    <div>
+                        <div class="test_name"><a href="{% url 'programs' %}">Lisa</a></div>
+                        <div class="test_image">
+                            <img class="testimonial_img" src="/static/img/lisa-soederberg.jpg" alt="Image of a woman">
+                        </div>
+                        <div class="test_title">- 30 day results -
+                            <ul>
+                                <li class="test-list">Weight: -9 kg</li>
+                                <li class="test-list">Waist: -22 cm</li>
+                                <li class="test-list">Resting puls: -18 beats/min</li>
+                            </ul>
+                        </div>
+                        <div class="test_text">
+                            <p>I signed up for the World of Shape because I saw that many ordinary people had
+                                implemented the program with amazing results!
+                                World of Shape has developed a concept that is easy to follow. Nice exercise for
+                                the body that can also be carried out at home.</p> <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <!-- Testimonial -->
+                <div class="test d-flex flex-row align-items-start justify-content-start break_line">
+                    <div>
+                        <div class="test_name"><a href="{% url 'programs' %}">Richard</a></div>
+                        <div class="test_image"><img class="testimonial_img" src="/static/img/richard.jpg"
+                                alt="Image of a woman">
+                        </div>
+                        <div class="test_title">- 30 day results -
+                            <ul>
+                                <li class="test-list">Weight: -14 kg</li>
+                                <li class="test-list">Waist: -21 cm</li>
+                                <li class="test-list">Resting puls: -18 beats/min</li>
+                            </ul>
+                        </div>
+                        <div class="test_text">
+                            <p>An amazing month filled with great exercises, inspiring recipes and food tips!
+                                Thank you so much for giving me the opportunity and help to change my destructive life.
+                                I can really
+                                recommend everyone to join, regardless of age and gender!</p>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <!-- Testimonial -->
+                <div class="test d-flex flex-row align-items-start justify-content-start break_line">
+                    <div>
+                        <div class="test_name"><a href="{% url 'programs' %}">Sofie</a></div>
+                        <div class="test_image"><img class="testimonial_img" src="/static/img/sofie.jpg"
+                                alt="Image of a woman"></div>
+                        <div class="test_title">- 30 day results -
+                            <ul>
+                                <li class="test-list">Weight: -4.8 kg</li>
+                                <li class="test-list">Waist: -21 cm</li>
+                                <li class="test-list">Resting puls: -12 beats/min</li>
+                            </ul>
+                        </div>
+                        <div class="test_text">
+                            <p>I'm very pleased with the results World of Shape has given me. That I saw big
+                                changes after 10 days is amazing. It's a great setup that you can practice at
+                                home (as I did) and at the gym.</p> <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <!-- Testimonial -->
+                <div class="test d-flex flex-row align-items-start justify-content-start break_line">
+                    <div>
+                        <div class="test_name"><a href="{% url 'programs' %}">Maria</a></div>
+                        <div class="test_image"><img class="testimonial_img" src="/static/img/maria_jonsson.jpg"
+                                alt="Image of a woman"></div>
+                        <div class="test_title">- 30 day results -
+                            <ul>
+                                <li class="test-list">Weight: -9.9 kg</li>
+                                <li class="test-list">Waist: -18 cm</li>
+                                <li class="test-list">Resting puls: -21 beats/min</li>
+                            </ul>
+                        </div>
+                        <div class="test_text">
+                            <p>Thanks to World of Shape, I have gained a lot of knowledge of both diet and
+                                exercise and I feel I've found my stuff !!
+                                P.S Finally, all my superficial training clothes will finally be used !! :-)</p>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <!-- Testimonial -->
+                <div class="test d-flex flex-row align-items-start justify-content-start break_line">
+                    <div>
+                        <div class="test_name"><a href="{% url 'programs' %}">Daniel</a></div>
+                        <div class="test_image"><img class="testimonial_img" src="/static/img/daniel_snallman.jpg"
+                                alt="Image of a woman">
+                        </div>
+                        <div class="test_title">- 30 day results -
+                            <ul>
+                                <li class="test-list">Weight: -6.7 kg</li>
+                                <li class="test-list">Waist: -18 cm</li>
+                                <li class="test-list">Resting puls: -12 beats/min</li>
+                            </ul>
+                        </div>
+                        <div class="test_text">
+                            <p>An amazing month filled with great exercises, inspiring recipes and food tips!
+                                Thank you so much for giving me the opportunity and help to change my destructive life.
+                                I can really
+                                recommend everyone to join, regardless of age and gender!</p>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <!-- Testimonial -->
+                <div class="test d-flex flex-row align-items-start justify-content-start break_line">
+                    <div>
+                        <div class="test_name"><a href="{% url 'programs' %}">Emma</a></div>
+                        <div class="test_image"><img class="testimonial_img" src="/static/img/emma.jpg"
+                                alt="Image of a woman">
+                        </div>
+                        <div class="test_title">- 30 day results -
+                            <ul>
+                                <li class="test-list">Weight: -17 kg</li>
+                                <li class="test-list">Waist: -14 cm</li>
+                                <li class="test-list">Resting puls: -17 beats/min</li>
+                            </ul>
+                        </div>
+                        <div class="test_text">
+                            <p>An amazing month filled with great exercises, inspiring recipes and food tips!
+                                Thank you so much for giving me the opportunity and help to change my destructive life.
+                                I can really
+                                recommend everyone to join, regardless of age and gender!</p>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <!-- Testimonial -->
+                <div class="test d-flex flex-row align-items-start justify-content-start break_line">
+                    <div>
+                        <div class="test_name"><a href="{% url 'programs' %}">Sharon</a></div>
+                        <div class="test_image"><img class="testimonial_img" src="/static/img/sharon.jpg"
+                                alt="Image of a woman"></div>
+                        <div class="test_title">- 30 day results -
+                            <ul>
+                                <li class="test-list">Weight: -8.2 kg</li>
+                                <li class="test-list">Waist: -15 cm</li>
+                                <li class="test-list">Resting puls: -24 beats/min</li>
+                            </ul>
+                        </div>
+                        <div class="test_text">
+                            <p>When I decided to join the Fitness Fight, I needed a spur to switch up the pace. I
+                                realized that I needed some help with the motivation, new exercises and a good diet
+                                program that allowed me to lose a few pounds without going hungry.
+                                I was hoping that the program would result in a weight loss of 3-4 kg, but had no idea
+                                what it would actually mean for the waist measure or my resting heart rate. It was not
+                                quite as I imagined...
+                                I have lost 8.2 kg, 15 cm around the waist and lowered my heart rate by 24 strokes!!!
+                                The result is so obvious that several of my friends have signed up for the World of
+                                Shape and others have commented on how inspiring my journey has been to them!<br>
+                                Guess how I feel? Fantastic! I feel strong, proud and energetic.
+                                This is not a hocus-pocus or magic in powder form. This is my sweat, my workout pain and
+                                my worn shoes that have given me this result.
+                                With a clear, simple diet program and exercise program that is easy to follow, you have
+                                guided me here. I am so delighted that I took on this challenge!<br>
+                                Congratulations to all who are running this summer, you will not regret it!</p>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <!-- Testimonial -->
+                <div class="test d-flex flex-row align-items-start justify-content-start break_line">
+                    <div>
+                        <div class="test_name"><a href="{% url 'programs' %}">Sandra</a></div>
+                        <div class="test_image"><img class="testimonial_img" src="/static/img/sandra.jpg"
+                                alt="Image of a woman"></div>
+                        <div class="test_title">- 30 day results -
+                            <ul>
+                                <li class="test-list">Weight: -5.8 kg</li>
+                                <li class="test-list">Waist: -12.5 cm</li>
+                                <li class="test-list">Resting puls: -20 beats/min</li>
+                            </ul>
+                        </div>
+                        <div class="test_text">
+                            <p>I am super happy with the results World of Shape has given me. Seeing big changes after
+                                10 days is fantastic! It is a great arrangement that you can work out at home (which I
+                                did) and at the gym.</p>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row test_button_row testimonals_bottom">
+                <div class="col text-center">
+                    <div class="button test_button"><a href="{% url 'programs' %}">Join Now</a></div>
+                </div>
+            </div>
+        </div>
+        {% endblock content %}

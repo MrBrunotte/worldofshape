@@ -25,7 +25,8 @@
                         </div>
                         <div class="home_title">Get fit with us</div>
                         <div class="home_subtitle">Quick weight loss, Train at home</div>
-                        <div class="button home_button ml-auto mr-auto"><a href="">Join Now</a></div>
+                        <div class="button home_button ml-auto mr-auto"><a href="{% url 'programs' %}">Join Now</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -43,7 +44,7 @@
                     <!-- Box 1 -->
                     <div class="box">
                         <div class="box_icon d-flex flex-column align-items-center justify-content-center"><img
-                                src="/static/img/training-program.png" alt=""></div>
+                                src="/static/img/training-program.png" alt="{% url 'programs' %}"></div>
                         <div class="box_title">Training programs</div>
                         <div class="box_text">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae dolore quis, nostrum magni
@@ -109,7 +110,7 @@
                     <div class="col-lg-6 offset-lg-6 fill_height">
                         <div class="home_about_image"><img src="/static/img/abs500px.jpg" alt=""></div>
                     </div>
-                    <div class="button about_button"><a href="#">Read more</a></div>
+                    <div class="button about_button"><a href="{% url 'main-about' %}">Read more</a></div>
                 </div>
             </div>
         </div>
@@ -133,16 +134,16 @@
             <div class="col-lg-12">
                 <div class="section_title_container">
                     <div class="section_subtitle">world of shape</div>
-                    <div class="section_title">Testimonials</div>
+                    <div><a class="section_title" href="{% url 'testimonials' %}">Testimonials</a></div>
                 </div>
 
                 <!-- Testimonial -->
                 <div class="test test_1 d-flex flex-row align-items-start justify-content-start">
                     <div class="test_content">
 
-                        <div class="test_name"><a href="#">Lisa</a></div>
-                        <div class="test_image"><img src="/static/img/lisa-soederberg400x185.jpg"
-                                alt="Image of a woman"></div>
+                        <div class="test_name"><a href="{% url 'testimonials' %}">Lisa</a></div>
+                        <div class="test_image"><img src="/static/img/lisa-soederberg.jpg" alt="Image of a woman">
+                        </div>
                         <div class="test_title">- 30 day results -
                             <ul>
                                 <li class="test-list">Weight: -9 kg</li>
@@ -167,8 +168,8 @@
 
                     <div class="test_content">
 
-                        <div class="test_name"><a href="#">Sofie</a></div>
-                        <div class="test_image"><img src="/static/img/sofie400x185px.jpg" alt="Image of a woman"></div>
+                        <div class="test_name"><a href="{% url 'testimonials' %}">Sofie</a></div>
+                        <div class="test_image"><img src="/static/img/sofie.jpg" alt="Image of a woman"></div>
                         <div class="test_title">- 30 day results -
                             <ul>
                                 <li class="test-list">Weight: -4.8 kg</li>
@@ -191,9 +192,8 @@
 
                     <div class="test_content">
 
-                        <div class="test_name"><a href="#">Maria</a></div>
-                        <div class="test_image"><img src="/static/img/maria_jonsson400x185px.jpg"
-                                alt="Image of a woman"></div>
+                        <div class="test_name"><a href="{% url 'testimonials' %}">Maria</a></div>
+                        <div class="test_image"><img src="/static/img/maria_jonsson.jpg" alt="Image of a woman"></div>
                         <div class="test_title">- 30 day results -
                             <ul>
                                 <li class="test-list">Weight: -9.9 kg</li>
@@ -214,7 +214,7 @@
     </div>
     <div class="row test_button_row">
         <div class="col text-center">
-            <div class="button test_button"><a href="#">Join Now</a></div>
+            <div class="button test_button"><a href="{% url 'programs' %}">Join Now</a></div>
         </div>
     </div>
 </div>

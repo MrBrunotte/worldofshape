@@ -631,9 +631,14 @@ section
 }
 /* index.html*/
 .home,
-.profile_home {
+.profile_home,
+.testimonials_home {
     height: 100vh;
 }
+.testimonials_home {
+    border-bottom: solid 3px #ff9711;
+}
+
 /* about.html*/
 .about_home,
 .training_home {
@@ -659,6 +664,9 @@ section
     position: absolute;
 	left: 0;
 	width: 100%;
+}
+.testimonials_home_container {
+	top: 34%;
 }
 .home_container {
 	top: 31.61%;
@@ -715,7 +723,8 @@ section
 .about_home_title,
 .training_home_title,
 .username_title,
-.contact_home_title {
+.contact_home_title,
+.testimonials_home_title {
     font-weight: 200;
     color: #fff;
     line-height: 1.2;
@@ -728,7 +737,8 @@ section
 .training_home_title,
 .training_home_title,
 .profile_home_title,
-.contact_home_title {
+.contact_home_title,
+.testimonials_home_title {
 	font-size: 72px;
 }
 .home_subtitle,
@@ -736,7 +746,8 @@ section
 .training_home_subtitle,
 .username_email_subtitle,
 .username_title,
-.contact_home_subtitle  {
+.contact_home_subtitle,
+.testimonials_home_subtitle  {
     font-size: 16px;
 	font-weight: 500;
 	color: #fff;
@@ -1023,6 +1034,9 @@ p:last-of-type {
 	line-height: 1.75;
 	margin-top: 35px;
 }
+.text_highlight_testimonials {
+	color: #FFFFFF;
+}
 .home_about_text,
 .about_about_text
 {
@@ -1060,33 +1074,45 @@ p:last-of-type {
 
 .testimonials
 {
-	padding-top: 316px;
+	padding-top: 310px;
 	padding-bottom: 100px;
+}
+
+.testimonals_bottom {
+	padding-bottom: 100px;
+	margin: 0 auto;
 }
 .testimonials .section_title
 {
 	color: #fff;
+}
+.testimonials_section {
+	padding-top: 20px;
+}
+.testimonials_section_title{
+	padding: 0 0 20px;
 }
 .test:not(:last-child)
 {
 	margin-bottom: 82px;
 }
 .test_image {
-    width: 400px;
-    height: 196px;
+    width: 100%;
     overflow: hidden;
 }
-.test_content
-{
-	padding-left: 40px;
+.testimonial_img {
+	width: 80%;
 }
+
 .test_1
 {
-	margin-top: 137px;
+	margin-top: 60px;
 }
 .test_name
 {
 	margin-top: 3px;
+	padding-bottom: 3px;
+	text-transform: uppercase;
 }
 .test_name a
 {
@@ -1119,6 +1145,17 @@ p:last-of-type {
 {
 	font-style: italic;
 	color: #a8a8a8;
+}
+.test_text p::before
+{
+	content: open-quote;
+}
+.test_text p::after
+{
+	content: close-quote;
+}
+.break_line {
+	border-bottom: solid 1px #ff9711;
 }
 .test_rating
 {
@@ -2091,10 +2128,7 @@ p:last-of-type {
 		margin-top: 106px;
 		margin-bottom: 82px;
 	}
-	.test_content
-	{
-		padding-left: 25px;
-	}
+	
 	.gallery_slider_container
 	{
 		width: 150%;
