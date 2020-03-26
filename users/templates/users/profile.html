@@ -18,8 +18,10 @@
 
                             <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
                         </div>
-                        <div class="username_title">Current username: {{ user.username }}
-                            <p class="username_email_subtitle">Current Email: {{ user.email }}</p>
+                        <div class="username_title">Current Username: <strong class="strong_profile">
+                                {{ user.username }} </strong>
+                            <p class="username_email_subtitle">Current Email:
+                                <strong class="strong_profile"> {{ user.email }} </strong></p>
                         </div>
 
                         <form method="POST" enctype="multipart/form-data">

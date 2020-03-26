@@ -730,6 +730,12 @@ section
     line-height: 1.2;
 	margin-top: -9px;
 }
+.username_title {
+	padding: 30px 0;
+}
+.username_email_subtitle {
+	padding-top: 5px;
+}
 .home_title {
 	font-size: 100px;
 }
@@ -751,6 +757,17 @@ section
     font-size: 16px;
 	font-weight: 500;
 	color: #fff;
+}
+.strong_profile {
+	color: #f98c00;
+	font-size: 1.2rem;
+	padding-left: 40px;
+}
+.strong_profile::before {
+	content: open-quote;
+}
+.strong_profile::after {
+	content: close-quote;
 }
 .home_subtitle {
 	margin-top: -6px;
@@ -1087,7 +1104,7 @@ p:last-of-type {
 	color: #fff;
 }
 .testimonials_section {
-	padding-top: 20px;
+	padding-top: 69px;
 }
 .testimonials_section_title{
 	padding: 0 0 20px;
@@ -1230,7 +1247,18 @@ p:last-of-type {
 	margin-top: -9px;
 	text-align: center;
 }
-
+.reset_title{
+	font-size: 72px;
+	font-weight: 200;
+    color: #fff;
+    line-height: 1.2;
+	margin-top: -9px;
+}
+.reset_subtitle {
+	font-size: 16px;
+	font-weight: 500;
+	color: #fff;
+}
 .profile_image {
 	justify-content: center;
 }
