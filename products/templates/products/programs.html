@@ -45,277 +45,35 @@
                 </div>
             </div>
         </div>
+        <!-- Programs for loop -->
         <div class="row services_row">
-
-            <!-- Program Fitness-fight -->
+            {% for product in products %}
             <div class="col-xl-4 col-md-6 service_col">
                 <div class="service">
+                    <div class="product_image" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')">
+                    </div>
                     <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
-                        <div>
-                            <div class="service_icon"><img src="/static/img/ff_1.png" alt="image of woman boxing"></div>
-                        </div>
-                        <div class="service_title">Fitness-fight</div>
+                        <div class="service_title">{{ product.name }}</div>
                     </div>
-                    <div class="service_text">
-                        <p><strong>The Fitness-Fight</strong> is our most popular 30-day program and it is for anyone
-                            who want to get a
-                            "kick-start challenge".<br><br>Focus lies on fat burning, weight loss and reshaping and
-                            toning
-                            the body. You will get about 36 exercises in total. From day 3 you will get a new exercise
-                            each day. The program includes fitness, strength and core training as well as dynamic
-                            stretching.</p>
-                        <div class="button home_button ml-auto mr-auto"><a href="#">Get Started</a></div>
-                    </div>
+
+                    <p class="service_text">{{ product.description }}</p>
+                    <p class="price">{{ product.price }}</p>
+                    <form action="{% url 'add_to_cart' product.id %}" method="post">
+                        {% csrf_token %}
+                        <input type="number" name="quantity" min="1" max="999" class="form_group cart_qty"
+                            placeholder="Quantity">
+                        <span class="input_group">
+                            <button class="button home_button ml-auto mr-auto mb-4" type="submit">Add to
+                                Cart</button>
+                        </span>
+                    </form>
+
                 </div>
             </div>
-
-            <!-- Service Butt Blaster-->
-            <div class="col-xl-4 col-md-6 service_col">
-                <div class="service">
-                    <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
-                        <div>
-                            <div class="service_icon"><img src="/static/img/fitness_xpress_2_mini.png"
-                                    alt="image of woman doing the planche"></div>
-                        </div>
-                        <div class="service_title">butt blaster</div>
-                    </div>
-                    <div class="service_text">
-                        <p><strong>Butt-Blaster</strong> is a quick and fast 22.5 minute training program aimed for
-                            todays hectic life.<br><br>If you aim for getting a firmer and harder but, tighter thighs
-                            and a
-                            flatter belly, this is the program for you!. The workout is only 22.5 min a day (strength,
-                            training and fitness) for 30 days. You will build and balande your body for maximum results
-                            and posture. You will get about 60 exercises in total. A new program with 15 exercises start
-                            each week. The program includes cardio, core and leg and leg exercises.</p>
-                        <div class="button home_button ml-auto mr-auto"><a href="#">Get Started</a></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Service Fitness-express -->
-            <div class="col-xl-4 col-md-6 service_col">
-                <div class="service">
-                    <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
-                        <div>
-                            <div class="service_icon"><img src="/static/img/fitness_xpress2.png"
-                                    alt="image of woman doing crunches"></div>
-                        </div>
-                        <div class="service_title">fitness-xpress</div>
-                    </div>
-                    <div class="service_text">
-                        <p><strong>Fitness-Xpress</strong> is suitable if: you don't work out, exercise just a little or
-                            have difficulty getting started! You exercise for 45 minutes a day for 30 days and follow a
-                            4 step workout program.<br><br>Steps 1-3 start with your upper body: cardio, leg, core for 3
-                            x
-                            13 min = 39 minutes. Step 4 is high intensity: Upper body, legs, cardio for 6 minutes. You
-                            will get new exercises every day and in total you get 92 different exercises and challenges,
-                            where there are 36 different strength and cardio exercise, 26 high intensity exercises and
-                            30 challenges.</p>
-                        <div class="button home_button ml-auto mr-auto"><a href="#">Get Started</a></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Service Kick-Start 30-->
-            <div class="col-xl-4 col-md-6 service_col">
-                <div class="service">
-                    <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
-                        <div>
-                            <div class="service_icon"><img src="/static/img/slim_lite_30_liten.jpg"
-                                    alt="image of slim woman"></div>
-                        </div>
-                        <div class="service_title">kick-Start 30</div>
-                    </div>
-                    <div class="service_text">
-                        <p><strong>Kick-Start 30</strong> is the program for you if you want to get "kick start" your
-                            fat burning and weight loss journey and don't have a lot of spare time.<br><br>You work out
-                            for
-                            30 minutes a day where you follow a training program based on our unique training method
-                            where you will build and balance your body for maximum fat burning, weight loss and posture
-                            results.</p>
-                        <div class="button home_button ml-auto mr-auto"><a href="#">Get Started</a></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Service Cross-shape 28 -->
-            <div class="col-xl-4 col-md-6 service_col">
-                <div class="service">
-                    <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
-                        <div>
-                            <div class="service_icon"><img src="/static/img/cs_1.png" alt="image of man standing"></div>
-                        </div>
-                        <div class="service_title">cross-Shape 28</div>
-                    </div>
-                    <div class="service_text">
-                        <p><strong>Cross-Shape 28</strong> is an intense program for you who have trained before and
-                            do not have that much time.<br><br>Start with a warm-up for 5 min and then continue on to
-                            the training phase where all exercises are high intense, you end with a cool-down low
-                            intensith finish. There are three levels: Get started (day 1-10), Build up (day 11-20) and
-                            High Intensity (day 21-30). </p>
-                        <div class="button home_button ml-auto mr-auto"><a href="#">Get Started</a></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Service Mamma-Shape -->
-            <div class="col-xl-4 col-md-6 service_col">
-                <div class="service">
-                    <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
-                        <div>
-                            <div class="service_icon"><img src="/static/img/ms_1.png" alt="image of woman with baby">
-                            </div>
-                        </div>
-                        <div class="service_title">Mamma-Shape</div>
-                    </div>
-                    <div class="service_text">
-                        <p><strong>Mamma-Shape</strong> is especially designed for you who have given birth to children
-                            over the past three years.<br><br>The exercises are simple to perform and very effective. It
-                            is
-                            a mixture of strength exercises and short cardio workouts. The first few days we start
-                            quietly so you can regain control of your muscles. We then gradually increase the intensity
-                            so that you will get the desired result. We exchange an exercise every day so it never gets
-                            boring. In total, you get 35 different exercises.</p>
-                        <div class="button home_button ml-auto mr-auto"><a href="#">Get Started</a></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Service Mamma-Shape-Combo -->
-            <div class="col-xl-4 col-md-6 service_col">
-                <div class="service">
-                    <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
-                        <div>
-                            <div class="service_icon"><img src="/static/img/ms_1.png" alt="image of woman with baby">
-                            </div>
-                        </div>
-                        <div class="service_title">Mamma-Shape-combo</div>
-                    </div>
-                    <div class="service_text">
-                        <p><strong>Mamma-Shape-Combo</strong> is a 60-day program especially developed for you who have
-                            delivered a baby within the last three years.<br><br>Each workout takes about an hour to
-                            perform and the exercises are simple but very effective. It is a mixture of strength
-                            exercises and short cardio workouts. The first few days we start quietly so you can
-                            reastablish connection with muscles and tissues. Then we gradually increase so that you get
-                            the desired result. We exchange an exercise every day so it never gets boring. In total you
-                            get 60 different exercises.</p>
-                        <div class="button home_button ml-auto mr-auto"><a href="#">Get Started</a></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Service Run-4-Fun -->
-            <div class="col-xl-4 col-md-6 service_col">
-                <div class="service">
-                    <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
-                        <div>
-                            <div class="service_icon"><img src="/static/img/rff.png" alt="Image of running couple">
-                            </div>
-                        </div>
-                        <div class="service_title">Run-4-Fun</div>
-                    </div>
-                    <div class="service_text">
-                        <p><strong>Run-4-Fun</strong> is the program for anyone who likes running, want to lose a few
-                            pounds and at the same time improve your running technique.<br><br>Run-4-Fun is an effective
-                            way for you to get started quickly and get the results you desire. Run-4-Fun also focuses on
-                            restoring the body's function, by removing the restrictions your body might have you will
-                            imporve and develop your running technique.</p>
-                        <div class="button home_button ml-auto mr-auto"><a href="#">Get Started</a></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Service Eze-Walking -->
-            <div class="col-xl-4 col-md-6 service_col">
-                <div class="service">
-                    <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
-                        <div>
-                            <div class="service_icon"><img src="/static/img/ew.png" alt="image of walking couple"></div>
-                        </div>
-                        <div class="service_title">Eze-Walking</div>
-                    </div>
-                    <div class="service_text">
-                        <p><strong>Eze-Walking</strong> is for you who enjoy walking, want to become more vibrant,
-                            increase your well-being and lose a few pounds.<br><br>You work out with a low load but with
-                            maximum results. You walk 50 minutes a day and do 6 posture exercises. From day 2 onward you
-                            will get a new exercise that focuses on your posture when walking.</p>
-                        <div class="button home_button ml-auto mr-auto"><a href="#">Get Started</a></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Service Slim-Tone -->
-            <div class="col-xl-4 col-md-6 service_col">
-                <div class="service">
-                    <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
-                        <div>
-                            <div class="service_icon"><img src="/static/img/st.png" alt="image of woman exercising">
-                            </div>
-                        </div>
-                        <div class="service_title">Slim-Tone</div>
-                    </div>
-                    <div class="service_text">
-                        <p><strong>Slim-Tone</strong> is a gym program for you who want to get a lean and hard body. Get
-                            a kick start on you fat burning and weight loss process.<br><br>This program is for anyone
-                            who wants to lose weight, get a hard body and a flat stomach in 30 days. The "Slim-Tone"
-                            program is designed in the same way as our home program "Kick-Start" is designed but with
-                            gym machines. You will challenge all muscles in your body and you will become leaner and
-                            harder than ever.</p>
-                        <div class="button home_button ml-auto mr-auto"><a href="#">Get Started</a></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Service Big and Strong -->
-            <div class="col-xl-4 col-md-6 service_col">
-                <div class="service">
-                    <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
-                        <div>
-                            <div class="service_icon"><img src="/static/img/bs.png"
-                                    alt="image of woman standing besides an exercise machine">
-                            </div>
-                        </div>
-                        <div class="service_title">Big-Strong</div>
-                    </div>
-                    <div class="service_text">
-                        <p><strong>Big-Strong</strong> is a gym program for you who want to get bigger and harder
-                            muscles.<br><br>You work out at the gym with gym machines for an hour a day for 30 days.
-                            This is a three-part strength training program and every muscle group will always get the
-                            optimal recovery time, which is 72 hours. You train for three days and rest for one day to
-                            recover. Day 1 back + leg. Day 2 chest + triceps. Day 3 shoulders + biceps. Day 4 Walk +
-                            Core (Recovery Day)</p>
-                        <div class="button home_button ml-auto mr-auto"><a href="#">Get Started</a></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Service Yoga-Shape -->
-            <div class="col-xl-4 col-md-6 service_col">
-                <div class="service">
-                    <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
-                        <div>
-                            <div class="service_icon"><img src="/static/img/yoga.png" alt="image of woman doing yoga">
-                            </div>
-                        </div>
-                        <div class="service_title">Yoga-Shape</div>
-                    </div>
-                    <div class="service_text">
-                        <p><strong>Yoga-Shape</strong> is for you who aim for increased flexibility. You will learn how
-                            to relax and reduce stress, increase trunk stability and get better balance while losing
-                            weight.<br><br>Block 1 - Focus on breathing. Block 2 - Flow section. Leads to learning "The
-                            Sun" on Day 25. Block 3 - Balance and core training, strength and agility. Block 4 - Same as
-                            block 2. Block 5 - Seated positions and finishes. Flexibility and core training. Yin Yoga -
-                            exercise as in block 1.</p>
-                        <div class="button home_button ml-auto mr-auto"><a href="#">Get Started</a></div>
-                    </div>
-                </div>
-            </div>
-
+            {% endfor %}
         </div>
     </div>
 </div>
-
-
 
 <!-- Extra -->
 

@@ -24,6 +24,7 @@ from home import views as home_views
 from products import views as products_views
 from products import urls as urls_products
 from products.views import all_products
+from cart import urls as urls_cart
 from django.views import static
 from .settings import MEDIA_ROOT
 
@@ -67,13 +68,15 @@ urlpatterns = [
     url('r^$', all_products, name='index'),
     # products/
     path('products/', products_views.all_products, name='products'),
+    # cart
+    url(r'^cart/', include(urls_cart)),
     # media path
-    url(r'^media/(?P<path>.*)¤', static.serve, {'document_root': MEDIA_ROOT}),
+    url(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT}),
     # blog app
     path('blog/', include('blog.urls')),
 ]
 
 # We use this urlpattern when we are in DEBUG mode, We will us AWS S3 Bucket in production
 # if settings.DEBUG:
-#   urlpatterns += static(settings.MEDIA_URL,
+#    urlpatterns += static(settings.MEDIA_URL,
 #                          document_root=settings.MEDIA_ROOT)
