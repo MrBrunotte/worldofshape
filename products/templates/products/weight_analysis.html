@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="register_home">
+    <div class="background_image" style="background-image:url(/static/images/services.jpg)"></div>
+    <div class="register_container">
+        <div class="container"></div>
+        <div class="row">
+            <div class="col">
+                <div class="register_content">
+
+                    <div class="testimonials_home_title">Weight loss analysis</div>
+                    <div class="testimonials_home_subtitle">Fill in the fields and find the most suitable programs for
+                        you.</div>
+                    <form method="POST">
+                        {% csrf_token %}
+                        <fieldset class="form_group text_left">
+                            {{ form }}
+                        </fieldset>
+                        <div class="form_group">
+                            <button class="button home_button ml-auto mr-auto mb-4" type="submit">Find Your
+                                Program</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

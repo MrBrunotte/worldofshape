@@ -20,6 +20,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from users import views as user_views
 from home import views as home_views
+from products import views as products_views
 
 urlpatterns = [
     # admin temlpate
@@ -49,11 +50,14 @@ urlpatterns = [
     # users app PasswordResetConfirmView Takes two url parameters: UIDB64 and token from link in email
     path('password-reset-confirm/<uidb64>/<token>', auth_views.PasswordResetConfirmView.as_view(
         template_name='users/password_reset_confirm.html'), name='password_reset_confirm'),
-    # users app PasswordResetCompleteView 
+    # users app PasswordResetCompleteView
     path('password-reset-complete/', auth_views.PasswordResetCompleteView.as_view(
         template_name='users/password_reset_complete.html'), name='password_reset_complete'),
     # products app
     path('programs/', include('products.urls')),
+    # products app
+    path('weight_loss/', products_views.WeightLossAnalysis,
+         name='weight_loss_analysis'),
     # blog app
     path('blog/', include('blog.urls')),
 ]

@@ -782,6 +782,10 @@ section
 	border: solid 1px #FFFFFF;
 	margin-top: 44px;
 }
+.home_button:hover {
+	color:white;
+}
+
 .home_button a
 {
 	line-height: 41px;
@@ -1043,8 +1047,8 @@ p:last-of-type {
 	z-index: 1;
 	padding-right: 190px;
 }
-.text_highlight
-{
+.text_highlight,
+.program_text {
 	font-size: 16px;
 	font-weight: 600;
 	color: #535353;
@@ -1263,12 +1267,7 @@ p:last-of-type {
 	justify-content: center;
 }
 
-/* the form */
-
-.form_group p {
-	margin-bottom: 0;
-}
-
+/* forms */
 
 label {
 	margin-bottom: 0;
@@ -1288,8 +1287,6 @@ input {
 	text-align: center !important;
 	margin-bottom: 0;
 }
-
-
 input:hover {
 	background-color: black !important;
 	color:#FFFFFF !important;
@@ -1302,6 +1299,10 @@ form {
 	width: 100%;
 	text-align: center;
 }
+.form_group p {
+	margin-bottom: 0;
+}
+
 .username_label {
 	display: inline-block;
 	width: 80%;
@@ -1342,9 +1343,33 @@ li:hover {
 	font-size: 1rem;
 	color: #f98c00;
 }
-
 a:hover {
-    color: #f98c00;
+    color: black;
+}
+
+.text_left {
+	text-align: left;
+	margin: 60px 0;
+}
+
+#id_gender,
+#id_current_weight,
+#id_expected_weight_loss,
+#id_current_age,
+#id_training_level {
+	width: 320px;
+	color: #f98c00;
+	background-color: transparent;
+	border: none;
+	padding: 0 15px 0;
+	text-align: right;
+	text-transform: capitalize;
+}
+.text_left label {
+	width: 50% !important;
+}
+option {
+	background: black !important;
 }
 
 
@@ -1688,6 +1713,7 @@ p:last-of-type {
 .service_text p{
 	height: 340px;
 }
+
 
 /*********************************
 12. Footer
