@@ -899,6 +899,7 @@ p:last-of-type {
 	padding-right: 37px;
 	padding-bottom: 20px;
 	margin-left: 10px;
+	height: 430px;
 }
 .box:first-child
 {
@@ -933,10 +934,12 @@ p:last-of-type {
 .box_text
 {
 	margin-top: 20px;
+	max-height: 300px;
 }
 .box_text p
 {
 	color: #FFFFFF;
+	height: 150px;
 }
 .box_link_container
 {

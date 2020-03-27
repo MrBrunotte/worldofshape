@@ -19,7 +19,7 @@
 
 	<link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap-4.1.2/bootstrap.min.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'styles/compiled_styles.css' %}">
-	<link rel="stylesheet" type="text/css" href="{% static 'styles/elements.css' %}">
+	<!--<link rel="stylesheet" type="text/css" href="{% static 'styles/elements.css' %}">-->
 
 
 	{% if title %}
@@ -108,7 +108,7 @@
 		<!-- message within block content -->
 		{% if messages %}
 		{% for message in messages %}
-		<div class="alert alert-success">
+		<div class="alert alert-{{ message.tags }}">
 			{{ message }}
 		</div>
 		{% endfor %}

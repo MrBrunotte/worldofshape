@@ -1,8 +1,17 @@
 from django.shortcuts import render
-from .models import Program
+from .models import Program, Product
 from .forms import WeightLossAnalysisForm
 
 # Create your views here.
+
+
+def all_products(request):
+    """
+    returns a list of all products/programs that are for sale
+    We are using programs2.html change this later to programs.html??
+    """
+    products = Product.objects.all()
+    return render(request, 'products/programs2.html', {'products': products})
 
 
 def all_programs(request):

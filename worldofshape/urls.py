@@ -17,10 +17,15 @@ from django.contrib import admin
 from django.contrib.auth import views as auth_views
 from django.urls import path, include
 from django.conf import settings
+from django.conf.urls import url
 from django.conf.urls.static import static
 from users import views as user_views
 from home import views as home_views
 from products import views as products_views
+from products import urls as urls_products
+from products.views import all_products
+from django.views import static
+from .settings import MEDIA_ROOT
 
 urlpatterns = [
     # admin temlpate
@@ -58,11 +63,17 @@ urlpatterns = [
     # products app
     path('weight_loss/', products_views.WeightLossAnalysis,
          name='weight_loss_analysis'),
+    # Might have to fix this! to products/
+    url('r^$', all_products, name='index'),
+    # products/
+    path('products/', products_views.all_products, name='products'),
+    # media path
+    url(r'^media/(?P<path>.*)¤', static.serve, {'document_root': MEDIA_ROOT}),
     # blog app
     path('blog/', include('blog.urls')),
 ]
 
 # We use this urlpattern when we are in DEBUG mode, We will us AWS S3 Bucket in production
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL,
-                          document_root=settings.MEDIA_ROOT)
+# if settings.DEBUG:
+#   urlpatterns += static(settings.MEDIA_URL,
+#                          document_root=settings.MEDIA_ROOT)

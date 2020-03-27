@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block content %}
+<!-- Home -->
+
+<div class="training_home">
+    <div class="background_image" style="background-image:url(/static/images/services.jpg)"></div>
+    <div class="overlay"></div>
+    <div class="training_home_container">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="">
+                        <div class="training_home_title">Training Programs</div>
+                        <div class="training_home_subtitle">Fitness-fight, Butt-blaster, Kick-start 30, Mamma-shape &
+                            many more</div>
+                        <div class="button home_button mt-4">
+                            <a href="#program_section">
+                                Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Services  -->
+
+<div class="about_services" id="program_section">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="section_title_container">
+                    <div class="section_subtitle">welcome to World of Shape</div>
+                    <div class="section_title">our <span>training Programs</span></div>
+                </div>
+                <div class="program_text">
+                    <p>Which program should I chose?<br>What is best for me and my current situation?<br>
+                        <strong></strong>Click on the
+                        button<strong> "Find my program" </strong>
+                        and let our analyzer suggest what program matches you the best.</p>
+                    <div class="button home_button ml-auto mr-auto"><a href="{% url 'weight_loss' %}">Find my
+                            program</a></div>
+                </div>
+            </div>
+        </div>
+        <!-- Programs for loop -->
+        <div class="row services_row">
+            {% for product in products %}
+            <div class="col-xl-4 col-md-6 service_col">
+                <div class="service">
+                    <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
+                        <div>
+                            <div class="service_icon"
+                                style="background-image: url('{{ MEDIA_URL }}{{ product_image }}')"></div>
+                        </div>
+                        <div class="service_title">{{ product.name }}</div>
+                    </div>
+                    <div class="service_text">
+                        <p>{{ product.description }}</p>
+                        <p>{{ product.price }}</p>
+                        <form action="{% url 'add_to_cart' product.id %}" method="post">
+                            {% csrf_token %}
+                            <input type="number" name="quantity" min="1" max="999" class="form_control"
+                                placeholder="Quantity">
+                            <span class="input_group">
+                                <button class="button home_button ml-auto mr-auto mb-4" type="submit">Add to
+                                    Cart</button>
+                            </span>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<!-- Extra -->
+
+<div class="extra d-flex flex-column align-items-center justify-content-center text-center">
+    <div class="background_image" style="background-image:url(/static/images/extra_wide.jpg)"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="extra_content d-flex flex-column align-items-center justify-content-center text-center">
+                    <div class="extra_title">15% Discount</div>
+                    <div class="extra_text">
+                        <p>Morbi sed varius risus, vitae molestie lectus. Donec id hendrerit velit, eu fringilla
+                            neque. Etiam id finibus sapien. Donec sollicitudin luctus ex non pharetra.llus.</p>
+                    </div>
+                    <div class="button extra_button"><a href="#">Join Now</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
