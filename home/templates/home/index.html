@@ -70,8 +70,8 @@
 
                     <!-- Box 3 -->
                     <div class="box">
-                        <div class="box_icon d-flex flex-column align-items-center justify-content-center"><img
-                                src="/static/img/check-list-icon.png" alt=""></div>
+                        <div class="box_icon d-flex flex-column align-items-center justify-content-center"><img button
+                                home_button src="/static/img/check-list-icon.png" alt=""></div>
                         <div class="box_title">Healthy diet plan</div>
                         <div class="box_text">
                             <p>Diet and healthy eating is as important as exercise and training! Check out our nutrtion
@@ -80,7 +80,19 @@
                         </div>
                     </div>
                 </div>
-
+                <div class="container">
+                    <div class="row">
+                        <div class="col ">
+                            <div class="d-flex flex-column align-items-center justify-content-center">
+                                <form class="form_group cart_qtyss" action="{% url 'search' %}" method="GET">
+                                    <input name="q" type="text" placeholder="Type to search..."
+                                        class="form_group_search cart_qtys">
+                                    <button class="button home_button" type="submit">Search</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

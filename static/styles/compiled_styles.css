@@ -891,6 +891,7 @@ p:last-of-type {
 	z-index: 1;
 	margin-top: -270px;
 }
+
 .box
 {
 	width: calc(100% / 3);
@@ -898,7 +899,6 @@ p:last-of-type {
 	padding-top: 20px;
 	padding-right: 37px;
 	padding-bottom: 20px;
-	margin-left: 10px;
 	height: 430px;
 }
 .box:first-child
@@ -909,6 +909,8 @@ p:last-of-type {
 .box:nth-child(2)
 {
 	background: rgb(239, 136, 1, 0.9);
+	border-left: solid 3px #ffffff69;
+	border-right: solid 3px #ffffff69;
 }
 .box:nth-child(3)
 {
@@ -976,6 +978,19 @@ p:last-of-type {
 	line-height: 39px;
 	text-align: center;
 }
+
+.form_group_search {
+	color: black !important;
+	width: 70%;
+	height: 41px;
+	font-weight: 700;
+}
+.form_group_search:hover {
+	background-color: rgba(249,140,0,0.75)!important;
+    color: black !important;
+    border: solid 1px #FFFFFF !important;
+}
+
 /*********************************
 7. About
 *********************************/

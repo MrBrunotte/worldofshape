@@ -60,6 +60,12 @@
 									<li class="nav_list"><a href="{% url 'login' %}">Login</a></li>
 									<li class="nav_list"><a href="{% url 'register' %}">Register</a></li>
 									{% endif %}
+									<li class="nav_list"><a href="{% url 'view_cart' %}"><i
+												class="fa fa-shipping-cart"></i>Cart {% if product_count > 0 %} <label
+												class="badge badge-warining">{{ product_count }}</label>
+											{% endif %}
+										</a>
+									</li>
 								</ul>
 							</nav>
 						</div>
@@ -113,6 +119,7 @@
 		</div>
 		{% endfor %}
 		{% endif %}
+
 		<!-- Block content -->
 		{% block content %}
 		{% endblock %}
