@@ -12,20 +12,26 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 # imports the env.py file and keys
-# import env
+import environ
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
+env = environ.Env(DEBUG=(bool, False))
+env_file = os.path.join(BASE_DIR, ".env")
+environ.Env.read_env(env_file)
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEBUG'
+# DEBUG = 'DEBUG' original setting
+DEBUG = env("DEBUG")
 
 ALLOWED_HOSTS = ['127.0.0.1']
 
@@ -135,8 +141,8 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Stripe payment keys
-STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE')
-STRIPE_SECRET = os.getenv('STRIPE_SECRET')
+STRIPE_PUBLISHABLE = env('STRIPE_PUBLISHABLE')
+STRIPE_SECRET = env('STRIPE_SECRET')
 
 
 # MEDIA_ROOT is the full path to a directory where we want Django to store our uploaded files, they are not stored in the Database
@@ -156,8 +162,8 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 # TODO this is only working when i display email and app password here! Figure this out!!
 # TODO do I need to import env at the top??
-EMAIL_HOST_USER = os.getenv('EMAIL_USER')
-EMAIL_HOST_PASSWORD = os.getenv('EMAIL_PASS')
+EMAIL_HOST_USER = env('EMAIL_USER')
+EMAIL_HOST_PASSWORD = env('EMAIL_PASS')
 
 #EMAIL_HOST_USER = os.environ.get('EMAIL_USER')
 #EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
