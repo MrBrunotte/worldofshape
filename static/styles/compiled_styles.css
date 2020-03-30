@@ -1366,6 +1366,10 @@ form {
 	font-weight: 700;
 	text-align: center;
 }
+.cart_amount:hover {
+	color: #f98c00;
+	font-size: 16px;
+}
 .cart_total {
 	color: black;
 }

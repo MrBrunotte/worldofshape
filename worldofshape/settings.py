@@ -11,7 +11,8 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-#import env
+# imports the env.py file and keys
+import env
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -44,6 +45,7 @@ INSTALLED_APPS = [
     'products.apps.ProductsConfig',
     'cart.apps.CartConfig',
     'crispy_forms',
+    'checkout.apps.CheckoutConfig',
 ]
 
 MIDDLEWARE = [
@@ -131,6 +133,11 @@ STATICFILES_LOCATION = 'static'
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Stripe payment keys
+STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE')
+STRIPE_SECRET = os.getenv('STRIPE_SECRET')
+
 
 # MEDIA_ROOT is the full path to a directory where we want Django to store our uploaded files, they are not stored in the Database
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
