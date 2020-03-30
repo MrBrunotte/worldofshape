@@ -24,6 +24,7 @@ from home import views as home_views
 from products import views as products_views
 from products import urls as urls_products
 from products.views import all_products
+from checkout import urls as urls_checkout
 from cart import urls as urls_cart
 from search import urls as urls_search
 from django.views import static
@@ -74,6 +75,8 @@ urlpatterns = [
     url(r'^cart/', include(urls_cart)),
     # search
     url(r'^search/', include(urls_search)),
+    # checkout
+    url(r'^checkout/', include(urls_checkout)),
     # media path
     url(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT}),
     # blog app

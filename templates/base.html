@@ -20,7 +20,8 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap-4.1.2/bootstrap.min.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'styles/compiled_styles.css' %}">
 	<!--<link rel="stylesheet" type="text/css" href="{% static 'styles/elements.css' %}">-->
-
+	{% block head_js %}
+	{% endblock head_js %}
 
 	{% if title %}
 	<title>World of Shape - {{ title }}</title>

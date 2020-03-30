@@ -434,6 +434,7 @@ section
 .badge {
 	text-align: center;
 	margin: 0;
+	width: 100% !important;
 }
 .badge:hover {
 	color: black !important;
@@ -644,6 +645,9 @@ section
 .testimonials_home {
     height: 100vh;
 }
+.cart_home {
+	height: 500px;
+}
 .testimonials_home {
     border-bottom: solid 3px #ff9711;
 }
@@ -789,11 +793,15 @@ section
 .add_to_cart_button {
 	border: solid 1px #FFFFFF;
 }
-.home_button
-{
+.home_button, 
+.submit_button {
 	border: solid 1px #FFFFFF;
+	
+}
+.home_button {
 	margin-top: 44px;
 }
+
 .home_button:hover,
 .add_to_cart_button:hover {
 	color:white;
@@ -1132,7 +1140,7 @@ p:last-of-type {
 	color: #fff;
 }
 .testimonials_section {
-	padding-top: 69px;
+	padding-top: 165px;
 }
 .testimonials_section_title{
 	padding: 0 0 20px;
@@ -1296,25 +1304,28 @@ p:last-of-type {
 label {
 	margin-bottom: 0;
 	color: white !important;
-	display: inline-block !important;
-	width: 80% !important;
+	display: inline-block;
+	width: 25% !important;
 	text-transform: capitalize !important;
-	margin: 5px 25px 0;
+	margin: 10px 10px 0;
 }
 input {
 	width: 50%;
-	border-radius: 25px !important;
+	border-radius: 5px;
 	border: solid 1px #f98c00 !important;
-	padding:0 15px !important;
+	padding:0 15px;
 	background-color: transparent !important;
-	color:#FFFFFF !important;
-	text-align: center !important;
+	color:#FFFFFF;
+	text-align: left;
 	margin-bottom: 0;
 }
 input:hover {
-	background-color: black !important;
-	color:#FFFFFF !important;
+	background-color: #f98c00 !important;
+	color: black !important;
 	border: solid 1px #FFFFFF !important;
+}
+legend {
+	padding: 5px 20px;
 }
 form {
 	margin: 0 auto;
@@ -1337,21 +1348,36 @@ form {
     color: black !important;
     border: solid 1px #FFFFFF !important;
 }
-.cart_section {
-	padding-bottom: 50px;
+.update_cart_btn_section {
+	width: 80%;
 }
-.cart_title {
+.cart_title,
+.cart_title_checkout {
 	font-size: 24px;
 	font-weight: 400;
-	color: #262626;
+	
 	text-transform: uppercase;
 }
+.cart_title {
+	color: #262626;
+}
+.cart_title_checkout,
+.cart_text_checkout {
+	color: white;
+}
 .cart_text{
-	margin-top: 20px;;
+	margin-top: 20px;
+}
+.center_text {
+	text-align: center;
 }
 .cart_qty {
 	color: black !important;
 	font-weight: 700;
+	text-align: center;
+}
+.cart_qty_checkout {
+	color:white !important;
 }
 
 .cart_qty:hover {
@@ -1362,6 +1388,7 @@ form {
 	margin-bottom: 10px;;
 }
 .cart_total,
+.cart_total_checkout,
 .cart_amount {
 	font-weight: 700;
 	text-align: center;
@@ -1372,6 +1399,10 @@ form {
 }
 .cart_total {
 	color: black;
+}
+.cart_total_checkout {
+	color: white;
+	font-size: 2rem;
 }
 .cart_total_pb {
 	padding-bottom: 25px;
@@ -1454,11 +1485,18 @@ a:hover {
 	text-align: right;
 	text-transform: capitalize;
 }
+
+#id_expiry_month,
+#id_expiry_year {
+	width: 60px;
+}
+
+
 .text_left label {
 	width: 50% !important;
 }
 option {
-	background: black !important;
+	background: transparent !important;
 }
 
 
@@ -1822,11 +1860,16 @@ p:last-of-type {
 	background-position: center; /* Center the image */
   	background-repeat: no-repeat; /* Do not repeat the image */
 }
-.price {
+.price,
+.price_checkout {
 	text-align: right;
 	font-weight: 700;
 }
-.price::after{
+.price_checkout {
+	color: #f98c00;
+}
+.price::after,
+.price_checkout::after {
 	content: ' SEK'
 }
 

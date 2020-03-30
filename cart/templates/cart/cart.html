@@ -3,83 +3,68 @@
 {% load static %}
 {% block content %}
 <!-- Home -->
-
-<div class="training_home">
-    <div class="background_image" style="background-image:url(/static/images/services.jpg)"></div>
-    <div class="training_home_container">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div class="">
-                        <div class="training_home_title">Your shopping cart</div>
-                        <div class="training_home_subtitle">See the programs in your shopping cart below. Scroll down to
-                            the bottom to checkout</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<!-- Programs for loop -->
-<div class="cart_section" id="program_section">
+<div class="testimonials testimonials_section" id="testimonials">
+    <div class="parallax_background parallax-window" data-parallax="scroll"
+        data-image-src="/static/images/testimonials.jpg" data-speed="0.8"></div>
     <div class="container">
-        <div class="button home_button ml-auto mr-auto"><a href="#">Checkout</a></div>
-        <div class="cart_total">Cart Total:</div>
-        <div class="cart_total cart_total_pb top_separator">{{ total }}</div>
-        <div class="row services_row">
-            {% for item in cart_items %}
-            <div class="col-12 bottom_separator">
-                <div class="service">
-                    <div class="product_image" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')">
-                    </div>
-                    <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
-                        <div class="cart_title">{{ item.product.name }}</div>
-                    </div>
 
-                    <p class="cart_text">{{ item.product.description }}</p>
-                    <p class="price">Price: {{ item.product.price }}</p>
-                    <div class="d-flex flex-column align-items-center justify-content-center">
-                        <form class="form_group" action="{% url 'adjust_cart' item.id %}" method="post">
-                            {% csrf_token %}
-                            <div class="form_group">
-                                <div class="input_group">
-                                    <div class="cart_amount">Current Cart Qty:</div>
-                                    <div class="cart_amount cart_amount_mb">{{ item.quantity }}</div>
-                                    <input type="number" name="quantity" min="0" max="999"
-                                        class="form_group_search cart_qty" placeholder="0 to Delete or Add New Qty...">
-                                </div>
+        <div class="section_title_container">
+            <div class="section_title testimonials_section_title">Your shopping cart</div>
+            <div class="testimonials_home_subtitle">See the program(s) in your shopping cart below.
+            </div>
+
+        </div>
+
+
+        <!-- Programs for loop -->
+        <div class="cart_section" id="program_section">
+            <div class="container">
+                <div class="button home_button ml-auto mr-auto"><a href="{% url 'checkout' %}">Checkout</a>
+                </div>
+                <div class="cart_text center_text">Check your order below, if it is correct proceed to Checkout.
+                </div>
+                <br>
+                <div class="cart_total">Cart Total:</div>
+                <div class="cart_total cart_total_pb top_separator">{{ total }}</div>
+                <div class="row services_row">
+                    {% for item in cart_items %}
+                    <div class="col-12 bottom_separator">
+                        <div class="service">
+                            <div class="product_image"
+                                style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')">
+                            </div>
+                            <div
+                                class="service_title_container d-flex flex-row align-items-center justify-content-start">
+                                <div class="cart_title_checkout">{{ item.product.name }}</div>
                             </div>
 
-                            <button class="button home_button ml-auto mr-auto mb-4" type="submit">Update
-                                Cart</button>
-                        </form>
+                            <p class="cart_text_checkout">{{ item.product.description }}</p>
+                            <p class="price_checkout">Price: {{ item.product.price }}</p>
+                            <div class="d-flex flex-column align-items-center justify-content-center">
+                                <form class="form_group" action="{% url 'adjust_cart' item.id %}" method="post">
+                                    {% csrf_token %}
+                                    <div class="form_group">
+                                        <div class="input_group">
+                                            <div class="cart_amount">Current Cart Qty:</div>
+                                            <div class="cart_amount cart_amount_mb">{{ item.quantity }}</div>
+                                            <input type="number" name="quantity" min="0" max="999"
+                                                class="form_group_search cart_qty_checkout"
+                                                placeholder="Add 'New Qty' or set to '0' to delete...">
+                                        </div>
+                                    </div>
+
+
+                                    <button class="button home_button ml-auto mr-auto mb-4" type="submit">Update
+                                        Cart</button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
+                    {% endfor %}
                 </div>
             </div>
-            {% endfor %}
         </div>
     </div>
-</div>
-<!-- Extra -->
 
-<div class="extra d-flex flex-column align-items-center justify-content-center text-center">
-    <div class="background_image" style="background-image:url(/static/images/extra_wide.jpg)"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <div class="extra_content d-flex flex-column align-items-center justify-content-center text-center">
-                    <div class="extra_title">15% Discount</div>
-                    <div class="extra_text">
-                        <p>Morbi sed varius risus, vitae molestie lectus. Donec id hendrerit velit, eu fringilla
-                            neque. Etiam id finibus sapien. Donec sollicitudin luctus ex non pharetra.llus.</p>
-                    </div>
-                    <div class="button extra_button"><a href="#">Join Now</a></div>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
-
 {% endblock content %}
