@@ -27,7 +27,7 @@ class OrderForm(forms.ModelForm):
             'country',
             'postcode',
             'town_or_city',
-            'street_address_1',
-            'street_address_2',
+            'street_address1',
+            'street_address2',
             'county'
         )
