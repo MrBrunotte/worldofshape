@@ -11,13 +11,9 @@
             <div class="row">
                 <div class="col">
                     <div class="">
-                        <div class="training_home_title">Training Programs</div>
-                        <div class="training_home_subtitle">Fitness-fight, Butt-blaster, Kick-start 30, Mamma-shape &
-                            many more</div>
-                        <div class="button home_button mt-4">
-                            <a href="#program_section">
-                                Read more</a>
-                        </div>
+                        {% for product in products %}
+                        <div class="training_home_title">{{ product.name }}</div>
+                        <div class="training_home_subtitle">Need to put some other text here...</div>
                     </div>
                 </div>
             </div>
@@ -29,25 +25,9 @@
 
 <div class="about_services" id="program_section">
     <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="section_title_container">
-                    <div class="section_subtitle">welcome to World of Shape</div>
-                    <div class="section_title">our <span>training Programs</span></div>
-                </div>
-                <div class="program_text">
-                    <p>Which program should I chose?<br>What is best for me and my current situation?<br>
-                        <strong></strong>Click on the
-                        button<strong> "Find my program" </strong>
-                        and let our analyzer suggest what program matches you the best.</p>
-                    <div class="button home_button ml-auto mr-auto"><a href="{% url 'weight_loss' %}">Find my
-                            program</a></div>
-                </div>
-            </div>
-        </div>
+
         <!-- Programs for loop -->
         <div class="row services_row">
-            {% for product in products %}
             <div class="col-xl-4 col-md-6 service_col program_separator">
                 <div class="service">
                     <div class="product_image" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')">
@@ -55,8 +35,6 @@
                     <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
                         <div class="service_title">{{ product.name }}</div>
                     </div>
-                    <a class="read_more" href="{% url 'program' %}">read
-                        more...</a>
                     <p class="service_text">{{ product.description }}</p>
                     <p class="price">{{ product.price }}</p>
                     <span class="input_group">

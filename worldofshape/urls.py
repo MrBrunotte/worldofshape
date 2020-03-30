@@ -43,11 +43,9 @@ urlpatterns = [
     # home app view
     path('testimonials/', home_views.contact, name='testimonials'),
     # users app login view
-    path('login/', auth_views.LoginView.as_view(template_name='users/login.html'),
-         name='login'),
+    path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
     # users app logout view
-    path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'),
-         name='logout'),
+    path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
     # users app PasswordResetView to reset the password
     path('password-reset/', auth_views.PasswordResetView.as_view(
         template_name='users/password_reset.html'), name='password_reset'),
@@ -62,11 +60,14 @@ urlpatterns = [
         template_name='users/password_reset_complete.html'), name='password_reset_complete'),
     # products app
     path('programs/', include('products.urls')),
+    # products app Individual program
+    path('program/', include('products.urls')),
     # products app
     path('weight_loss/', products_views.WeightLossAnalysis,
          name='weight_loss_analysis'),
     # Might have to fix this! to products/
-    url('r^$', all_products, name='index'),
+    #url('r^$', all_products, name='index'),
+    url(r'^$', all_products, name='index'),
     # products/
     path('products/', products_views.all_products, name='products'),
     # cart

@@ -6,11 +6,25 @@ from .forms import WeightLossAnalysisForm
 
 
 def all_products(request):
-    """
-    returns a list of all products/programs that are for sale
-    """
     products = Product.objects.all()
     return render(request, 'products/programs.html', {'products': products})
+
+
+""" the one_program view should return an individual program when user clicks on 'read more' on the 'Our Training' 
+
+program = request.session.get('program', {})
+    program[id] = cart.get(id)
+
+    request.session['cart'] = cart
+    return redirect(reverse('program'))
+
+"""
+
+
+def one_program(request):
+    program = Program.objects.find_one()
+    """A View that renders an indiviual program"""
+    return render(request, "products/programs.html", {'program': program})
 
 
 def all_programs(request):

@@ -1,24 +1,19 @@
 <!DOCTYPE html>
 {% extends "base.html" %}
-{% load static from staticfiles %}
+{% load static %}
 {% block content %}
 <!-- Home -->
 
 <div class="training_home">
     <div class="background_image" style="background-image:url(/static/images/services.jpg)"></div>
-    <div class="overlay"></div>
     <div class="training_home_container">
         <div class="container">
             <div class="row">
                 <div class="col">
                     <div class="">
                         <div class="training_home_title">Your shopping cart</div>
-                        <div class="training_home_subtitle">Fitness-fight, Butt-blaster, Kick-start 30, Mamma-shape &
-                            many more</div>
-                        <div class="button home_button mt-4">
-                            <a href="#program_section">
-                                Read more</a>
-                        </div>
+                        <div class="training_home_subtitle">See the programs in your shopping cart below. Scroll down to
+                            the bottom to checkout</div>
                     </div>
                 </div>
             </div>
@@ -28,45 +23,45 @@
 
 
 <!-- Programs for loop -->
-<div class="row services_row">
-    {% for item in cart_items %}
-    <div class="col-xl-4 col-md-6 service_col">
-        <div class="service">
-            <div class="product_image" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')">
-            </div>
-            <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
-                <div class="service_title">{{ item.product.name }}</div>
-            </div>
+<div class="cart_section" id="program_section">
+    <div class="container">
+        <div class="button home_button ml-auto mr-auto"><a href="#">Checkout</a></div>
+        <div class="cart_total">Cart Total:</div>
+        <div class="cart_total cart_total_pb top_separator">{{ total }}</div>
+        <div class="row services_row">
+            {% for item in cart_items %}
+            <div class="col-12 bottom_separator">
+                <div class="service">
+                    <div class="product_image" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')">
+                    </div>
+                    <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
+                        <div class="cart_title">{{ item.product.name }}</div>
+                    </div>
 
-            <p class="service_text">{{ item.product.description }}</p>
-            <p class="price">{{ item.product.price }}</p>
-            <form action="{% url 'adjust_cart' item.id %}" method="post">
-                {% csrf_token %}
-                <div class="form_group cart_qty">
-                    <label for="ExampleInputAmount" class="sr_only">New Qty</label>
-                    <div class="input_group">
-                        <div class="input_group_addon">Qty</div>
-                        <input type="number" name="quantity" min="0" max="999" class="form_control">
-                        <div class="input_group_addon">{{ item.quantity }}</div>
+                    <p class="cart_text">{{ item.product.description }}</p>
+                    <p class="price">Price: {{ item.product.price }}</p>
+                    <div class="d-flex flex-column align-items-center justify-content-center">
+                        <form class="form_group" action="{% url 'adjust_cart' item.id %}" method="post">
+                            {% csrf_token %}
+                            <div class="form_group">
+                                <div class="input_group">
+                                    <div class="cart_amount">Current Cart Qty:</div>
+                                    <div class="cart_amount cart_amount_mb">{{ item.quantity }}</div>
+                                    <input type="number" name="quantity" min="0" max="999"
+                                        class="form_group_search cart_qty" placeholder="New Qty...">
+                                </div>
+                            </div>
+
+                            <button class="button home_button ml-auto mr-auto mb-4" type="submit">Update
+                                Cart</button>
+                        </form>
                     </div>
                 </div>
-                <span class="input_group">
-                    <button class="button home_button ml-auto mr-auto mb-4" type="submit">Wat shall it say here?</button>
-                </span>
-            </form>
+            </div>
+            {% endfor %}
         </div>
     </div>
-    {% endfor %}
 </div>
-<div class="row">
-    <p>Total
-        <p><span>{{ total }}</span></p>
-        <div class="button home_button ml-auto mr-auto"><a href="#">Checkout</a>
-    </div>
-    </p>
-</div>
-
-
 <!-- Extra -->
 
 <div class="extra d-flex flex-column align-items-center justify-content-center text-center">
