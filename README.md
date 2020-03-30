@@ -6,6 +6,8 @@
 
 [![Build Status](https://travis-ci.org/MrBrunotte/worldofshape.svg?branch=master)](https://travis-ci.org/MrBrunotte/worldofshape)
 
+When I import env in my settingsfile Travis fails..
+
 ### What is CI - Continuous Integration?
 
 I have used the practice of CI (Continuous Integration), which is the the practice of merging in small code changes frequently - rather than merging in a large change at the end of a development cycle. The goal is to build healthier software by developing and testing in smaller increments. 
