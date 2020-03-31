@@ -37,7 +37,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', "env value not loadeds")
 # DEBUG = 'DEBUG' original setting
 DEBUG = 'DEBUG'
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1', 'worldofshape.herokuapp.com']
 
 
 # Application definition
