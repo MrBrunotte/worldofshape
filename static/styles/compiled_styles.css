@@ -1330,6 +1330,9 @@ legend {
 form {
 	margin: 0 auto;
 }
+.form-group {
+	margin-bottom: 0;
+}
 .form_group {
 	width: 100%;
 	text-align: center;
