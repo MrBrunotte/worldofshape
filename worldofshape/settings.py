@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import django_heroku
 # imports the env.py file and keys
 from os import path
 
@@ -141,6 +142,7 @@ STATICFILES_LOCATION = 'static'
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Stripe payment keys
@@ -167,3 +169,5 @@ EMAIL_USE_TLS = True
 # TODO do I need to import env at the top??
 EMAIL_HOST_USER = os.getenv('EMAIL_USER', "env value not loaded")
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_PASS', "env value not loaded")
+
+django_heroku.settings(locals())

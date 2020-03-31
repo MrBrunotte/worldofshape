@@ -1,1 +1,1 @@
-web:python run.py 
+'web: gunicorn worldofshape.wsgi --log-file -' 

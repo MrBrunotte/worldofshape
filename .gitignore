@@ -1,6 +1,11 @@
 .vscode
 venv
-*.sqlite3
+
+### Django ###
+*.log
+*.pot
 *.pyc
+local_settings.py
+*.sqlite3
 __pycache__
 env.py 
