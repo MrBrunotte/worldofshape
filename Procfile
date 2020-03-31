@@ -1,1 +1,1 @@
-'web: gunicorn worldofshape.wsgi --log-file -' 
+web: python app.py runserver 0.0.0.0:8000
