@@ -14,8 +14,8 @@ import os
 # imports the env.py file and keys
 from os import path
 
-#if path.exists('env.py'):
-import env
+if path.exists('env.py'):
+    import env
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
