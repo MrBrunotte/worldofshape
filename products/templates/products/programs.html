@@ -55,7 +55,7 @@
                     <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
                         <div class="service_title">{{ product.name }}</div>
                     </div>
-                    <a class="read_more" href="{% url 'program' %}">read
+                    <a class="read_more" href="{% url 'product-detail' product.id %}">read
                         more...</a>
                     <p class="service_text">{{ product.description }}</p>
                     <p class="price">{{ product.price }}</p>

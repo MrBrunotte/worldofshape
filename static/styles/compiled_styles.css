@@ -271,6 +271,9 @@ section
 	background-size: cover;
 	background-position: center center;
 }
+.program_section_height {
+	height: 400px;
+}
 .nopadding
 {
 	padding: 0px !important;
@@ -657,18 +660,27 @@ section
 .training_home {
     height: 667px;
 }
-.overlay
-{
+.training_home_single {
+	height: 500px;
+}
+.overlay,
+.overlay_program {
 	position: absolute;
 	left: 0;
-	bottom: -270px;
 	width: 120%;
-	height: 270px;
 	background: #FFFFFF;
 	transform-origin: top left;
 	transform: rotate(-8deg);
 	z-index: 1;
 	box-shadow: 0 0 1px 0 #FFFFFF inset, 0 0 1px 0 #FFFFFF;
+}
+.overlay {
+	bottom: -270px;
+	height: 270px;
+}
+.overlay_program {
+	bottom: -170px;
+	height: 170px;
 }
 .home_container,
 .about_home_container,
@@ -792,6 +804,9 @@ section
 }
 .add_to_cart_button {
 	border: solid 1px #FFFFFF;
+}
+.extra_padding {
+	margin: 15px 0 30px 0;
 }
 .home_button, 
 .submit_button {
@@ -1829,6 +1844,9 @@ p:last-of-type {
 {
 	max-width: 100%;
 }
+.single_program_section {
+	margin-bottom: 55px;
+}
 .service_title
 {
 	font-size: 24px;
@@ -1837,6 +1855,14 @@ p:last-of-type {
 	text-transform: uppercase;
 	margin-bottom: 17px;
 }
+.service_title_program {
+	font-size: 24px;
+	font-weight: 400;
+	color: #262626;
+	text-transform: uppercase;
+	margin: 0 auto;
+	padding: 15px 0;
+}
 .service_text
 {
 	margin-top: 17px;
@@ -1844,6 +1870,12 @@ p:last-of-type {
 }
 .service_text p{
 	min-height: 340px;
+}
+.service_text_single_top {
+	font-weight: 700;
+}
+.service_text_single {
+	min-height: 0;
 }
 .read_more
 {
@@ -1871,10 +1903,18 @@ p:last-of-type {
 .price_checkout {
 	color: #f98c00;
 }
+.price_program {
+	text-align: center;
+	font-weight: 900;
+	font-size: 1.5rem;
+	padding: 2px 0 25px 0;
+}
 .price::after,
-.price_checkout::after {
+.price_checkout::after,
+.price_program::after {
 	content: ' SEK'
 }
+
 
 /*********************************
 12. Footer
@@ -1885,7 +1925,7 @@ p:last-of-type {
 	display: block;
 	width: 100%;
 	background: #262626;
-	padding-top: 96px;
+	padding-top: 55px;
 	border-top: solid 1px #88591d;
 	padding-bottom: 105px;
 }

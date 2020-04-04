@@ -1,8 +1,14 @@
 from django.shortcuts import render
 from .models import Program, Product
 from .forms import WeightLossAnalysisForm
+from django.views.generic import DetailView
 
 # Create your views here.
+
+
+class ProductDetailView(DetailView):
+    model = Product
+    template_name = 'products/program.html'  # <app>/<model>_<view>.html
 
 
 def all_products(request):
