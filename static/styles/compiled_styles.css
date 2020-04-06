@@ -1850,7 +1850,7 @@ p:last-of-type {
 .product_row {
 	margin-top: 90px;
 }
-.service_col:nth-last-child(n+4)
+.service_col
 {
 	/* margin-bottom: 79px;*/
 	margin-bottom: 30px;
@@ -1881,7 +1881,7 @@ p:last-of-type {
 	margin-bottom: 17px;
 }
 .service_title_meal {
-	font-size: 16px;
+	font-size: 14px;
 	margin: 17px 0;
 	font-weight: 600;
 }
@@ -1903,7 +1903,7 @@ p:last-of-type {
 }
 .service_text_meal {
 	margin-top: 17px;
-	min-height: 130px;
+	min-height: 252px;
 }
 .service_text_single_top {
 	font-weight: 700;
