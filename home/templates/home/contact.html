@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% extends "base.html" %}
+{% load static %}
 {% block content %}
 <!-- Home -->
 
@@ -67,25 +68,34 @@
 
             <!-- Contact Form -->
             <div class="col-lg-8 contact_col">
+                {% if message_name %}
+                <center>
+                    <div class="email_message_title">Thanks {{ message_name }}</div>
+                    <p class="email_message_subtitle">We received your email and will respond shortly...</p>
+                </center>
+                {% else %}
                 <div class="contact_title">Get in touch</div>
                 <div class="contact_form_container">
-                    <form action="#" id="contact_form" class="contact_form">
+                    <form action="{% url 'contact' %}" method="POST" id="contact_form" class="contact_form">
+                        {% csrf_token %}
                         <div class="row">
                             <div class="col-lg-6">
-                                <div class="input_item"><input type="text" class="my_contact_input trans_200"
-                                        placeholder="Name" required="required"></div>
+                                <div class="input_item"><input type="text" name="message-name"
+                                        class="my_contact_input trans_200" placeholder="Name" required="required"></div>
                             </div>
                             <div class="col-lg-6">
-                                <div class="input_item"><input type="email" class="my_contact_input trans_200"
-                                        placeholder="E-mail" required="required">
+                                <div class="input_item"><input type="email" name="message-email"
+                                        class="my_contact_input trans_200" placeholder="E-mail" required="required">
                                 </div>
                             </div>
                         </div>
-                        <div class="input_item"><textarea class="my_contact_input contact_textarea trans_200"
-                                placeholder="Message" required="required"></textarea></div>
+                        <div class="input_item"><textarea name="message"
+                                class="my_contact_input contact_textarea trans_200" placeholder="Message"
+                                required="required"></textarea></div>
                         <button class="contact_button button">Send<span></span></button>
                     </form>
                 </div>
+                {% endif %}
             </div>
         </div>
     </div>

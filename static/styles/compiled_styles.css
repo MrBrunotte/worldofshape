@@ -744,6 +744,17 @@ section
 {
 	color: #ff9711;
 }
+.email_message_title,
+.email_message_subtitle {
+	color: #ff9711;
+}
+.email_message_title {
+	font-size: 72px;
+}
+.email_message_subtitle {
+	font-size: 16px;
+	font-weight: 500;
+}
 .home_title,
 .about_home_title,
 .training_home_title,
@@ -965,7 +976,7 @@ p:last-of-type {
 }
 .box_title
 {
-	font-size: 24px;
+	font-size: 20px;
 	font-weight: 400;
 	color: #fff;
 	line-height: 1.2;
@@ -1611,6 +1622,8 @@ p:last-of-type {
     padding-left: 25px !important;
 	border-left: solid 2px transparent !important;
 	text-align: left !important;
+	color: black;
+	font-weight: 500;
 }
 .my_contact_input:focus, 
 .my_contact_input:hover {

@@ -13,11 +13,18 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import os
 import django_heroku
 # imports the env.py file and keys
-from os import path
+# from os import path
 
-if path.exists('env.py'):
-    import env
+# if path.exists('env.py'):
+#    import env
+import environ
 
+env = environ.Env(
+    # set casting, default value
+    DEBUG=(bool, False)
+)
+# reading.env file
+environ.Env.read_env()
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -31,11 +38,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET_KEY', "env value not loadeds")
+SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = 'DEBUG' original setting
-DEBUG = 'DEBUG'
+DEBUG = env('DEBUG')
 
 ALLOWED_HOSTS = ['127.0.0.1', 'worldofshape.herokuapp.com']
 
@@ -146,9 +153,8 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Stripe payment keys
-STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE', "env value not loaded")
-STRIPE_SECRET = os.getenv('STRIPE_SECRET', "env value not loaded")
-
+STRIPE_PUBLISHABLE = env('STRIPE_PUBLISHABLE')
+STRIPE_SECRET = env('STRIPE_SECRET')
 
 # MEDIA_ROOT is the full path to a directory where we want Django to store our uploaded files, they are not stored in the Database
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -160,14 +166,16 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 LOGIN_REDIRECT_URL = '/'
 LOGIN_URL = 'login'
 
+# myaccount.google.com/lesssecureapps
+# myaccount.google.com/apppasswords
+# accounts.google.com/DisplayUnlockCaptcha
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-# TODO this is only working when i display email and app password here! Figure this out!!
-# TODO do I need to import env at the top??
-EMAIL_HOST_USER = os.getenv('EMAIL_USER', "env value not loaded")
-EMAIL_HOST_PASSWORD = os.getenv('EMAIL_PASS', "env value not loaded")
+EMAIL_HOST_USER = env('EMAIL_USER')
+EMAIL_HOST_PASSWORD = env('EMAIL_PASS')
+
 
 django_heroku.settings(locals())
