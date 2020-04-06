@@ -765,6 +765,7 @@ section
     color: #fff;
     line-height: 1.2;
 	margin-top: -9px;
+	text-transform: capitalize;
 }
 .username_title {
 	padding: 30px 0;
@@ -977,7 +978,9 @@ p:last-of-type {
 .box_title
 {
 	font-size: 20px;
-	font-weight: 400;
+	font-weight: 600;
+	letter-spacing: 1px;
+	text-transform: uppercase;
 	color: #fff;
 	line-height: 1.2;
 	margin-top: 20px;
@@ -1493,7 +1496,7 @@ li:hover {
 	color: #f98c00;
 }
 a:hover {
-    color: black;
+    color: #f98c00;
 }
 
 .text_left {
@@ -1841,7 +1844,11 @@ p:last-of-type {
 	background: #FFFFFF;
 }
 .services_row {
-	margin-top: 87px;
+	margin-top: 170px;
+}
+.meal_row,
+.product_row {
+	margin-top: 90px;
 }
 .service_col:nth-last-child(n+4)
 {
@@ -1860,19 +1867,29 @@ p:last-of-type {
 .single_program_section {
 	margin-bottom: 55px;
 }
-.service_title
-{
-	font-size: 24px;
+.service_title,
+.service_title_meal,
+.service_title_meal2,
+.service_title_program {
 	font-weight: 400;
 	color: #262626;
 	text-transform: uppercase;
+}
+.service_title
+{
+	font-size: 24px;
+	margin-bottom: 17px;
+}
+.service_title_meal {
+	font-size: 16px;
+	margin: 17px 0;
+	font-weight: 600;
+}
+.service_title_meal2 {
 	margin-bottom: 17px;
 }
 .service_title_program {
 	font-size: 24px;
-	font-weight: 400;
-	color: #262626;
-	text-transform: uppercase;
 	margin: 0 auto;
 	padding: 15px 0;
 }
@@ -1884,29 +1901,41 @@ p:last-of-type {
 .service_text p{
 	min-height: 340px;
 }
+.service_text_meal {
+	margin-top: 17px;
+	min-height: 130px;
+}
 .service_text_single_top {
 	font-weight: 700;
 }
 .service_text_single {
 	min-height: 0;
 }
-.read_more
-{
-	width: 100px;
+.read_more,
+.service_title_meal2 {
 	text-align: center;
 	font-size: 12px;
 	font-weight: 700;
 	text-transform: uppercase;
 	color: #9d9d9d;
 }
+.read_more {
+	width: 100px;
+}
 .read_more:hover {
 	color: #f98c00;
 	font-size: 14px;
+}
+.service_title_meal2 {
+	width: 100%;
 }
 .product_image {
 	height: 110px;
 	background-position: center; /* Center the image */
   	background-repeat: no-repeat; /* Do not repeat the image */
+}
+.meal_image {
+
 }
 .price,
 .price_checkout {

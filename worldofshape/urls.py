@@ -23,7 +23,7 @@ from users import views as user_views
 from home import views as home_views
 from products import views as products_views
 from products import urls as urls_products
-from products.views import all_products
+from products.views import all_products, all_meals
 from checkout import urls as urls_checkout
 from cart import urls as urls_cart
 from search import urls as urls_search
@@ -74,21 +74,25 @@ urlpatterns = [
     # products app
     path('programs/', include('products.urls')),
 
-    # products app productdetail view
+    # products app productdetail view single product
     path('program/', products_views.ProductDetailView, name='product-detail'),
 
-    # products app Individual program
-    # path('program/', include('products.urls')),
+    # products app mealdetail view single meal
+    path('meal/', products_views.MealDetailView, name='meal-detail'),
+
     # products app
     path('weight_loss/', products_views.WeightLossAnalysis,
          name='weight_loss_analysis'),
 
-    # Might have to fix this! to products/
+    # TODO Might have to fix this! to products/
     #url('r^$', all_products, name='index'),
     url(r'^$', all_products, name='index'),
 
     # products/
     path('products/', products_views.all_products, name='products'),
+
+    # meals/
+    path('meals/', products_views.all_meals, name='meals'),
 
     # cart
     url(r'^cart/', include(urls_cart)),

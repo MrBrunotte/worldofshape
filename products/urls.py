@@ -5,8 +5,11 @@ from .views import (
     all_programs,
     program_section,
     WeightLossAnalysisForm,
-    all_products, one_program,
-    ProductDetailView
+    all_products,
+    all_meals,
+    one_program,
+    ProductDetailView,
+    MealDetailView
 )
 
 urlpatterns = [
@@ -17,4 +20,7 @@ urlpatterns = [
     path('products/', views.all_products, name='products'),
     path('product/<int:pk>/',
          ProductDetailView.as_view(), name='product-detail'),
+    path('meal/<int:pk>/',
+         MealDetailView.as_view(), name='meal-detail'),
+    path('meals/', views.all_meals, name='meals'),
 ]

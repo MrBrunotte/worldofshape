@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Program, Product
+from .models import Program, Product, Meal
 from .forms import WeightLossAnalysisForm
 from django.views.generic import DetailView
 
@@ -15,16 +15,13 @@ def all_products(request):
     products = Product.objects.all()
     return render(request, 'products/programs.html', {'products': products})
 
+class MealDetailView(DetailView):
+    model = Meal
+    template_name = 'products/meal.html'  # <app>/<model>_<view>.html
 
-""" the one_program view should return an individual program when user clicks on 'read more' on the 'Our Training' 
-
-program = request.session.get('program', {})
-    program[id] = cart.get(id)
-
-    request.session['cart'] = cart
-    return redirect(reverse('program'))
-
-"""
+def all_meals(request):
+    meals = Meal.objects.all()
+    return render(request, 'products/meals.html', {'meals': meals})
 
 
 def one_program(request):

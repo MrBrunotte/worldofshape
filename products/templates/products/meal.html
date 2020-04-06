@@ -11,10 +11,10 @@
                 <div class="col">
                     <div class="">
 
-                        <div class="training_home_title">{{ product.name }}</div>
+                        <div class="training_home_title">{{ meal.name }}</div>
                         <div class="training_home_subtitle">Read all about this program below...</div>
                         <div class="button add_to_cart_button extra_padding"><a
-                                href="{% url 'add_to_cart' product.id %}">Add
+                                href="{% url 'add_to_cart' meal.id %}">Add
                                 to
                                 Cart</a>
                         </div>
@@ -30,28 +30,24 @@
 <div class="single_program_section" id="program_section">
     <div class="container">
 
-        <!-- Programs for loop -->
-        <div class="row product_row">
-
-            <div class="col-12 service_col">
+        <!-- Meal for loop -->
+        <div class="row meal_row">
+            <div class="col-12">
                 <div class="service">
-                    <div class="product_image" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')">
+                    <div class="product_image" style="background-image: url('{{ MEDIA_URL }}{{ meal.image }}')">
                     </div>
-                    <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
-                        <h2><a class="service_title_program"
-                                href="{% url 'product-detail' product.id %}">{{ product.title }}</a></h2>
-                        <div class="service_title_program">{{ product.name }}</div>
+                    <div class="service_title_container d-flex flex-row align-items-center justify-content-center">
+                        <div class="service_title">{{ meal.name }}</div>
                     </div>
-
-                    <p class="service_text_single_top">{{ product.description }}</p>
-                    <p class="service_text_single">{{ product.full_description }}</p>
-                    <p class="service_text_single">{{ product.full_description_2 }}</p>
-                    <p class="service_text_single">{{ product.full_description_3 }}</p>
-                    <p class="service_text_single">{{ product.full_description_4 }}</p>
-                    <p class="price_program">{{ product.price }}</p>
+                    <div class="service_title_meal2 d-flex flex-row align-items-center justify-content-center">
+                        {{ meal.name2 }}</div>
+                    <p class="service_text_single_top">{{ meal.description }}</p>
+                    <p class="service_text_single">{{ meal.description2 }}</p>
+                    <p class="service_text_single">{{ meal.description3 }}</p>
+                    <p class="price_program">{{ meal.price }}</p>
                     <span class="input_group">
                         <div class="button add_to_cart_button ml-auto mr-auto"><a
-                                href="{% url 'add_to_cart' product.id %}">Add
+                                href="{% url 'add_to_cart' meal.id %}">Add
                                 to
                                 Cart</a>
                         </div>
