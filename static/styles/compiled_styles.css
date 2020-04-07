@@ -1935,7 +1935,9 @@ p:last-of-type {
   	background-repeat: no-repeat; /* Do not repeat the image */
 }
 .meal_image {
-
+	height: 517px;
+	background-position: center; /* Center the image */
+  	background-repeat: no-repeat; /* Do not repeat the image */
 }
 .price,
 .price_checkout {
