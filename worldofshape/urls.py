@@ -37,26 +37,35 @@ urlpatterns = [
     # home app
     path('', include('home.urls')),
 
-    # users app register view
-    path('register/', user_views.register, name='register'),
-
-    # users app profile view
-    path('profile/', user_views.profile, name='profile'),
-
     # home app view
     path('contact/', home_views.contact, name='contact'),
 
     # home app view
     path('testimonials/', home_views.contact, name='testimonials'),
 
+    # home app 404 error
+    # TODO how do i make this page appear when there is a 404 error??
+    path('404/', auth_views.LogoutView.as_view(template_name='home/404.html'), name='404'),
+
+    # home app 405 error
+    # TODO how do i make this page appear when there is a 404 error??
+    path('405/', auth_views.LogoutView.as_view(template_name='home/405.html'), name='405'),
+
+    # home app 500 error
+    # TODO how do i make this page appear when there is a 404 error??
+    path('500/', auth_views.LogoutView.as_view(template_name='home/500.html'), name='500'),
+
+    # users app register view
+    path('register/', user_views.register, name='register'),
+
+    # users app profile view
+    path('profile/', user_views.profile, name='profile'),
+
     # users app login view
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
 
     # users app logout view
     path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
-
-    # users app 404
-    path('logout/', auth_views.LogoutView.as_view(template_name='users/404.html'), name='404'),
 
     # users app PasswordResetView to reset the password
     path('password-reset/', auth_views.PasswordResetView.as_view(
@@ -88,22 +97,22 @@ urlpatterns = [
          name='weight_loss_analysis'),
 
     # TODO Might have to fix this! to products/
-    #url('r^$', all_products, name='index'),
+    # products app
     url(r'^$', all_products, name='index'),
 
-    # products/
+    # products app
     path('products/', products_views.all_products, name='products'),
 
-    # meals/
+    # products app
     path('meals/', products_views.all_meals, name='meals'),
 
-    # cart
+    # cart app
     url(r'^cart/', include(urls_cart)),
 
-    # search
+    # search app
     url(r'^search/', include(urls_search)),
 
-    # checkout
+    # checkout app
     url(r'^checkout/', include(urls_checkout)),
 
     # media path
