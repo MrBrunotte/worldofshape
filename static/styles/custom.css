@@ -1,0 +1,14 @@
+/* compound selectors */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Add custom colors and more under :root
+:root {
+
+}
+*/
+
+/* Navbar style */
