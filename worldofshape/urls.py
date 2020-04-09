@@ -55,6 +55,9 @@ urlpatterns = [
     # users app logout view
     path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
 
+    # users app 404
+    path('logout/', auth_views.LogoutView.as_view(template_name='users/404.html'), name='404'),
+
     # users app PasswordResetView to reset the password
     path('password-reset/', auth_views.PasswordResetView.as_view(
         template_name='users/password_reset.html'), name='password_reset'),
