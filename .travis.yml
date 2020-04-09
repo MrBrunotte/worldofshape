@@ -4,6 +4,5 @@ python:
 install: "pip install -r requirements.txt"
 env:
 - STRIPE_PUBLISHABLE="STRIPE_PUBLISHABLE"
-- SECRET_KEY="SECRET_KEY"
 script:
-python manage.py test
+- SECRET_KEY="SECRET_KEY" python manage.py test
