@@ -418,18 +418,19 @@ section
 }
 .main_nav ul li:not(:last-of-type)
 {
-	margin-right: 65px;
+	margin-right: 40px;
 }
 .main_nav ul li a
 {
-	font-size: 16px;
-	font-weight: 300;
+	font-size: 11px;
+	font-weight: 900;
 	color: #fff;
 }
 .main_nav ul li.active a,
 .main_nav ul li a:hover
 {
 	color: #ff9711;
+	font-size: 12px;
 }
 .nav_list {
 	text-align: center;
@@ -2059,7 +2060,7 @@ p:last-of-type {
 1. Hamburger menu below 1760px widht
 **************************************/
 
-@media only screen and (max-width: 1760px)
+@media only screen and (max-width: 1190px)
 {
 	.hamburger
 	{
