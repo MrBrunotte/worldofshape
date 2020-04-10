@@ -1263,7 +1263,8 @@ p:last-of-type {
 *********************************/
 .logout_home,
 .login_home,
-.register_home {
+.register_home,
+.register_login {
 	height: 100vh;
 }
 
@@ -1279,7 +1280,8 @@ p:last-of-type {
 
 .login_home,
 .register_home,
-.contact_home {
+.contact_home,
+.register_login {
 	width: 100%;
 	overflow: hidden;
 }
@@ -2053,7 +2055,26 @@ p:last-of-type {
 
 ******************************/
 
+/*************************************
+1. Hamburger menu below 1760px widht
+**************************************/
 
+@media only screen and (max-width: 1760px)
+{
+	.hamburger
+	{
+		display: block;
+	}
+	.hamburger_bar
+	{
+		display: block;
+		right: 125px;
+	}
+	.main_nav
+	{
+		display: none;
+	}
+}
 /************
 1. >1200px
 ************/
@@ -2105,18 +2126,6 @@ p:last-of-type {
 
 @media only screen and (max-width: 991px)
 {
-	.hamburger
-	{
-		display: block;
-	}
-	.hamburger_bar
-	{
-		display: block;
-	}
-	.main_nav
-	{
-		display: none;
-	}
 	.box
 	{
 		width: 100%;
@@ -2164,17 +2173,14 @@ p:last-of-type {
 		-o-transform: none;
 		transform: none;
 	}
-	.team_col:not(:last-child)
-	{
-		margin-bottom: 120px;
+	.footer_nav{
+		display: none;
 	}
-	.skills_col
-	{
-		margin-top: 100px;
+	.footer_content {
+		padding-bottom: 440px;
 	}
-	.footer_nav ul li:not(:last-of-type)
-	{
-		margin-right: 40px;
+	.service_text_meal {
+		min-height: 120px;
 	}
 }
 
@@ -2203,6 +2209,31 @@ p:last-of-type {
 	{
 		margin-top: 37px;
 	}
+	.form_group {
+		padding-top: 35px;
+	}
+	.footer_content {
+		padding-bottom: 345px;
+	}
+	.footer_nav {
+		display: none;
+	}
+	.training_home_container {
+		top: 31%;
+	}
+	.service_text {
+		min-height: 235px;
+	}
+	.service_text_meal {
+		min-height: 100px;
+	}
+	.contact_title {
+		padding-top: 25px;
+	}
+	.email_message_title {
+		font-size: 44px;
+		padding: 30px;
+	}
 }
 
 /************
@@ -2213,25 +2244,66 @@ p:last-of-type {
 {
 	p
 	{
-		font-size: 11px;
+		font-size: 10px;
+	}
+	.hamburger {
+		padding: 15px 20px 15px;
+	}
+	.hamburger_bar
+	{
+		right: 0px;
+		height: 65px;
+	}
+	.logo > div {
+		font-size: 16px;
+	}
+	/*Top content */
+	.training_home_container {
+		top: 35%;
+	}
+	.video_text {
+		font-size: 12px;
 	}
 	.home
 	{
 		height: 70vh;
 	}
-	.home_title{
-		font-size: 50px;
+	.home_title,
+	.training_home_title {
+		font-size: 26px;
+		padding: 20px 0;
+		font-weight: 600;
+	}
+	.home_subtitle,
+	.training_home_subtitle {
+		font-size: 12px;
+	}
+	.training_home {
+		height: 360px;
+	}
+	.about_services {
+		padding-top: 5px;
+		padding-bottom: 0;
+	}
+	
+	.home_button
+	{
+		margin-top: 33px;
+	}
+	.home_button a
+	{
+		font-size: 14px;
 	}
 	.button {
-		width: 132px;
+		width: 133px;
 	}
 	.boxes {
-		margin-top: -100px;
+		margin-top: 5px;
 	}
 	.box {
-		width: 70%;
+		width: 90%;
 		margin: 0 auto;
-		height: 330px;
+		height: 355px;
 	}
 	.box_text p {
 		height: 80px;
@@ -2239,8 +2311,35 @@ p:last-of-type {
 	.box:not(:last-child) {
 		margin-bottom: 5px;
 	}
+	.form_group {
+		padding-top: 33px;
+		text-align: left;
+	}
+	
+	.home_about {
+		padding-top: 0;
+	}
+	.about_home {
+		height: 100vh;
+	}
+	.about_home_container {
+		top: 35%;
+	}
+	.text_highlight {
+		font-size: 10px;
+	}
+	.about_button {
+		margin-bottom: 42px;
+	}
+	.testimonials {
+		padding-top: 70px;
+		padding-bottom: 40px;
+	}
 	.testimonial_img_sm {
 		width: 80%;
+	}
+	.section_title {
+		font-size: 43px;
 	}
 	.test_text p {
 		width: 80%;
@@ -2250,31 +2349,10 @@ p:last-of-type {
 	{
 		height: 65px;
 	}
-	.hamburger_bar
-	{
-		right: 0px;
-		height: 65px;
-	}
 	.about_home_title
 	{
         font-size: 48px;
         margin-bottom: 14px;
-	}
-	.section_title
-	{
-		font-size: 48px;
-	}
-	.home_button
-	{
-		margin-top: 33px;
-	}
-	.home_button a
-	{
-		font-size: 14px;
-	}
-	.text_highlight
-	{
-		font-size: 15px;
 	}
 	.team
 	{
@@ -2284,9 +2362,103 @@ p:last-of-type {
 	{
 		font-size: 48px;
 	}
+	/* our meals */
+	.section_title {
+		font-size: 21px;
+	}
+	.service_text {
+		min-height: 270px;
+	}
+	.service_text_meal {
+		min-height: 85px;
+	}
+	.overlay {
+		display: none;
+	}
+	.services_row {
+		margin-top: 31px;
+	}
+	/* login, register and contact */
+	.register_login {
+		height: 100vh;
+	}
+	.register_title,
+	.contact_home_title {
+		font-size: 30px;
+	}
+	.contact_home_subtitle {
+		font-size: 11px;
+	}
+	.contact_title {
+		padding-top: 25px;
+	}
+	.contact_container {
+		top: 62%
+	}
+	.contact {
+		padding-top: 15px;
+	}
+	.contact_home {
+		/*height: 473px;*/
+		height: 245px;
+	}
+	.contact_list ul li > div:last-of-type {
+		font-size: 8px;
+	}
+	.contact_list ul li > div:first-of-type > div {
+		font-size: 10px;
+	}
+	.email_message_title {
+		font-size: 25px;
+		padding: 40px;
+	}
+	/* Weight analysis page */
+	.register_home {
+		height: 130vh;
+	}
+	.testimonials_home_title {
+		font-size: 24px;
+		padding-bottom: 10px;
+	}
+	.testimonials_home_subtitle {
+		font-size: 10px;
+	}
+	.testimonials_home_container {
+		top: 20%;
+	}
+	.register_content {
+		padding-top: 110px;
+	}
+	.register_container {
+		width: 70%;
+	}
+	
+	.label {
+		width: 100%;
+		text-align: center;
+		font-size: 12px;
+	}
+	input {
+		width: 100%
+	}
+	#id_gender, #id_current_weight,
+	#id_expected_weight_loss,
+	#id_current_age,
+	#id_training_level {
+		width: 225px;
+	}
+	.text_left {
+		margin: 10px 0;
+	}
+	/* footer content */
+	.footer {
+		padding-top: 30px;
+		padding-bottom: 180px;
+
+	}
 	.footer_content
 	{
-		padding-bottom: 40px;
+		padding-bottom: 0px;
 	}
 	.footer_nav ul li:not(:last-of-type)
 	{
@@ -2296,5 +2468,12 @@ p:last-of-type {
 	.footer_image
 	{
 		opacity: 0.5;
+		bottom: -269px
+	}
+	.footer_logo .logo > div {
+		font-size: 28px;
+	}
+	.footer_nav {
+		display: none;
 	}
 }
