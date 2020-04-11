@@ -13,7 +13,7 @@ import json
 
 # Create your tests here.
 
-# urls test
+# urls test - run: python manage.py test products
 
 
 class TestUrls(SimpleTestCase):
