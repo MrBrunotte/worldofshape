@@ -178,4 +178,4 @@ EMAIL_HOST_USER = env('EMAIL_USER')
 EMAIL_HOST_PASSWORD = env('EMAIL_PASS')
 
 
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
