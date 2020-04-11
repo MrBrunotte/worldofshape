@@ -3,8 +3,6 @@ python:
   - "3.7"
 env:
   - SECRET_KEY='TEST'
-install: 
-  - pip install -r requirements.txt
-  - pipenv install
+install: "pip install -r requirements.txt"
 script:
-  -  python manage.py test
+  - python manage.py test
