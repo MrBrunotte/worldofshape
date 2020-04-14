@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 
 """
 run with:   coverage run --source='users' manage.py test && coverage report && coverage html
+            Go to the htmlcov file and run the index file to get the report.
 and:        python manage.py test users
 """
 

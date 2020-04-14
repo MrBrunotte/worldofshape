@@ -23,6 +23,8 @@ I have used the package 'coverage' to see how effective my testing is.
 I installed the covarage package with 'pip install coverage' and then I ran:
     
 **"coverage run --source='users' manage.py test && coverage report && coverage html"**
+
+
 [Automated testing results](static/img/automated_testing_results.PNG)
 
 ## SETTING UP URLs
