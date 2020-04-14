@@ -3,6 +3,10 @@ from django.urls import reverse, resolve
 from users.views import register
 from django.contrib.auth.models import User
 
+"""
+run with:   coverage run --source='users' manage.py test && coverage report && coverage html
+and:        python manage.py test users
+"""
 
 class TestUrls(SimpleTestCase):
 
