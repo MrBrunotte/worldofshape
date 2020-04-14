@@ -57,10 +57,13 @@ def profile(request):
     return render(request, 'users/profile.html', context)
 
 
+"""
+This class is used for the blog--remove it!!
+
 class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
-    """
+    
     Delete user view
-    """
+   
     model = User
     success_url = '/'
 
@@ -69,3 +72,4 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         if self.request.user == post.author:
             return True
         return False
+ """

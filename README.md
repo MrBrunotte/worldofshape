@@ -6,7 +6,6 @@
 
 [![Build Status](https://travis-ci.org/MrBrunotte/worldofshape.svg?branch=master)](https://travis-ci.org/MrBrunotte/worldofshape)
 
-When I import env in my settingsfile Travis fails..
 
 ### What is CI - Continuous Integration?
 
@@ -16,6 +15,16 @@ As a continuous integration platform, Travis CI supports your development proces
 ### CI Builds and Automation: Building, Testing, Deploying
 
 When you run a build, Travis CI clones your GitHub repository into a brand-new virtual environment, and carries out a series of tasks to build and test your code. If one or more of those tasks fail, the build is considered **broken**. If none of the tasks fail, the build is considered **passed** and Travis CI can deploy your code to a web server or application host.
+
+## AUTOMATED TESTING 
+
+### Coverage
+I have used the package 'coverage' to see how effective my testing is. 
+I installed the covarage package with 'pip install coverage' and then I ran:
+    
+**"coverage run --source='users' manage.py test && coverage report && coverage html"**
+
+
 
 ## SETTING UP URLs
 
