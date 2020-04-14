@@ -1540,7 +1540,7 @@ option {
 
 .alert-success {
 	background: rgb(255, 151, 17);
-	color: white;
+	color: black;
 }
 
 .alert {
@@ -1548,7 +1548,7 @@ option {
 	margin: 70px 0 0 !important;
 	padding: 0;
 	border: 1px solid transparent;
-	border-radius: .25rem;
+	border-radius: 0 !important;
 	text-align: center;
 	text-transform: capitalize;
 	background-color: rgb(255, 151, 17);
@@ -1847,8 +1847,8 @@ p:last-of-type {
 	padding-bottom: 34px;
 	background: #FFFFFF;
 }
-.services_row {
-	margin-top: 170px;
+.services_meals {
+	margin-top: 40px;
 }
 .meal_row,
 .product_row {
@@ -2018,6 +2018,8 @@ p:last-of-type {
 }
 .wos_disclaimer {
 	color: #ff9711;
+	width: 90%;
+	text-align: center;
 }
 
 .copyright
@@ -2118,6 +2120,25 @@ p:last-of-type {
 	.about_about_image
 	{
 		max-width: 50%;
+	}
+	/* profile */
+	.alert {
+		font-size: 1.125rem;
+	}
+	.profile_title {
+		font-size: 90px;
+		font-weight: 200;
+	}
+	.username_title,
+	.strong_profile {
+		font-size: 18px;
+	}
+
+	.footer_nav {
+		display: none;
+	}
+	.footer_content{
+		padding-bottom: 380px;
 	}
 }
 
@@ -2363,6 +2384,18 @@ p:last-of-type {
 	.extra_title
 	{
 		font-size: 48px;
+	}
+	/* profile */
+	.alert {
+		font-size: .9rem;
+	}
+	.profile_title {
+		font-size: 34px;
+		font-weight: 300;
+	}
+	.username_title,
+	.strong_profile {
+		font-size: 12px;
 	}
 	/* our meals */
 	.section_title {

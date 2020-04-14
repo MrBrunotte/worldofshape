@@ -19,8 +19,13 @@ When you run a build, Travis CI clones your GitHub repository into a brand-new v
 ## AUTOMATED TESTING 
 
 ### Coverage
+
 I have used the package 'coverage' to see how effective my testing is. 
-I installed the covarage package with 'pip install coverage' and then I ran:
+I installed the covarage package with 'pip install coverage' and then I ran 'Coverage' and created a covhtml file.
+
+run with:   coverage run --source='users' manage.py test && coverage report && coverage html
+            Go to the htmlcov file and run the index file to get the report.
+and:        python manage.py test users
     
 **"coverage run --source='users' manage.py test && coverage report && coverage html"**
 
