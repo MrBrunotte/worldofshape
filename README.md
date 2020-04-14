@@ -24,7 +24,7 @@ I installed the covarage package with 'pip install coverage' and then I ran:
     
 **"coverage run --source='users' manage.py test && coverage report && coverage html"**
 
-[Automated testing results]() 
+[Automated testing results]('https://github.com/MrBrunotte/worldofshape/blob/master/static/img/automated_testing_results.PNG') 
 
 ## SETTING UP URLs
 
