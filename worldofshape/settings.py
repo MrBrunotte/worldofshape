@@ -63,6 +63,7 @@ INSTALLED_APPS = [
     'cart.apps.CartConfig',
     'crispy_forms',
     'checkout.apps.CheckoutConfig',
+    'storages'
 ]
 
 MIDDLEWARE = [
@@ -145,17 +146,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATICFILES_LOCATION = 'static'
-
-STATIC_URL = '/static/'
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
-#PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+AWS_S3_OBJECT_PARAMETERS = {
+    'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+    'CacheControl': 'max-age=94608000',
+}
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = '/static/'
+STATICFILES_LOCATION = 'static'
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
-# Stripe payment keys
-STRIPE_PUBLISHABLE = env('STRIPE_PUBLISHABLE')
-STRIPE_SECRET = env('STRIPE_SECRET')
-
+#PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 # MEDIA_ROOT is the full path to a directory where we want Django to store our uploaded files, they are not stored in the Database
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # MEDIA_URL is the public directory of the the MEDIA_ROOT. how we we will access our media directory
@@ -176,6 +176,28 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = env('EMAIL_USER')
 EMAIL_HOST_PASSWORD = env('EMAIL_PASS')
+
+# Stripe payment keys
+STRIPE_PUBLISHABLE = env('STRIPE_PUBLISHABLE')
+STRIPE_SECRET = env('STRIPE_SECRET')
+
+# AWS storage
+AWS_STORAGE_BUCKET_NAME = env('AWS_STORAGE_BUCKET_NAME')
+#AWS region name
+AWS_S3_REGION_NAME = 'eu-north-1'
+# AWS keys
+AWS_ACCESS_KEY_ID = env('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = env('AWS_SECRET_ACCESS_KEY')
+# AWS domain
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+
+#DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+# to make sure files are not overwritten if they have the same name
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+
 
 
 # django_heroku.settings(locals())
