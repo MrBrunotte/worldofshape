@@ -150,16 +150,30 @@ AWS_S3_OBJECT_PARAMETERS = {
     'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
     'CacheControl': 'max-age=94608000',
 }
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = '/static/'
-STATICFILES_LOCATION = 'static'
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+AWS_STORAGE_BUCKET_NAME = 'worldofshape'
+AWS_S3_REGION_NAME = 'eu-north-1'
+AWS_ACCESS_KEY_ID = env('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = env('AWS_SECRET_ACCESS_KEY')
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+# to make sure files are not overwritten if they have the same name
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
 
-#PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-# MEDIA_ROOT is the full path to a directory where we want Django to store our uploaded files, they are not stored in the Database
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+
+STATICFILES_LOCATION = 'static'
+STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+
+STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)
+
+MEDIAFILES_LOCATION = 'media'
+DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-# MEDIA_URL is the public directory of the the MEDIA_ROOT. how we we will access our media directory
-MEDIA_URL = '/media/'
+MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
@@ -169,7 +183,6 @@ LOGIN_URL = 'login'
 # myaccount.google.com/lesssecureapps
 # myaccount.google.com/apppasswords
 # accounts.google.com/DisplayUnlockCaptcha
-
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
@@ -181,23 +194,5 @@ EMAIL_HOST_PASSWORD = env('EMAIL_PASS')
 STRIPE_PUBLISHABLE = env('STRIPE_PUBLISHABLE')
 STRIPE_SECRET = env('STRIPE_SECRET')
 
-# AWS storage
-AWS_STORAGE_BUCKET_NAME = env('AWS_STORAGE_BUCKET_NAME')
-#AWS region name
-AWS_S3_REGION_NAME = 'eu-north-1'
-# AWS keys
-AWS_ACCESS_KEY_ID = env('AWS_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY = env('AWS_SECRET_ACCESS_KEY')
-# AWS domain
-AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
-
-#DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-
-# to make sure files are not overwritten if they have the same name
-AWS_S3_FILE_OVERWRITE = False
-AWS_DEFAULT_ACL = None
-
-
-
+# DJANGO settings
 # django_heroku.settings(locals())
