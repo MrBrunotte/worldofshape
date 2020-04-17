@@ -11,17 +11,19 @@ class ProductDetailView(DetailView):
     template_name = 'products/program.html'  # <app>/<model>_<view>.html
 
 
-def all_products(request):
-    products = Product.objects.all()
-    return render(request, 'products/programs.html', {'products': products})
-
 class MealDetailView(DetailView):
     model = Meal
     template_name = 'products/meal.html'  # <app>/<model>_<view>.html
 
-def all_meals(request):
-    meals = Meal.objects.all()
-    return render(request, 'products/meals.html', {'meals': meals})
+
+def all_products(request):
+    products = Product.objects.all()
+    return render(request, 'products/programs.html', {'products': products})
+
+
+def all_programs(request):
+    programs = Program.objects.all()
+    return render(request, 'products/programs.html', {'programs': programs})
 
 
 def one_program(request):
@@ -30,9 +32,15 @@ def one_program(request):
     return render(request, "products/programs.html", {'program': program})
 
 
-def all_programs(request):
-    programs = Program.objects.all()
-    return render(request, 'products/programs.html', {'programs': programs})
+def all_meals(request):
+    meals = Meal.objects.all()
+    return render(request, 'products/meals.html', {'meals': meals})
+
+
+def one_meal(request):
+    meal = Program.objects.find_one()
+    """A View that renders an indiviual program"""
+    return render(request, "products/meal.html", {'meal': meal})
 
 
 def program_section(request):

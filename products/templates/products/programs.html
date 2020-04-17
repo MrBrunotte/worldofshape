@@ -40,7 +40,8 @@
                         <strong></strong>Click on the
                         button<strong> "Find my program" </strong>
                         and let our analyzer suggest what program matches you the best.</p>
-                    <div class="button home_button ml-auto mr-auto"><a href="{% url 'weight_loss' %}">Find my
+                    <div class="button home_button ml-auto mr-auto">
+                        <a href="{% url 'weight_loss' %}">Find my
                             program</a></div>
                 </div>
             </div>
@@ -60,8 +61,8 @@
                     <p class="service_text">{{ product.description }}</p>
                     <p class="price">{{ product.price }}</p>
                     <span class="input_group">
-                        <div class="button add_to_cart_button ml-auto mr-auto"><a
-                                href="{% url 'add_to_cart' product.id %}">Add
+                        <div class="button add_to_cart_button ml-auto mr-auto">
+                            <a href="{% url 'add_to_cart' product.id %}">Add
                                 to
                                 Cart</a>
                         </div>

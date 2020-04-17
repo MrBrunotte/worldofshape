@@ -21,7 +21,7 @@ class Product(models.Model):
     def __str__(self):
         return self.name
 
-    def get_absolute_url(self):
+    def get_absolute_url(self, **kwargs):
         return reverse('product-detail', kwargs={'pk': self.pk})
 
 
@@ -40,7 +40,7 @@ class Meal(models.Model):
     def __str__(self):
         return self.name
 
-    def get_absolute_url(self):
+    def get_absolute_url(self, **kwargs):
         return reverse('meal-detail', kwargs={'pk': self.pk})
 
 

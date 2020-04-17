@@ -122,7 +122,7 @@ urlpatterns = [
     path('blog/', include('blog.urls')),
 ]
 
-# We use this urlpattern when we are in DEBUG mode, We will us AWS S3 Bucket in production
+# We use this urlpattern when we are in DEBUG mode
 # if settings.DEBUG:
 #    urlpatterns += static(settings.MEDIA_URL,
 #                          document_root=settings.MEDIA_ROOT)
