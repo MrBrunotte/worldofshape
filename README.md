@@ -1,5 +1,7 @@
 # Welcome to the "World of Shape"
 
+![alt text](https://github.com/MrBrunotte/foodictionary/blob/master/static/images/Landingpage.JPG "World of Shape")
+
 ## **Testing**
 
 ### Travis CI - platform
