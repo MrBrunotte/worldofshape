@@ -1,13 +1,15 @@
-# Welcome to the "World of Shape"
+# Welcome to the **"World of Shape"**
 
-![alt text](https://github.com/MrBrunotte/foodictionary/blob/master/static/images/Landingpage.JPG "World of Shape")
+![alt text](https://github.com/MrBrunotte/worldofshape/blob/master/static/images/landingpage.png "World of Shape")
+
+[![Build Status](https://travis-ci.org/MrBrunotte/worldofshape.svg?branch=master)](https://travis-ci.org/MrBrunotte/worldofshape)
+
+**World of Shape - Your journey starts now!**
+
 
 ## **Testing**
 
 ### Travis CI - platform
-
-[![Build Status](https://travis-ci.org/MrBrunotte/worldofshape.svg?branch=master)](https://travis-ci.org/MrBrunotte/worldofshape)
-
 
 ### What is CI - Continuous Integration?
 
