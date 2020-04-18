@@ -20,7 +20,8 @@ class Meal(models.Model):
         return self.name
 
     def get_absolute_url(self, **kwargs):
-        return reverse('meal-detail', kwargs={'pk': self.pk})
+        return reverse('meal-detail', kwargs={'id': self.pk})
+
 
 class Program(models.Model):
     name = models.CharField(max_length=254, default='')

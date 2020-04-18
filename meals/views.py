@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Meal
+from .models import Meal, Program
 from django.views.generic import DetailView
 
 # Create your views here.

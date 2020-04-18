@@ -1119,6 +1119,9 @@ p:last-of-type {
 	line-height: 1.75;
 	margin-top: 35px;
 }
+.program_text {
+	padding-bottom: 50px;
+}
 .text_highlight_testimonials {
 	color: #FFFFFF;
 }

@@ -86,11 +86,14 @@ urlpatterns = [
     path('password-reset-complete/', auth_views.PasswordResetCompleteView.as_view(
         template_name='users/password_reset_complete.html'), name='password_reset_complete'),
 
-    # products app
+    # products app all programs
     path('programs/', include('products.urls')),
 
     # products app productdetail view single product
     path('program/', products_views.ProductDetailView, name='product-detail'),
+
+    # meals app all meals
+    path('meals/', include('meals.urls')),
 
     # meals app mealdetail view single meal
     path('meal/', meals_views.MealDetailView, name='meal-detail'),
