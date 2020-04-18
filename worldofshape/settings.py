@@ -60,10 +60,11 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'home.apps.HomeConfig',
     'products.apps.ProductsConfig',
+    'meals.apps.MealsConfig',
     'cart.apps.CartConfig',
-    'crispy_forms',
     'checkout.apps.CheckoutConfig',
-    'storages'
+    'crispy_forms',
+    'storages',
 ]
 
 MIDDLEWARE = [

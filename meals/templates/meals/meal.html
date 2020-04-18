@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block content %}
+<!-- Home -->
+
+<div class="training_home_single">
+    <div class="background_image" style="background-image:url(/static/images/index.jpg)"></div>
+    <div class="training_home_container">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="">
+                        <div class="training_home_title">{{ meal.name }}</div>
+                        <div class="training_home_subtitle">Read all about this program below...</div>
+                        <div class="button add_to_cart_button extra_padding"><a
+                                href="{% url 'add_to_cart' meal.id %}">Add
+                                to
+                                Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Services  -->
+
+<div class="single_program_section" id="program_section">
+    <div class="container">
+
+        <!-- Meal for loop -->
+        <div class="row meal_row">
+            <div class="col-12">
+                <div class="service">
+                    <div class="meal_image" style="background-image: url('{{ MEDIA_URL }}{{ meal.image }}')">
+                    </div>
+                    <div class="service_title_container d-flex flex-row align-items-center justify-content-center">
+                        <div class="service_title_program">{{ meal.name }}</div>
+                    </div>
+                    <div class="service_title_meal2 d-flex flex-row align-items-center justify-content-center">
+                        {{ meal.name2 }}</div>
+                    <p class="service_text_single_top">{{ meal.description }}</p>
+                    <p class="service_text_single">{{ meal.description2 }}</p>
+                    <p class="service_text_single">{{ meal.description3 }}</p>
+                    <p class="price_program">{{ meal.price }}</p>
+                    <span class="input_group">
+                        <div class="button add_to_cart_button ml-auto mr-auto">
+                            <a href="{% url 'add_to_cart' meal.id %}">Add
+                                to
+                                Cart</a>
+                        </div>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Extra -->
+
+<div class="extra d-flex flex-column align-items-center justify-content-center text-center">
+    <div class="background_image program_section_height" style="background-image:url(/static/images/extra_wide.jpg)">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="extra_content d-flex flex-column align-items-center justify-content-center text-center">
+                    <div class="extra_title">Start now and take back control of your body..</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

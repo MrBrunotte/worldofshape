@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Program, Product, Meal
+from .models import Program, Product
 from .forms import WeightLossAnalysisForm
 from django.views.generic import DetailView
 
@@ -9,11 +9,6 @@ from django.views.generic import DetailView
 class ProductDetailView(DetailView):
     model = Product
     template_name = 'products/program.html'  # <app>/<model>_<view>.html
-
-
-class MealDetailView(DetailView):
-    model = Meal
-    template_name = 'products/meal.html'  # <app>/<model>_<view>.html
 
 
 def all_products(request):
@@ -30,17 +25,6 @@ def one_program(request):
     program = Program.objects.find_one()
     """A View that renders an indiviual program"""
     return render(request, "products/programs.html", {'program': program})
-
-
-def all_meals(request):
-    meals = Meal.objects.all()
-    return render(request, 'products/meals.html', {'meals': meals})
-
-
-def one_meal(request):
-    meal = Program.objects.find_one()
-    """A View that renders an indiviual program"""
-    return render(request, "products/meal.html", {'meal': meal})
 
 
 def program_section(request):
