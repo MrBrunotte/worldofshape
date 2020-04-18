@@ -31,15 +31,16 @@
                     <div class="col-12 bottom_separator">
                         <div class="service">
                             <div class="product_image"
-                                style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')">
+                                style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}{{ item.meal.image }}')">
                             </div>
                             <div
                                 class="service_title_container d-flex flex-row align-items-center justify-content-start">
-                                <div class="cart_title_checkout">{{ item.product.name }}</div>
+                                <div class="cart_title_checkout">{{ item.product.name }}{{ item.meal.name }}</div>
                             </div>
 
-                            <p class="cart_text_checkout">{{ item.product.description }}</p>
-                            <p class="price_checkout">Price: {{ item.product.price }}</p>
+                            <p class="cart_text_checkout">{{ item.product.description }}{{ item.meal.description }}
+                            </p>
+                            <p class="price_checkout">Price: {{ item.product.price }}{{ item.meal.price }}</p>
                             <div class="d-flex flex-column align-items-center justify-content-center">
                                 <form class="form_group" action="{% url 'adjust_cart' item.id %}" method="post">
                                     {% csrf_token %}

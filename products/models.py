@@ -9,6 +9,7 @@ class Product(models.Model):
     This is the database for the products/programs
     We specify the columns that will be in the tables in our db
     """
+    name_id = models.CharField(max_length=20, default='')
     name = models.CharField(max_length=254, default='')
     description = models.TextField()
     full_description = models.TextField(default='')

@@ -8,6 +8,7 @@ class Meal(models.Model):
     """
     This is the database for the meal and diet plans
     """
+    name_id = models.CharField(max_length=20, default='')
     name = models.CharField(max_length=254, default='')
     name2 = models.CharField(max_length=254, default='')
     description = models.TextField()
@@ -20,7 +21,7 @@ class Meal(models.Model):
         return self.name
 
     def get_absolute_url(self, **kwargs):
-        return reverse('meal-detail', kwargs={'id': self.pk})
+        return reverse('meal-detail', kwargs={'pk': self.pk})
 
 
 class Program(models.Model):
