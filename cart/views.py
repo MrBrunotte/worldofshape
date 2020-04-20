@@ -8,14 +8,27 @@ def view_cart(request):
     return render(request, "cart/cart.html")
 
 
-def add_to_cart(request, id):
+def add_product_to_cart(request, id):
     """Add a quantity of the specified product to the cart"""
     quantity = 1
 
     cart = request.session.get('cart', {})
-    cart[id] = cart.get(id, quantity)
+    cart['product'] = cart.get('product', {id: quantity})
 
     request.session['cart'] = cart
+    print(cart)
+    return redirect(reverse('view_cart'))
+
+
+def add_meal_to_cart(request, id):
+    """Add a quantity of the specified product to the cart"""
+    quantity = 1
+
+    cart = request.session.get('cart', {})
+    cart['meal'] = cart.get('meal', {id: quantity})
+
+    request.session['cart'] = cart
+    print(cart)
     return redirect(reverse('view_cart'))
 
 
