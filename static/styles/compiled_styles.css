@@ -288,6 +288,7 @@ section
 	background: #f98c00;
 	box-shadow: 0 0 1px 0 #FFFFFF inset, 0 0 1px 0 #FFFFFF;
 	text-align: center;
+	text-transform: capitalize;
 }
 .button a
 {
