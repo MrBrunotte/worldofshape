@@ -34,6 +34,22 @@ def add_meal_to_cart(request, id):
     return redirect(reverse('view_cart'))
 
 
+def adjust_product_in_cart(request, id):
+    """
+    Adjust the quantity of the specified product to the specific amount
+    """
+    quantity = int(request.POST.get('product', {id: quantity}))
+    cart = cart.get('product', {id: quantity})
+
+    if quantity > 0:
+        cart[{id}] = quantity
+    else:
+        cart.pop({id: quantity})
+
+    request.session['cart'] = cart
+    return redirect(reverse('view_cart'))
+
+
 def adjust_meal_in_cart(request, id):
     """
     Adjust the quantity of the specified product to the specific amount
