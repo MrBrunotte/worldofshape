@@ -35,16 +35,20 @@
                             </div>
                             <div
                                 class="service_title_container d-flex flex-row align-items-center justify-content-start">
-                                <div class="cart_title_checkout">{{ item.product.name }}{{ item.meal.name }}</div>
+                                {% if item.meal.name %}
+                                <div class="cart_title_checkout">{{ item.meal.name }}</div>
                             </div>
 
                             <p class="cart_text_checkout">{{ item.product.description }}{{ item.meal.description }}
                             </p>
                             <p class="price_checkout">Price: {{ item.product.price }}{{ item.meal.price }}</p>
                             <div class="d-flex flex-column align-items-center justify-content-center">
-                                <form class="form_group"
-                                    action="{% url 'add_product_to_cart' product.id %}{% url 'add_meal_to_cart' meal.id %}"
+                                <form class="form_group" action="{% url 'view_cart' %}" method="post">
+                                    <!--</form>
+                                {% else %}
+                                <form class="form_group" action="{% url 'add_product_to_cart' product.id %}"
                                     method="post">
+                                    {% endif %}-->
                                     {% csrf_token %}
                                     <div class="form_group">
                                         <div class="input_group">
@@ -58,12 +62,10 @@
 
                                     <div class="cart_button ml-auto mr-auto mb-4">
                                         <button class="button home_button mr-5" type="submit">
-                                            <a
-                                                href="{% url 'adjust_product_in_cart' product.id %}{% url 'adjust_meal_in_cart' meal.id %}"></a>Update
+                                            Update
                                             Cart</button>
                                         <button class="button home_button" type="submit">
-                                            <a
-                                                href="{% url 'delete_product_in_cart' product.id %}{% url 'delete_meal_in_cart' meal.id %}"></a>
+
                                             Delete
                                             item</button>
                                     </div>
