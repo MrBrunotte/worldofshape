@@ -3,9 +3,10 @@ from .views import (
     view_cart,
     add_meal_to_cart,
     add_product_to_cart,
-    adjust_product_in_cart,
-    adjust_meal_in_cart,
-    delete_meal_in_cart
+    update_product_item,
+    update_meal_item,
+    delete_meal_item,
+    delete_product_item
 )
 urlpatterns = [
     url(r'^$', view_cart, name='view_cart'),
@@ -16,12 +17,15 @@ urlpatterns = [
     url(r'^add_product_to_cart/(?P<id>\d+)',
         add_product_to_cart, name='add_product_to_cart'),
 
-    url(r'^adjust_product_in_cart/(?P<id>\d+)',
-        adjust_product_in_cart, name='adjust_product_in_cart'),
+    url(r'^update_product_item/(?P<id>\d+)',
+        update_product_item, name='update_product_item'),
 
-    url(r'^adjust_meal_in_cart/(?P<id>\d+)',
-        adjust_meal_in_cart, name='adjust_meal_in_cart'),
+    url(r'^update_meal_item/(?P<id>\d+)',
+        update_meal_item, name='update_meal_item'),
 
-    url(r'^delete/(?P<id>\d+)',
-        delete_meal_in_cart, name='delete_meal_in_cart'),
+    url(r'^delete_meal_item/(?P<id>\d+)',
+        delete_meal_item, name='delete_meal_item'),
+
+    url(r'^delete_product_item/(?P<id>\d+)',
+        delete_product_item, name='delete_product_item'),
 ]
