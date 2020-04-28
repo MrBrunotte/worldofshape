@@ -10,6 +10,8 @@ def view_cart(request):
     """A View that renders the cart contents page"""
     return render(request, "cart/cart.html")
 
+# products.html/product.html/meals.html
+
 
 def add_product_to_cart(request, id):
     """
@@ -47,7 +49,6 @@ def add_meal_to_cart(request, id):
     quantity = 1
 
     cart = request.session.get('cart', {'meal': {}, 'product': {}})
-    #print(cart, id)
     if id in cart['meal']:
         cart['meal'][id] = int(cart['meal'][id]) + quantity
     else:
@@ -56,18 +57,19 @@ def add_meal_to_cart(request, id):
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))
 
+# cart.html
+
 
 def update_product_item(request, id):
-    """
-    Adjust the quantity of the specified product to the specific amount
-    """
-    quantity = int(request.POST.get('product', {id: quantity}))
-    cart = cart.get('product', {id: quantity})
 
-    if quantity > 0:
-        cart[{id}] = quantity
+    cart = request.session.get('cart', {'product'})
+    quantity = int(request.POST.get({'quantity'}))
+    print('quantity')
+    if quantity in cart > 0:
+        cart['product'][id] = quantity
     else:
-        cart.pop({id: quantity})
+        cart.pop(id)
+    print(cart, id)
 
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))
@@ -75,16 +77,18 @@ def update_product_item(request, id):
 
 def update_meal_item(request, id):
 
-    quantity = int(request.POST.get('meal', {id: quantity}))
-    cart = request.session.get('cart', {'meal': {id: quantity}})
-    print(cart, id)
+    cart = request.session.get('cart', ('meal', {'quantity'}))
+    # print(cart)
+    quantity = int(request.POST.get('quantity'))
+    #print('meal', {quantity})
 
-    if {id: quantity} in cart['meal'] > 0:
+    if quantity in cart > 0:
         cart['meal'][id] = quantity
+        print(cart)
     else:
-        cart.pop({id: quantity})
-    print(cart, id)
-    
+        cart.pop(quantity)
+    print(quantity)
+
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))
 
@@ -107,3 +111,18 @@ def delete_product_item(request, id):
     messages.success(
         request, f'Your recipe/mealplan has been deleted from your cart!')
     return redirect(reverse('view_cart'))
+
+
+"""
+def remove_product(request, id):
+    cart = view_cart(request)
+    product = get_object_or_404(Product, pk=id)
+    cart.remove(product)
+    return redirect(reverse('view_cart'))
+
+def remove_meal(request, id):
+    cart = view_cart(request)
+    meal = get_object_or_404(Meal, pk=id)
+    cart.remove(meal)
+    return redirect(reverse('view_cart'))
+"""

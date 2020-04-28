@@ -13,24 +13,29 @@ def cart_contents(request):
     cart_items = []
     total = 0
     total_product = 0
-    product_count = 0
     total_meal = 0
-    meal_count = 0
+    product_quantity = 0
+    meal_quantity = 0
 
     for category, values in cart.items():
         for id, quantity in values.items():
-            print(category, values, id, quantity)
+            #print(category, values, id, quantity)
             if category == 'meal':
                 meal = get_object_or_404(Meal, pk=id)
                 total_meal += quantity * meal.price
-                meal_count += quantity
+                meal_quantity += quantity
                 cart_items.append(
-                    {'id': id, 'quantity': quantity, 'meal': meal})
+                    {'id': id, 'meal_quantity': meal_quantity, 'meal': meal})
             else:
                 product = get_object_or_404(Product, pk=id)
                 total_product += quantity * product.price
-                product_count += quantity
+                product_quantity += quantity
                 cart_items.append(
-                    {'id': id, 'quantity': quantity, 'product': product})
+                    {'id': id, 'product_quantity': product_quantity, 'product': product})
 
-    return {'cart_items': cart_items, 'total': total_meal + total_product, 'product_count': product_count, 'meal_count': meal_count, 'all_items_in_cart': meal_count + product_count}
+    total_cart_items = meal_quantity + product_quantity
+
+    #print(cart_items)
+    #print(total_cart_items)
+
+    return {'cart_items': cart_items, 'total': total_meal + total_product, 'product_quantity': product_quantity, 'meal_quantity': meal_quantity, 'total_cart_items': total_cart_items}

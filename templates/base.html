@@ -58,8 +58,8 @@
 									<li class="nav_list"><a href="{% url 'register' %}">Register</a></li>
 									{% endif %}
 									<li class="nav_list"><a href="{% url 'view_cart' %}"><i
-												class="fa fa-shipping-cart"></i>Cart {% if cart_contents > 0 %}
-											<label class="badge badge-warning">{{ cart_contents }}</label>
+												class="fa fa-shipping-cart"></i>Cart {% if total_cart_items > 0 %}
+											<label class="badge badge-warning">{{ total_cart_items }}</label>
 											{% endif %}
 										</a>
 									</li>
@@ -107,8 +107,8 @@
 					<li class="nav_list"><a href="{% url 'register' %}">Register</a></li>
 					{% endif %}
 					<li class="nav_list"><a href="{% url 'view_cart' %}"><i class="fa fa-shipping-cart"></i>Cart
-							{% if cart_contents > 0 %}
-							<label class="badge badge-warning">{{ cart_contents }}</label>
+							{% if total_cart_items > 0 %}
+							<label class="badge badge-warning">{{ total_cart_items }}</label>
 							{% endif %}
 						</a>
 					</li>
