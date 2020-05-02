@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib import messages
 from .models import Program, Product
 from .forms import WeightLossAnalysisForm
 from django.views.generic import DetailView
@@ -47,6 +48,10 @@ def WeightLossAnalysis(request):
 
             print(gender, current_weight, expected_weight_loss,
                   current_age, training_level)
+
+        else:
+            messages.success(
+                request, f'Something when wrong, please try again!')
 
     form = WeightLossAnalysisForm()
     return render(request, 'products/weight_analysis.html', {'form': form})

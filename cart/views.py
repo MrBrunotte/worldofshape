@@ -26,7 +26,6 @@ def add_product_to_cart(request, id):
     quantity = 1
 
     cart = request.session.get('cart', {'meal': {}, 'product': {}})
-    #print(cart, id)
     if id in cart['product']:
         cart['product'][id] = int(cart['product'][id]) + quantity
     else:
@@ -59,6 +58,8 @@ def add_meal_to_cart(request, id):
 
 # cart.html
 
+# TODO Fix the update items finctions with the update button in cart.html
+
 
 def update_product_item(request, id):
 
@@ -76,10 +77,10 @@ def update_product_item(request, id):
 
 
 def update_meal_item(request, id):
-
+    quantity = int(request.POST.get('quantity'))
     cart = request.session.get('cart', ('meal', {'quantity'}))
     # print(cart)
-    quantity = int(request.POST.get('quantity'))
+
     #print('meal', {quantity})
 
     if quantity in cart > 0:

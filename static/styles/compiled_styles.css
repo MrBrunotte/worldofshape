@@ -1407,7 +1407,10 @@ form {
 	color: white;
 }
 .cart_text{
-	margin-top: 20px;
+	margin-top: 30px;
+	color: white;
+	font-size: 18px;
+	font-weight: 900;
 }
 .center_text {
 	text-align: center;
@@ -1426,7 +1429,7 @@ form {
 	color: black !important;
 }
 .cart_amount_mb {
-	margin-bottom: 10px;;
+	margin-bottom: 10px;
 }
 .cart_total,
 .cart_total_checkout,
@@ -1439,7 +1442,8 @@ form {
 	font-size: 16px;
 }
 .cart_total {
-	color: black;
+	color: #f98c00;
+	font-size: 20px;
 }
 .cart_total_checkout {
 	color: white;
@@ -1964,7 +1968,8 @@ p:last-of-type {
 }
 .price::after,
 .price_checkout::after,
-.price_program::after {
+.price_program::after,
+.cart_total_pb::after {
 	content: ' SEK'
 }
 
@@ -2025,6 +2030,7 @@ p:last-of-type {
 	color: #ff9711;
 	width: 90%;
 	text-align: center;
+	font-size: 8px;
 }
 
 .copyright

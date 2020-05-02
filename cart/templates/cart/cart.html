@@ -40,8 +40,7 @@
                             <p class="cart_text_checkout">{{ item.meal.description }}
                             </p>
                             <p class="price_checkout">Price: {{ item.meal.price }}</p>
-                            <div class="d-flex flex-column align-items-center justify-content-center">
-                            </div>
+
                             <form class="form_group" action="{% url 'update_meal_item' item.meal.id %}" method="post">
                                 {% csrf_token %}
                                 <div class="form_group">
@@ -53,6 +52,7 @@
                                             placeholder="Add 'New Qty' or set to '0' to delete...">
                                     </div>
                                 </div>
+                                <!-- TODO do i need to move the buttons outside the form??-->
                                 <div class="cart_button ml-auto mr-auto mb-4">
                                     <button class="button home_button mr-5" type="submit">
                                         Update cart</button>
