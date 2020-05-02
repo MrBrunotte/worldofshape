@@ -188,8 +188,18 @@ From the contact page the user can send an email to World of Shape. After the me
 
 _**Login** page:_ 
 
-* The user logs in with username and password.
-* If the user havent registered there is a link to sing up now that directs the user to the register page.
+* The user logs in with username and password and get directed to the homepage.
+* If user have forgotten the password they can request a new password by clicking on the "Forgot Password?" link.
+* If the user haven't registered there is a link to "sign up now" that directs the user to the register page.
+
+**Register** page:_ 
+
+* The user register a username, emal, password and confirms the password. There is help-text below each input field that informs the user what format is needed, the help-text is highlited when hovered over.
+* When the user clicks register, the user is redirected to hte login page and a message is displayed "_Your Account Has Been Created! You Can Now Log In._"
+* If user already is registered there is a link to the login page.
+
+_**Reset Password** page:_ 
+
 * If the user forgot their password they can click on the link to create a new password. They will then be directed to the reset password page
 
 <p align="center">
@@ -201,6 +211,18 @@ _**Login** page:_
 <p align="center">
     <img src="https://github.com/MrBrunotte/worldofshape/blob/master/static/images/reset_password_page_message.PNG" alt="Reset Password Message">
 </p>
+
+_**Cart** page:_ 
+
+When a product or meal is added they are displayed in the cart page.
+
+* The **Checkout** button redirects the user to the payment page.
+* Each program/meal in the cart can be deleted by clicking on the **Delete Item** button.
+* If there are more than one item in the cart the total ammount is displayed below the checkout button.
+
+_**Checkout** page:_ 
+
+
 
 ### Features left to implement
 
