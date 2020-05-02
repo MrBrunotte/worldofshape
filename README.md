@@ -18,7 +18,7 @@
     - [**User Stories:**](#user-stories)
   - [**Features**](#features)
     - [Existing features](#existing-features)
-    - [Features left to implemnt](#features-left-to-implemnt)
+    - [Features left to implement](#features-left-to-implement)
   - [**Testing**](#testing)
     - [Travis CI - platform](#travis-ci---platform)
     - [What is CI - Continuous Integration?](#what-is-ci---continuous-integration)
@@ -32,7 +32,7 @@
 World of Shape is a website that aims to get the user in shape and lose weight in 30 days! 
 
 
-This is attained when the user purchase and attends a 30-day excercise program where the user will have access to World of Shapes personal trainers, the training program and mealplans the user chosed to purchase. The user is encuraged to take a "before" and "after" picture of themself in order to monitor thier progress. The World of Shape concept has a proven system that can be validated in the testimonial section of the website.
+This is attained when the user purchase and attends a 30-day excercise program where the user will have access to World of Shapes personal trainers, the training program and mealplans the user chose to purchase. The user is encuraged to take a "before" and "after" picture of themself in order to monitor thier progress. The World of Shape concept has a proven system that can be validated in the testimonial section of the website.
 
 ### **Purpose of Project**
 
@@ -50,7 +50,7 @@ The appliction uses Django 3 to encourage rapid development, by following a MTV 
 Alongside the Django framework, I have used sqlite in the project's development phase for local testing. Sqlite is a selfcontained highly reliable SQL database engine that features all the normal relational database management. When the project was ready for deployment I switched to Postgres (PostGreSQL) to ensure that any data entered was visible in my deployed Heroku application. Postgres is open source and boosts a fully technical and easy to use Object relational database management system.
 
 The admin user of World of Shape has full access to the Admin dashboard where the admin can **create, read, update and delete** the training programs or mealplans. 
-The Admin dashboard is custom made for the World of Shape website and consists of 6 apps where the admin have full controll over the sites different application. 
+The Admin dashboard is custom made for the World of Shape website. From the Django dashboard the admin can do the CRUD operations in all 6 applocations. 
 
 The 6 applications are:
 * Authentication & authorization
@@ -85,23 +85,38 @@ The typical user is a man or a woman of all ages that want to get in shape but h
 
 _**Generic** (Guest/Public) User:_
 
-* As a **Generic** User, I want to be able to view the site on any device I may have, (mobile/tablet/desktop).
+* As a **Generic** User I can browse the site and access all necessary information I need before making a purchase.
+* As a **Generic** User I can search the site by typing keywords that describe my search qriteria.
+* As a **Generic** User I can register a profile and add a profile picture.
+* As a **Generic** User I can contact World of Shape by sending them a message from the website contact form.
+* As a **Generic** User I can view the site on any device I may have, (mobile/tablet/desktop).
 
 _**Registered** (Logged in) User:_
 
-* As a **Registered** User, I want to be able to view the site on any device I may have, (mobile/tablet/desktop).
+* As a **Registered** User I can login to my site.
+* As a **Registered** User I can update my profile picture, username and email settings.
+* As a **Registered** User I add products to my shopping cart.
+* As a **Registered** User I change the number of items or delete my cart items.
+* As a **Registered** User I checkout and pay for my shopping cart items.
 
-_**Application** Owner/Admin User:_
+_**Application** Admin User:_
 
-* As a site **Admin** User, I want to be able to view the site on any device I may have, (mobile/tablet/desktop).
+* As a site **Admin** User I can log in to the Django Admin Dashboard. In the dashboard I can:
+    * Update, add, change or delete **Users**,
+    * Update, add, change or delete **Meals**,
+    * Update, add, change or delete **Programs**,
+    * Update, add, change or delete **Profiles**,
+    * Update, add, change or delete **Orders**.
 
-* As the **Owner** User, I want to be able to view the site on any device I may have, (mobile/tablet/desktop).
+_**Application** Owner:_
+
+* As the **Owner** User I can receive emails from the sites contact from.
 
 _**Developer**:_
 
-* As a **Developer**, I want to demonstrate my skills as a junior Full Stack Software developer.
-* As a **Developer**, I wanted to build a project that I could showcase alongside my other projects to potential future employers or customers on GitHub and on my personal portfolio.
-* As a **Developer**, I wanted to improve the existing website [World of Shape](https://worldofshape.com/) and make it a more inviting and user friendly website.
+* As a **Developer** I wanted to demonstrate my skills as a junior Full Stack Software developer.
+* As a **Developer** I wanted to build a project that I could showcase alongside my other projects to potential future employers or customers on GitHub and on my personal portfolio.
+* As a **Developer** I wanted to improve the existing website [World of Shape](https://worldofshape.com/) and make it a more inviting and user friendly website.
 
 [Back to: _"Table of Contents"_](#table-of-contents)
 
@@ -110,11 +125,18 @@ _**Developer**:_
 
 ### Existing features
 
+_**Contact form**:_ 
 
-### Features left to implemnt
+When the user uses the contact form to contact World of Shape an email is send to World of Shape and the user is informed that the email is send and that World of Shape will be in touch soon.
+
+<p align="center">
+    <img src="" alt="Message to sender">
+</p>
+
+### Features left to implement
 
 * Add a blog function (_already axists as an app in the project_).
-* 
+* The form help text form Django forms could be displayed more aligned to the input field box.
 
 [Back to: _"Table of Contents"_](#table-of-contents)
 
