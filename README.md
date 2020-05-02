@@ -222,7 +222,10 @@ When a product or meal is added they are displayed in the cart page.
 
 _**Checkout** page:_ 
 
-
+The checkout page summarizes the items and lets the user scroll down to make sure that the correct items are in the cart.
+* The **Change Order** button redirects the user back to the cart to delete an item.
+* The user inserts the "Payment Details" and "Card Details" before submitting payment. 
+  * if something is wrong the message "We Were Unable To Take Payment With That Card!" will be displayed and the user is redirected to the checkout page. 
 
 ### Features left to implement
 
