@@ -29,7 +29,6 @@ from meals import urls as urls_meals
 from meals.views import all_meals
 from checkout import urls as urls_checkout
 from cart import urls as urls_cart
-from search import urls as urls_search
 from django.views import static
 from .settings import MEDIA_ROOT
 
@@ -114,9 +113,6 @@ urlpatterns = [
 
     # cart app
     url(r'^cart/', include(urls_cart)),
-
-    # search app
-    url(r'^search/', include(urls_search)),
 
     # checkout app
     url(r'^checkout/', include(urls_checkout)),

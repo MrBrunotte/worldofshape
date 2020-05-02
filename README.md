@@ -125,18 +125,43 @@ _**Developer**:_
 
 ### Existing features
 
+_**Navigation and buttons**:_ 
+
+The navigation consist of a "logged in" navigation and a "guest" navigation. The difference between the two is that when the user is logged in they will be able to reach the "profile" section and the user is also able to add programs and meals to the shopping cart.
+
+There is a navigation row for larger screens and a "hamburger" menu for smaller screens. there is also a navigation bar in the footer.
+
+The idea behind the navigation both from the navigation bar and the different buttons is to direct the user to the correct location so that it is easy for the user to buy the training programs or meals or get the correct information so that they will feel confident and start one of the programs.
+
+The site is constructed so that the user have to do as few clicks as possible to make a purchase, this makes it more likely that the user purchases a product.
+
+On all pages exept "contact" and "Profile" there are buttons for the user to click on to join the program and get directed to a purchase opportunity. 
+
+_**Home page**:_ 
+
+* The **Join Now** button directs the user to the products page where all the training programs are listed. The user can read more or add a program to the shopping cart.
+* The **Read More** button in the "training programs" box directs the user to the products page.
+* The **Read More** button in the "Weight Loss Analysis" box directs the user to the weight loss page where the user can find out what program suits them best.
+* The **Read More** button in the "Healthy Diet Plan" box directs the user to meal page where the meals and dietplans can be purchased. 
+* The **Read More** button below About world of Shape directs the user to the About Us page.
+* The names of each testimonail is linked to the the testimonials page.
+* The **Join Now** button at the bottom of the page directs the user to the products page.
+
+_**About Us page**:_ 
+
 _**Contact form**:_ 
 
 When the user uses the contact form to contact World of Shape an email is send to World of Shape and the user is informed that the email is send and that World of Shape will be in touch soon.
 
 <p align="center">
-    <img src="" alt="Message to sender">
+    <img src="https://github.com/MrBrunotte/worldofshape/blob/master/static/images/contact_form_message.PNG" alt="Message to sender">
 </p>
 
 ### Features left to implement
 
 * Add a blog function (_already axists as an app in the project_).
 * The form help text form Django forms could be displayed more aligned to the input field box.
+* The **Get Discount** button in
 
 [Back to: _"Table of Contents"_](#table-of-contents)
 
