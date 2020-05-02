@@ -137,31 +137,76 @@ The site is constructed so that the user have to do as few clicks as possible to
 
 On all pages exept "contact" and "Profile" there are buttons for the user to click on to join the program and get directed to a purchase opportunity. 
 
-_**Home page**:_ 
+_**Home** page:_ 
 
 * The **Join Now** button directs the user to the products page where all the training programs are listed. The user can read more or add a program to the shopping cart.
 * The **Read More** button in the "training programs" box directs the user to the products page.
 * The **Read More** button in the "Weight Loss Analysis" box directs the user to the weight loss page where the user can find out what program suits them best.
 * The **Read More** button in the "Healthy Diet Plan" box directs the user to meal page where the meals and dietplans can be purchased. 
 * The **Read More** button below About world of Shape directs the user to the About Us page.
-* The names of each testimonail is linked to the the testimonials page.
+* The names of each testimonial is linked to the the testimonials page.
 * The **Join Now** button at the bottom of the page directs the user to the products page.
 
-_**About Us page**:_ 
+_**About Us** page:_ 
+
+* The **Read More** button directs the user to the text below.
+* The **Find Out How It Works Video** link shows the user a pop-up video explaining the World of Shape concept.
+* The **Join Now** button directs the user to the products page.
+* The **Get Discount** button at the bottom of the page is not linked yet and is left for future implementation.
+
+_**Our Training** and **Our Meals** page:_
+
+This page displays all training program/Meals available for purchase.
+
+* The **Read More** button directs the user to the text below.
+* The **Find My Program**Find button directs the user to the "weight loss" page where the user finds the correct program for them. (There is no **Find My Meals** button!)
+* The **Read More** button below each program/meal directs the user to the program/meal page where the user can read more about the specific program/meal.
+* The **Add To Cart** button puts the chosen program/meal in the shopping cart and the cart navigation in the top navigation bar displays the number of programs/meals in the cart.
+* * The **Get Discount** button at the bottom of the page is not linked yet and is left for future implementation.
+
+_**Program** and **Meals** page:_
+
+This page displays an indivicual program/meal available for purchase.
+
+* The **Add To Cart** button at the top and bottom puts the program/meal in the shopping cart and the cart navigation in the top navigation bar displays the number of products/meals in the cart. It redirects the user to the shopping cart so they can checkout and pay for the program/meal.
+
+The user is intentially redirected to the shopping cart because it is most likely that they will only buy one program/meal at a time, so it is better to redirect the user to the checkout rather than back to the homepage or anywhere else.
+
+_**Testimonials** page:_ 
+
+* The **Read More** button directs the user to the text below.
+* The names of each testimonial is linked to the the programs page where the user can get started and purchase a program.
+* The **Join Now** button at the bottom directs the user to the products page where the user can get started and purchase a program.
 
 _**Contact form**:_ 
 
-When the user uses the contact form to contact World of Shape an email is send to World of Shape and the user is informed that the email is send and that World of Shape will be in touch soon.
+From the contact page the user can send an email to World of Shape. After the message is sent the user is informed the the message has been delivered and World of Shape will be in touch soon.
 
 <p align="center">
     <img src="https://github.com/MrBrunotte/worldofshape/blob/master/static/images/contact_form_message.PNG" alt="Message to sender">
+</p>
+
+_**Login** page:_ 
+
+* The user logs in with username and password.
+* If the user havent registered there is a link to sing up now that directs the user to the register page.
+* If the user forgot their password they can click on the link to create a new password. They will then be directed to the reset password page
+
+<p align="center">
+    <img src="https://github.com/MrBrunotte/worldofshape/blob/master/static/images/reset_password_page.PNG" alt="Reset Password">
+</p>
+
+* When the user have requested a reset of their password they are redirected to a message page where they can log in again after they have followed the instructions in their mail inbox or they can go back to the homepage.
+
+<p align="center">
+    <img src="https://github.com/MrBrunotte/worldofshape/blob/master/static/images/reset_password_page_message.PNG" alt="Reset Password Message">
 </p>
 
 ### Features left to implement
 
 * Add a blog function (_already axists as an app in the project_).
 * The form help text form Django forms could be displayed more aligned to the input field box.
-* The **Get Discount** button in
+* The **Get Discount** button in the 15% discount section needs a discount message displayed in form of a popup with the discount code or message.
 
 [Back to: _"Table of Contents"_](#table-of-contents)
 
