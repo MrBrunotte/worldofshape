@@ -26,6 +26,9 @@
   - [AUTOMATED TESTING](#automated-testing)
     - [Coverage](#coverage)
   - [SETTING UP URLs](#setting-up-urls)
+  - [TECHNOLOGIES USED](#technologies-used)
+    - [Languages, Frameworks, Editor and Version Control](#languages-frameworks-editor-and-version-control)
+    - [Tools used:](#tools-used)
 
 ## **World of Shape**
 
@@ -225,7 +228,8 @@ _**Checkout** page:_
 The checkout page summarizes the items and lets the user scroll down to make sure that the correct items are in the cart.
 * The **Change Order** button redirects the user back to the cart to delete an item.
 * The user inserts the "Payment Details" and "Card Details" before submitting payment. 
-  * if something is wrong the message "We Were Unable To Take Payment With That Card!" will be displayed and the user is redirected to the checkout page. 
+  * If something with the payment is wrong the message "We Were Unable To Take Payment With That Card!" will be displayed and the user is redirected to the checkout page. 
+  * If the payment is ok
 
 ### Features left to implement
 
@@ -278,3 +282,26 @@ Steps to set up url patterns and getting it to work!
          name='testimonials'),  # from contact view
 
 [Back to: _"Table of Contents"_](#table-of-contents)
+
+## TECHNOLOGIES USED
+
+### Languages, Frameworks, Editor and Version Control
+
+* [VSCode](https://code.visualstudio.com/)
+* [HTML](https://en.wikipedia.org/wiki/HTML)
+* [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+* [Django 3.0.4](https://www.djangoproject.com/)
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+  * [Parallax](https://pixelcog.github.io/parallax.js/)
+* [Bootstrap 4](https://getbootstrap.com/)
+* [jQuery](https://jquery.com/)
+  * [Colorbox](http://www.jacklmoore.com/colorbox/)
+* [Git](https://git-scm.com/)
+* [GitHub](https://github.com/)
+* [Heroku](https://www.heroku.com/home)
+
+### Tools used:
+* [Pep 8 Online Validotr](http://pep8online.com/) ~ Check python code for PEP8 requirements
+* [Fontawsome](https://fontawesome.com/)
+* [Firefox Dev Tools](https://developer.mozilla.org/en-US/docs/Tools)
+* [Adobe Xd](https://www.adobe.com/se/products/xd.html)

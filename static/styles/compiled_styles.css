@@ -129,10 +129,7 @@ p a:hover::after
 	background: rgba(249,140,0,0.75);
 	color: #FFFFFF;
 }
-p::selection
-{
-	
-}
+
 h1{font-size: 48px;}
 h2{font-size: 36px;}
 h3{font-size: 24px;}
@@ -146,15 +143,7 @@ h1, h2, h3, h4, h5, h6
 	text-shadow: rgba(0,0,0,.01) 0 0 1px;
 	line-height: 1.2;
 }
-h1::selection, 
-h2::selection, 
-h3::selection, 
-h4::selection, 
-h5::selection, 
-h6::selection
-{
-	
-}
+
 .form-control
 {
 	color: #f98c00;
@@ -1460,9 +1449,6 @@ form {
 .program_separator {
 	padding-bottom: 25px;
 	border-bottom: 2px solid #f98c00;
-}
-.form_control_cart {
-
 }
 .form_control_cart:hover {
 	color: #ff9711 !important;
