@@ -15,6 +15,7 @@
   - [**UX - User Experience**](#ux---user-experience)
   - [**User Experience**](#user-experience)
     - [**User Stories:**](#user-stories)
+    - [**Wireframe**](#wireframe)
   - [**Features**](#features)
     - [**Existing features**](#existing-features)
     - [**Features left to implement**](#features-left-to-implement)
@@ -28,7 +29,10 @@
   - [**Technologies Used**](#technologies-used)
     - [**Languages, Frameworks, Editor and Version Control**](#languages-frameworks-editor-and-version-control)
     - [**Tools used:**](#tools-used)
-
+  - [**Credits**](#credits)
+    - [**Content**](#content)
+    - [**Acknowledgments**](#acknowledgments)
+    - [**Contact**](#contact)
 ## **World of Shape**
 
 World of Shape is a website that aims to get the user in shape and lose weight in 30 days! 
@@ -115,6 +119,14 @@ _**Developer**:_
 * As a **Developer** I wanted to demonstrate my skills as a junior Full Stack Software developer.
 * As a **Developer** I wanted to build a project that I could showcase alongside my other projects to potential future employers or customers on GitHub and on my personal portfolio.
 * As a **Developer** I wanted to improve the existing website [World of Shape](https://worldofshape.com/) and make it a more inviting and user friendly website.
+
+### **Wireframe**
+
+[AdobexD](https://www.adobe.com/se/products/xd.html) was used for the mockup.
+
+#### **Desktop & Mobile **
+
+See the [WorldofShape Mockups here](#) 
 
 [Back to: _"Table of Contents"_](#table-of-contents)
 
@@ -289,7 +301,7 @@ Steps to set up url patterns and getting it to work!
 * [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 * [Bootstrap 4](https://getbootstrap.com/)
 * [jQuery](https://jquery.com/)
-  * [Colorbox (jQuery plugin)](http://www.jacklmoore.com/colorbox/) ~ 
+  * [Colorbox (jQuery plugin)](http://www.jacklmoore.com/colorbox/) ~ Plugin for the World of Shape video
   * [Parallax (jQuery plugin)](https://pixelcog.github.io/parallax.js/) ~ A simple parallax scrolling effect.
 * [Git](https://git-scm.com/)
 * [GitHub](https://github.com/)
@@ -301,3 +313,21 @@ Steps to set up url patterns and getting it to work!
 * [Firefox Dev Tools](https://developer.mozilla.org/en-US/docs/Tools)
 * [Adobe Xd](https://www.adobe.com/se/products/xd.html)
 ****
+
+## **Credits**
+
+### **Content**
+
+Free template, including images downloaded from [**SportFit**](https://themewagon.com/themes/free-bootstrap-4-html5-fitness-website-template-sportfit/)
+
+All images used with permission from [**WorldofShape**](https://worldofshape.com/) 
+
+### **Acknowledgments**
+
+I would like to thank my good friend [**Niklas Lind**](https://github.com/niklaslind) for his support and guidance during the development of this project. 
+
+I would also like to thank my mentor [**Maranatha Ilesanmi**](https://github.com/mbilesanmi) and the tutors at Code Institute for their help.
+
+### **Contact**
+
+Created by [Stefan Brunotte](mrbrunotte@gmail.com)
