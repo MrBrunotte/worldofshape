@@ -1,4 +1,4 @@
-# Welcome to the **"World of Shape"**
+# Welcome to **"World of Shape"**
 
 ![alt text](https://github.com/MrBrunotte/worldofshape/blob/master/static/images/landingpage.png "World of Shape")
 
@@ -7,9 +7,8 @@
 [![Build Status](https://travis-ci.org/MrBrunotte/worldofshape.svg?branch=master)](https://travis-ci.org/MrBrunotte/worldofshape)
 
 
-## Table of Contents:
-- [Welcome to the **"World of Shape"**](#welcome-to-the-%22world-of-shape%22)
-  - [Table of Contents:](#table-of-contents)
+## **Table of Contents:**
+
   - [**World of Shape**](#world-of-shape)
     - [**Purpose of Project**](#purpose-of-project)
     - [**Functionality of Project**](#functionality-of-project)
@@ -17,18 +16,18 @@
   - [**User Experience**](#user-experience)
     - [**User Stories:**](#user-stories)
   - [**Features**](#features)
-    - [Existing features](#existing-features)
-    - [Features left to implement](#features-left-to-implement)
+    - [**Existing features**](#existing-features)
+    - [**Features left to implement**](#features-left-to-implement)
   - [**Testing**](#testing)
-    - [Travis CI - platform](#travis-ci---platform)
-    - [What is CI - Continuous Integration?](#what-is-ci---continuous-integration)
-    - [CI Builds and Automation: Building, Testing, Deploying](#ci-builds-and-automation-building-testing-deploying)
-  - [AUTOMATED TESTING](#automated-testing)
-    - [Coverage](#coverage)
-  - [SETTING UP URLs](#setting-up-urls)
-  - [TECHNOLOGIES USED](#technologies-used)
-    - [Languages, Frameworks, Editor and Version Control](#languages-frameworks-editor-and-version-control)
-    - [Tools used:](#tools-used)
+    - [**Travis CI - platform**](#travis-ci---platform)
+    - [**What is CI - Continuous Integration?**](#what-is-ci---continuous-integration)
+    - [**CI Builds and Automation: Building, Testing, Deploying**](#ci-builds-and-automation-building-testing-deploying)
+  - [**Automated Testing**](#automated-testing)
+    - [**Coverage**](#coverage)
+  - [Setting up URLs](#setting-up-urls)
+  - [**Technologies Used**](#technologies-used)
+    - [**Languages, Frameworks, Editor and Version Control**](#languages-frameworks-editor-and-version-control)
+    - [**Tools used:**](#tools-used)
 
 ## **World of Shape**
 
@@ -76,11 +75,7 @@ Please feel free to register a user to fully test the [World of Shape website](A
 
 [Back to: _"Table of Contents"_](#table-of-contents)
 
-## **UX - User Experience**
-
-
-
-## **User Experience**
+## **UX - User Experience**ö
 
 The typical user is a man or a woman of all ages that want to get in shape but have struggled in the past. World of Shape helps these users to attain this goal by giving them the tools to effectivly reach the goal set by the user. World of Shape helps the user by supplying the necessary tools to best loose weight and get in shape. These tools consists of training programs, mealplans and access to World of Shapes personal trainer on the web.
 
@@ -126,7 +121,7 @@ _**Developer**:_
 
 ## **Features**
 
-### Existing features
+### **Existing features**
 
 _**Navigation and buttons**:_ 
 
@@ -231,7 +226,7 @@ The checkout page summarizes the items and lets the user scroll down to make sur
   * If something with the payment is wrong the message "We Were Unable To Take Payment With That Card!" will be displayed and the user is redirected to the checkout page. 
   * If the payment is ok
 
-### Features left to implement
+### **Features left to implement**
 
 * Add a blog function (_already axists as an app in the project_).
 * The form help text form Django forms could be displayed more aligned to the input field box.
@@ -241,20 +236,20 @@ The checkout page summarizes the items and lets the user scroll down to make sur
 
 ## **Testing**
 
-### Travis CI - platform
+### **Travis CI - platform**
 
-### What is CI - Continuous Integration?
+### **What is CI - Continuous Integration?**
 
 I have used the practice of CI (Continuous Integration), which is the the practice of merging in small code changes frequently - rather than merging in a large change at the end of a development cycle. The goal is to build healthier software by developing and testing in smaller increments. 
 As a continuous integration platform, Travis CI supports your development process by automatically building and testing code changes, providing immediate **feedback** on the success of the change. Travis CI can also automate other parts of your development process by managing deployments and notifications.
 
-### CI Builds and Automation: Building, Testing, Deploying
+### **CI Builds and Automation: Building, Testing, Deploying**
 
 When you run a build, Travis CI clones your GitHub repository into a brand-new virtual environment, and carries out a series of tasks to build and test your code. If one or more of those tasks fail, the build is considered **broken**. If none of the tasks fail, the build is considered **passed** and Travis CI can deploy your code to a web server or application host.
 
-## AUTOMATED TESTING 
+## **Automated Testing** 
 
-### Coverage
+### **Coverage**
 
 I have used the package 'coverage' to see how effective my testing is. 
 I installed the covarage package with 'pip install coverage' and then I ran 'Coverage' and created a covhtml file.
@@ -268,7 +263,7 @@ and:        python manage.py test users
 
 [Automated testing results](static/img/automated_testing_results.PNG)
 
-## SETTING UP URLs
+## Setting up URLs
 
 Steps to set up url patterns and getting it to work!
 
@@ -283,25 +278,26 @@ Steps to set up url patterns and getting it to work!
 
 [Back to: _"Table of Contents"_](#table-of-contents)
 
-## TECHNOLOGIES USED
+## **Technologies Used**
 
-### Languages, Frameworks, Editor and Version Control
+### **Languages, Frameworks, Editor and Version Control**
 
 * [VSCode](https://code.visualstudio.com/)
 * [HTML](https://en.wikipedia.org/wiki/HTML)
 * [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 * [Django 3.0.4](https://www.djangoproject.com/)
 * [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
-  * [Parallax](https://pixelcog.github.io/parallax.js/)
 * [Bootstrap 4](https://getbootstrap.com/)
 * [jQuery](https://jquery.com/)
-  * [Colorbox](http://www.jacklmoore.com/colorbox/)
+  * [Colorbox (jQuery plugin)](http://www.jacklmoore.com/colorbox/) ~ 
+  * [Parallax (jQuery plugin)](https://pixelcog.github.io/parallax.js/) ~ A simple parallax scrolling effect.
 * [Git](https://git-scm.com/)
 * [GitHub](https://github.com/)
 * [Heroku](https://www.heroku.com/home)
 
-### Tools used:
+### **Tools used:**
 * [Pep 8 Online Validotr](http://pep8online.com/) ~ Check python code for PEP8 requirements
 * [Fontawsome](https://fontawesome.com/)
 * [Firefox Dev Tools](https://developer.mozilla.org/en-US/docs/Tools)
 * [Adobe Xd](https://www.adobe.com/se/products/xd.html)
+****
