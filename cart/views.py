@@ -98,21 +98,47 @@ def delete_meal_item(request, id):
     """Delete a meal in the cart"""
 
     cart = request.session.get('meal', {id})
-    cart.remove('meal', {id})
+    cart.remove(id)
     messages.success(
-        request, f'Your recipe/mealplan has been deleted from your cart!')
+        request, f'Your meal has been deleted from your cart!')
     return redirect(reverse('view_cart'))
 
 
 def delete_product_item(request, id):
     """Delete a product in the cart"""
 
-    cart = request.session.get('meal', {id})
-    cart.remove('meal', {id})
+    cart = request.session.get('cart', id)
+    print(cart)
+    del cart['product']
+    request.session["cart"] = cart
+    print(cart)
     messages.success(
-        request, f'Your recipe/mealplan has been deleted from your cart!')
+        request, f'Your program was removed from your cart!')
     return redirect(reverse('view_cart'))
 
+"""
+def delete_product_item(request, id):
+
+    cart = request.session.get('cart', {})
+    cart.delete(id)
+    request.session['cart'] = cart
+    messages.success(
+        request, f'Your meal has been deleted from your cart!')
+    return redirect(reverse('view_cart'))
+"""
+
+"""
+def remove_product(request, id):
+    
+    View for button removing items from cart from the users stored items
+  
+    product = get_object_or_404(Product, pk=id)
+    cart = request.session.get('cart', {})
+    del cart[id]
+    request.session['cart'] = cart
+    messages.success(request, '%s was removed from the cart' % (product.title))
+    return redirect('view_cart')
+ """
 
 """
 def remove_product(request, id):

@@ -41,7 +41,7 @@
                             </p>
                             <p class="price_checkout">Price: {{ item.meal.price }}</p>
 
-                            <form class="form_group" action="{% url 'update_meal_item' item.meal.id %}" method="post">
+                            <form class="form_group" action="{% url 'delete_meal_item' item.meal.id %}" method="post">
                                 {% csrf_token %}
                                 <div class="form_group">
                                     <!--TODO Remove this!<div class="input_group">
@@ -72,7 +72,7 @@
                             </p>
                             <p class="price_checkout">Price: {{ item.product.price }}</p>
                             <div class="d-flex flex-column align-items-center justify-content-center">
-                                <form class="form_group" action="{% url 'update_product_item' item.product.id %}"
+                                <form class="form_group" action="{% url 'delete_product_item' item.product.id %}"
                                     method="post">
                                     {% csrf_token %}
                                     <div class="form_group">
