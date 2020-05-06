@@ -16,7 +16,7 @@
                         suitable
                         programs for
                         you.</div>
-                    <form method="POST">
+                    <form method="POST" action="{% url 'correct_program' %}">
                         {% csrf_token %}
                         <fieldset class="form_group text_left">
                             {{ form }}

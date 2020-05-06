@@ -7,7 +7,8 @@ from .views import (
     WeightLossAnalysisForm,
     all_products,
     one_program,
-    ProductDetailView
+    ProductDetailView,
+    correct_program
 )
 
 urlpatterns = [
@@ -16,6 +17,7 @@ urlpatterns = [
     path('program/', views.one_program, name='program'),
     path('products/', views.all_products, name='products'),
     path('weight_loss/', views.WeightLossAnalysis, name='weight_loss'),
+    path('correct_program/', views.correct_program, name='correct_program'),
     path('product/<int:pk>/',
          ProductDetailView.as_view(), name='product-detail'),
 ]

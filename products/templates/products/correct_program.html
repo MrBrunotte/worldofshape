@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block content %}
+<!-- top -->
+
+<div class="training_home">
+    <div class="background_image" style="background-image:url(/static/images/services.jpg)"></div>
+    <div class="overlay"></div>
+    <div class="training_home_container">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="">
+                        <div class="training_home_title">Training Programs</div>
+                        <div class="training_home_subtitle">Get started today! Scroll down and read more about our
+                            programs.</div>
+                        <div class="button home_button mt-4">
+                            <a href="#program_section">
+                                Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Programs  -->
+
+<div class="about_services" id="program_section">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="section_title_container">
+                    <div class="section_subtitle">welcome to World of Shape</div>
+                    <div class="section_title">our <span>training Programs</span></div>
+                </div>
+            </div>
+        </div>
+        <!-- Programs for loop -->
+        <div class="row services_row">
+            {% for product in correct_products %}
+            <div class="col-xl-4 col-md-6 service_col program_separator">
+                <div class="service">
+                    <div class="product_image" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')">
+                    </div>
+                    <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
+                        <div class="service_title">{{ product.name }}</div>
+                    </div>
+                    <a class="read_more" href="{% url 'product-detail' product.id %}">read
+                        more...</a>
+                    <p class="service_text">{{ product.description }}</p>
+                    <p class="price">{{ product.price }}</p>
+                    <span class="input_group">
+                        <div class="button add_to_cart_button ml-auto mr-auto">
+                            <a href="{% url 'add_product_to_cart' product.id %}">Add
+                                to
+                                Cart</a>
+                        </div>
+                    </span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<!-- Discount -->
+
+<div class="extra d-flex flex-column align-items-center justify-content-center text-center">
+    <div class="background_image" style="background-image:url(/static/images/extra_wide.jpg)"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="extra_content d-flex flex-column align-items-center justify-content-center text-center">
+                    <div class="extra_title">15% Discount</div>
+                    <div class="extra_text">
+                        <p>Get a one time discount of 15% of your first mealplan order. Excercise along side a healty
+                            diet will make your journey to your new self faster and smoother.</p>
+                    </div>
+                    <div class="button extra_button"><a href="#">Get Discount</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

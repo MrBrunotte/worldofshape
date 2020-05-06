@@ -4,7 +4,7 @@ from django import forms
 class WeightLossAnalysisForm(forms.Form):
     gender = forms.ChoiceField(label='Gender',
                                choices=[('woman', 'Woman'),
-                                        ('Man', 'Man')])
+                                        ('man', 'Man')])
     current_weight = forms.ChoiceField(label='Current Weight span',
                                        choices=[('< 60 kg', '< 60 kg'),
                                                 ('60-70 kg', '60-70 kg'),

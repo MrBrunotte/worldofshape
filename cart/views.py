@@ -97,8 +97,10 @@ def update_meal_item(request, id):
 def delete_meal_item(request, id):
     """Delete a meal in the cart"""
 
-    cart = request.session.get('meal', {id})
-    cart.remove(id)
+    cart = request.session.get('cart', id)
+    print(cart)
+    del cart['meal'][id]
+    request.session["cart"] = cart
     messages.success(
         request, f'Your meal has been deleted from your cart!')
     return redirect(reverse('view_cart'))
@@ -109,13 +111,22 @@ def delete_product_item(request, id):
 
     cart = request.session.get('cart', id)
     print(cart)
-    del cart['product']
+    del cart['product'][id]
     request.session["cart"] = cart
     print(cart)
     messages.success(
         request, f'Your program was removed from your cart!')
     return redirect(reverse('view_cart'))
 
+
+"""
+def delete_product_item(request, id):
+    cartitem = cart_items.objects.get(id=id)
+    cartitem.delete()
+    messages.success(
+        request, f'Your program was removed from your cart!')
+    return redirect(reverse('view_cart'))
+"""
 """
 def delete_product_item(request, id):
 
