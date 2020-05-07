@@ -625,7 +625,20 @@ section
 /*********************************
 5. Home
 *********************************/
+.correct_program {
+	height: 440px;
+}
 
+.correct_training_prog {
+	padding-bottom: 50px;
+}
+
+.correct_prog_image {
+	height: 110px;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin: 40px;
+}
 
 .home,
 .about_home,
