@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.timezone import timezone
 from products.models import Program
 from meals.models import MealProgram
 
