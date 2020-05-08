@@ -1,5 +1,6 @@
 from django.db import models
 from products.models import Program
+from meals.models import MealProgram
 
 # Create your models here.
 
@@ -19,7 +20,7 @@ class Order(models.Model):
         return "{0}-{1}-{2}".format(self.id, self.date, self.full_name)
 
 
-class OrderLineItem(models.Model):
+class ProductLineItem(models.Model):
     order = models.ForeignKey(Order, on_delete=models.CASCADE)
     product = models.ForeignKey(Program, on_delete=models.CASCADE)
     quantity = models.IntegerField(blank=False)
@@ -27,3 +28,13 @@ class OrderLineItem(models.Model):
     def __str__(self):
         return "{0} {1} @ {2}".format(
             self.quantity, self.product.name, self.product.price)
+
+
+class MealLineItem(models.Model):
+    order = models.ForeignKey(Order, on_delete=models.CASCADE)
+    meal = models.ForeignKey(MealProgram, on_delete=models.CASCADE)
+    quantity = models.IntegerField(blank=False)
+
+    def __str__(self):
+        return "{0} {1} @ {2}".format(
+            self.quantity, self.meal.name, self.meal.price)

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Meal, Program
+from .models import Meal, MealProgram
 from django.views.generic import DetailView
 
 # Create your views here.
@@ -16,6 +16,6 @@ def all_meals(request):
 
 
 def one_meal(request):
-    meal = Program.objects.find_one()
+    meal = MealProgram.objects.find_one()
     """A View that renders an indiviual program"""
     return render(request, "meals/meal.html", {'meal': meal})

@@ -35,12 +35,3 @@ class Program(models.Model):
 
     def __str__(self):
         return self.name
-
-
-
-    """
-    This class is used to get the correct training program based on the user input in the WeightLossAnalysis form.
-
-    class CorrectProgram():
-        
-    """

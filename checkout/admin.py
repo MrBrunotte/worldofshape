@@ -1,13 +1,17 @@
 from django.contrib import admin
-from .models import Order, OrderLineItem
+from .models import Order, ProductLineItem, MealLineItem
 
 
-class OrderLineAdminInline(admin.TabularInline):
-    model = OrderLineItem
+class ProductLineAdminInline(admin.TabularInline):
+    model = ProductLineItem
+
+
+class MealineAdminInline(admin.TabularInline):
+    model = MealLineItem
 
 
 class OrderAdmin(admin.ModelAdmin):
-    inlines = (OrderLineAdminInline, )
+    inlines = (ProductLineAdminInline, MealineAdminInline)
 
 
 admin.site.register(Order, OrderAdmin)
