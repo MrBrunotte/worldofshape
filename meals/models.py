@@ -8,12 +8,10 @@ class Meal(models.Model):
     """
     This is the database for the meal and diet plans
     """
-    name_id = models.CharField(max_length=20, default='')
-    name = models.CharField(max_length=254, default='')
-    name2 = models.CharField(max_length=254, default='')
-    description = models.TextField()
-    description2 = models.TextField(default='')
-    description3 = models.TextField(default='')
+    name = models.CharField(max_length=50, default='')
+    name2 = models.CharField(max_length=50, default='')
+    description = models.TextField(default='')
+    full_description = models.TextField(default='')
     price = models.DecimalField(max_digits=6, decimal_places=2)
     image = models.ImageField(upload_to='')
 
@@ -25,8 +23,8 @@ class Meal(models.Model):
 
 
 class MealProgram(models.Model):
-    name = models.CharField(max_length=254, default='')
-    description = models.TextField()
+    name = models.CharField(max_length=50, default='')
+    description = models.TextField(default='')
     price = models.DecimalField(max_digits=6, decimal_places=2)
     image = models.ImageField(upload_to='images')
 

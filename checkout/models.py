@@ -1,7 +1,7 @@
 from django.db import models
 from django.utils.timezone import timezone
 from products.models import Program
-from meals.models import MealProgram
+from meals.models import Meal
 
 # Create your models here.
 
@@ -33,7 +33,7 @@ class ProductLineItem(models.Model):
 
 class MealLineItem(models.Model):
     order = models.ForeignKey(Order, on_delete=models.CASCADE)
-    meal = models.ForeignKey(MealProgram, on_delete=models.CASCADE)
+    meal = models.ForeignKey(Meal, on_delete=models.CASCADE)
     quantity = models.IntegerField(blank=False)
 
     def __str__(self):

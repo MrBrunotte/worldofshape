@@ -10,9 +10,9 @@ class Product(models.Model):
     This is the database for the products/programs
     We specify the columns that will be in the tables in our db
     """
-    name_id = models.CharField(max_length=20, default='')
-    name = models.CharField(max_length=254, default='')
-    description = models.TextField()
+    
+    name = models.CharField(max_length=50, default='')
+    description = models.TextField(default='')
     full_description = models.TextField(default='')
     full_description_2 = models.TextField(default='')
     full_description_3 = models.TextField(default='')
@@ -29,7 +29,7 @@ class Product(models.Model):
 
 class Program(models.Model):
     name = models.CharField(max_length=254, default='')
-    description = models.TextField()
+    description = models.TextField(default='')
     price = models.DecimalField(max_digits=6, decimal_places=2)
     image = models.ImageField(upload_to='images')
 
