@@ -66,69 +66,77 @@ def correct_program(request):
     form = WeightLossAnalysisForm(request.POST)
 
     if (request.POST.get('gender') == 'woman') & (request.POST.get('training_level') == 'lev_1'):
-        correct_products.append(Product.objects.get(id=16))
+        correct_products.append(Product.objects.get(id=4))
         correct_products.append(Product.objects.get(id=9))
+        correct_products.append(Product.objects.get(id=12))
         messages.success(
             request, f'Below you will find the best programs based on your choises!')
         return render(request, 'products/correct_program.html', {'correct_products': correct_products})
 
     elif (request.POST.get('gender') == 'woman') & (request.POST.get('training_level') == 'lev_2'):
-        correct_products.append(Product.objects.get(id=15))
+        correct_products.append(Product.objects.get(id=3))
+        correct_products.append(Product.objects.get(id=9))
+        correct_products.append(Product.objects.get(id=10))
         messages.success(
             request, f'Below you will find the best program based on your choises!')
         return render(request, 'products/correct_program.html', {'correct_products': correct_products})
 
     elif (request.POST.get('gender') == 'woman') & (request.POST.get('training_level') == 'lev_3'):
-        correct_products.append(Product.objects.get(id=15))
-        correct_products.append(Product.objects.get(id=4))
+        correct_products.append(Product.objects.get(id=3))
         correct_products.append(Product.objects.get(id=5))
+        correct_products.append(Product.objects.get(id=6))
         messages.success(
             request, f'Below you will find the best programs based on your choises!')
         return render(request, 'products/correct_program.html', {'correct_products': correct_products})
 
     elif (request.POST.get('gender') == 'woman') & (request.POST.get('training_level') == 'lev_4'):
-        correct_products.append(Product.objects.get(id=14))
-        correct_products.append(Product.objects.get(id=5))
+        correct_products.append(Product.objects.get(id=2))
         correct_products.append(Product.objects.get(id=8))
+        correct_products.append(Product.objects.get(id=10))
         messages.success(
             request, f'Below you will find the best programs based on your choises!')
         return render(request, 'products/correct_program.html', {'correct_products': correct_products})
 
     elif (request.POST.get('gender') == 'woman') & (request.POST.get('training_level') == 'lev_5'):
-        correct_products.append(Product.objects.get(id=5))
-        correct_products.append(Product.objects.get(id=6))
         correct_products.append(Product.objects.get(id=7))
-        correct_products.append(Product.objects.get(id=13))
         messages.success(
             request, f'Below you will find the best programs based on your choises!')
         return render(request, 'products/correct_program.html', {'correct_products': correct_products})
 
     elif (request.POST.get('gender') == 'man') & (request.POST.get('training_level') == 'lev_1'):
-        correct_products.append(Product.objects.get(id=16))
-        correct_products.append(Product.objects.get(id=9))
+        correct_products.append(Product.objects.get(id=4))
+        correct_products.append(Product.objects.get(id=8))
+        correct_products.append(Product.objects.get(id=12))
         messages.success(
             request, f'Below you will find the best programs based on your choises!')
         return render(request, 'products/correct_program.html', {'correct_products': correct_products})
 
     elif (request.POST.get('gender') == 'man') & (request.POST.get('training_level') == 'lev_2'):
-        correct_products.append(Product.objects.get(id=15))
+        correct_products.append(Product.objects.get(id=3))
+        correct_products.append(Product.objects.get(id=5))
+        correct_products.append(Product.objects.get(id=6))
         messages.success(
-            request, f'Below you will find the best program based on your choises!')
+            request, f'Below you will find the best programs based on your choises!')
         return render(request, 'products/correct_program.html', {'correct_products': correct_products})
 
     elif (request.POST.get('gender') == 'man') & (request.POST.get('training_level') == 'lev_3'):
-        correct_products.append(Product.objects.get(id=15))
-        correct_products.append(Product.objects.get(id=4))
-        correct_products.append(Product.objects.get(id=5))
+        correct_products.append(Product.objects.get(id=1))
+        correct_products.append(Product.objects.get(id=2))
+        correct_products.append(Product.objects.get(id=11))
         messages.success(
             request, f'Below you will find the best programs based on your choises!')
         return render(request, 'products/correct_program.html', {'correct_products': correct_products})
 
     elif (request.POST.get('gender') == 'man') & (request.POST.get('training_level') == 'lev_4'):
-        correct_products.append(Product.objects.get(id=13))
-        correct_products.append(Product.objects.get(id=8))
-        correct_products.append(Product.objects.get(id=5))
-        correct_products.append(Product.objects.get(id=14))
+        correct_products.append(Product.objects.get(id=1))
+        correct_products.append(Product.objects.get(id=2))
+        correct_products.append(Product.objects.get(id=11))
+        messages.success(
+            request, f'Below you will find the best programs based on your choises!')
+        return render(request, 'products/correct_program.html', {'correct_products': correct_products})
+
+    elif (request.POST.get('gender') == 'man') & (request.POST.get('training_level') == 'lev_5'):
+        correct_products.append(Product.objects.get(id=7))
         messages.success(
             request, f'Below you will find the best programs based on your choises!')
         return render(request, 'products/correct_program.html', {'correct_products': correct_products})
