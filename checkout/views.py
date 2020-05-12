@@ -102,7 +102,7 @@ def checkout(request):
                         quantity=quantity,
                     )
                     program_line_item.save()
-
+                    print(cart)
                     print(program_line_item)
                     # print(order)
                     # print(product)
