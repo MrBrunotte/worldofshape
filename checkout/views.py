@@ -73,7 +73,8 @@ def checkout(request):
             order.date = timezone.now()
             order.save()
 
-            cart = request.session.get('cart', {})
+            # cart = request.session.get('cart', {})
+            cart = request.session.get('cart', {"meal": {}, "program": {}})
             # print(cart)
             total = 0
             total_product = 0
