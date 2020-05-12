@@ -1914,10 +1914,6 @@ p:last-of-type {
 .service_text p{
 	min-height: 340px;
 }
-.service_text_meal {
-	margin-top: 17px;
-	min-height: 252px;
-}
 .service_text_single_top {
 	font-weight: 700;
 }
