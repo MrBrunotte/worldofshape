@@ -85,32 +85,40 @@ def checkout(request):
             for category, values in cart.items():
 
                 for id, quantity in values.items():
-                    meal = get_object_or_404(Meal, pk=id)
-                    total_meal += quantity * meal.price
-                    meal_line_item = MealLineItem(
-                        order=order,
-                        meal=meal,
-                        quantity=quantity,
-                    )
-                    meal_line_item.save()
 
-                    product = get_object_or_404(Product, pk=id)
-                    total_product += quantity * product.price
-                    program_line_item = ProgramLineItem(
-                        order=order,
-                        program=product,
-                        quantity=quantity,
-                    )
-                    program_line_item.save()
-                    print(cart)
-                    print(program_line_item)
-                    # print(order)
-                    # print(product)
-                    # print(quantity)
-                    print(meal_line_item)
-                    # print(order)
-                    # print(meal)
-                    # print(quantity)
+                    if category == 'meal':
+                        meal = get_object_or_404(Meal, pk=id)
+                        total_meal += quantity * meal.price
+                        meal_line_item = MealLineItem(
+                            order=order,
+                            meal=meal,
+                            quantity=quantity,
+                        )
+                        meal_line_item.save()
+
+                    else:
+                        product = get_object_or_404(Product, pk=id)
+                        total_product += quantity * product.price
+                        program_line_item = ProgramLineItem(
+                            order=order,
+                            program=product,
+                            quantity=quantity,
+                        )
+                        program_line_item.save()
+                        
+
+            total = total_meal + total_product
+
+            # print(total)
+            # print(cart)
+            # print(program_line_item)
+            # print(order)
+            # print(product)
+            # print(quantity)
+            # print(meal_line_item)
+            # print(order)
+            # print(meal)
+            # print(quantity)
 
             try:
                 customer = stripe.Charge.create(
