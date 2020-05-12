@@ -96,7 +96,7 @@ def checkout(request):
                         )
                         meal_line_item.save()
 
-                    else:
+                    if category == 'product':
                         product = get_object_or_404(Product, pk=id)
                         total_product += quantity * product.price
                         program_line_item = ProgramLineItem(
@@ -105,11 +105,10 @@ def checkout(request):
                             quantity=quantity,
                         )
                         program_line_item.save()
-                        
 
             total = total_meal + total_product
 
-            # print(total)
+            print(total)
             # print(cart)
             # print(program_line_item)
             # print(order)
