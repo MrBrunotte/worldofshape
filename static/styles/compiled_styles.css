@@ -347,7 +347,7 @@ Header
 }
 .logo
 {
-	left: -30px;
+	left: -15px;
 }
 .logo > div
 {
@@ -431,7 +431,7 @@ Header
 {
 	display: none;
 	position: absolute;
-	top: 50%;
+	top: 35%;
 	-webkit-transform: translateY(-50%);
 	-moz-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
@@ -2168,6 +2168,12 @@ p:last-of-type {
 		font-size: 14px;
 		margin-top: -4px;
 	}
+	.about_about {
+		padding-bottom: 130px;
+	}
+	.about_about_image {
+		bottom: -112px;
+	}
 	.home_button
 	{
 		margin-top: 37px;
@@ -2439,6 +2445,7 @@ p:last-of-type {
 	}
 	.text-muted {
 		font-size: 8px;
+		text-transform: capitalize;
 	}
 	.no_padding {
 		padding: 0px;
