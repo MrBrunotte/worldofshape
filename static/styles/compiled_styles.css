@@ -1090,7 +1090,7 @@ p:last-of-type {
 {
 	position: absolute;
 	right: -20px;
-	bottom: 20px;
+	bottom: -30px;
 	max-width: 47%;
 }
 .about_about_image img
@@ -1759,7 +1759,7 @@ p:last-of-type {
 .service_text
 {
 	margin-top: 17px;
-	min-height: 330px;
+	min-height: 365px;
 }
 .service_text p{
 	min-height: 340px;
@@ -1835,7 +1835,7 @@ p:last-of-type {
 }
 .footer_content
 {
-	padding-bottom: 253px;
+	padding-bottom: 436px;
 	z-index: 1;
 }
 .footer_logo .logo
@@ -2108,6 +2108,9 @@ p:last-of-type {
 		-o-transform: none;
 		transform: none;
 	}
+	.section_subtitle {
+		margin-top: 0px;
+		}
 	.footer_nav{
 		display: none;
 	}
@@ -2391,7 +2394,7 @@ p:last-of-type {
 	.section_title_container {
 		padding-top: 70px;
 	}
-	
+
 	/* profile */
 	.alert {
 		font-size: .9rem;
