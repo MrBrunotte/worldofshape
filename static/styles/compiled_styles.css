@@ -1,41 +1,14 @@
 @charset "utf-8";
 /* CSS Document */
 
-/******************************
-
-[Table of Contents]
-
-1. Fonts
-2. Body and some general stuff
---- base.html ---
-3. Header - navbar - hamburger animation
-4. Menu
---- App page sections ---
-5. Home
-6. Boxes
-7. About
-8. Testimonials
-9. Login/Register
-
-
-9. Gallery
-10. Services
-11. Blog
-12. Footer
-
-
-
-
-******************************/
-
 /***********
-1. Fonts
+Fonts
 ***********/
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700');
 
 /*********************************
-2. Body and some general stuff
+Body and some general stuff
 *********************************/
 
 *
@@ -347,24 +320,10 @@ section
 	margin-right: 4px;
 	color: #e0cccd;
 }
-.rating_1 i:first-child::before{color: #fba40e;}
-.rating_2 i:first-child::before{color: #fba40e;}
-.rating_2 i:nth-child(2)::before{color: #fba40e;}
-.rating_3 i:first-child::before{color: #fba40e;}
-.rating_3 i:nth-child(2)::before{color: #fba40e;}
-.rating_3 i:nth-child(3)::before{color: #fba40e;}
-.rating_4 i:first-child::before{color: #fba40e;}
-.rating_4 i:nth-child(2)::before{color: #fba40e;}
-.rating_4 i:nth-child(3)::before{color: #fba40e;}
-.rating_4 i:nth-child(4)::before{color: #fba40e;}
-.rating_5 i:first-child::before{color: #fba40e;}
-.rating_5 i:nth-child(2)::before{color: #fba40e;}
-.rating_5 i:nth-child(3)::before{color: #fba40e;}
-.rating_5 i:nth-child(4)::before{color: #fba40e;}
-.rating_5 i:nth-child(5)::before{color: #fba40e;}
+
 
 /*********************************
-3. Header
+Header
 *********************************/
 
 .header
@@ -547,7 +506,7 @@ section
 }
 
 /*********************************
-4. Menu
+Menu
 *********************************/
 
 .menu
@@ -622,24 +581,18 @@ section
 	margin-right: 12px;
 }
 
-/*********************************
-5. Home
-*********************************/
 .correct_program {
 	height: 440px;
 }
-
 .correct_training_prog {
 	padding-bottom: 50px;
 }
-
 .correct_prog_image {
 	height: 110px;
 	background-position: center;
 	background-repeat: no-repeat;
 	margin: 40px;
 }
-
 .home,
 .about_home,
 .training_home,
@@ -647,7 +600,6 @@ section
 	width: 100%;
 	overflow: hidden;
 }
-/* index.html*/
 .home,
 .profile_home,
 .testimonials_home {
@@ -659,8 +611,6 @@ section
 .testimonials_home {
     border-bottom: solid 3px #ff9711;
 }
-
-/* about.html*/
 .about_home,
 .training_home {
     height: 667px;
@@ -937,11 +887,6 @@ p:last-of-type {
     -o-transition: all 200ms ease;
     transition: all 200ms ease;
 }
-
-/*********************************
-6. Boxes
-*********************************/
-
 .boxes
 {
 	z-index: 1;
@@ -959,7 +904,6 @@ p:last-of-type {
 }
 .box:first-child
 {
-	/*background: #262626;*/
 	background: rgb(239, 136, 1, 0.9);
 }
 .box:nth-child(2)
@@ -1036,12 +980,6 @@ p:last-of-type {
 	line-height: 39px;
 	text-align: center;
 }
-
-
-
-/*********************************
-7. About
-*********************************/
 .home_about,
 .about_about {
     background: #FFFFFF;
@@ -1159,10 +1097,6 @@ p:last-of-type {
 {
 	max-width: 100%;
 }
-/*********************************
-8. Testimonials
-*********************************/
-
 .testimonials
 {
 	padding-top: 310px;
@@ -1266,10 +1200,6 @@ p:last-of-type {
 	display: inline-block;
 	box-shadow: 0 0 1px 0 #f98c00 inset, 0 0 1px 0 #f98c00;
 }
-
-/*********************************
-9. login/register/logout
-*********************************/
 .logout_home,
 .login_home,
 .register_home,
@@ -1286,7 +1216,6 @@ p:last-of-type {
 	background-repeat: no-repeat;
 	background-size: cover;
 }
-
 .login_home,
 .register_home,
 .contact_home,
@@ -1302,7 +1231,6 @@ p:last-of-type {
 .contact_home{
 	height: 667px;
 }
-
 .login_content,
 .register_content {
 	padding-top: 310px;
@@ -1312,7 +1240,6 @@ p:last-of-type {
 	margin:0 auto;
 	width: 60%;
 }
-
 .login_title,
 .register_title,
 .profile_title {
@@ -1338,9 +1265,6 @@ p:last-of-type {
 .profile_image {
 	justify-content: center;
 }
-
-/* forms */
-
 label {
 	margin-bottom: 0;
 	color: white !important;
@@ -1509,12 +1433,10 @@ li:hover {
 a:hover {
     color: white;
 }
-
 .text_left {
 	text-align: left;
 	margin: 60px 0;
 }
-
 #id_gender,
 #id_current_weight,
 #id_expected_weight_loss,
@@ -1528,28 +1450,20 @@ a:hover {
 	text-align: right;
 	text-transform: capitalize;
 }
-
 #id_expiry_month,
 #id_expiry_year {
 	width: 60px;
 }
-
-
 .text_left label {
 	width: 50% !important;
 }
 option {
 	background: transparent !important;
 }
-
-
-/* alert messages */
-
 .alert-success {
 	background: rgb(255, 151, 17);
 	color: black;
 }
-
 .alert {
 	position: relative;
 	margin: 65px 0 0 !important;
@@ -1562,7 +1476,6 @@ option {
 	font-size: 1.125rem;
 	font-weight: 600;
 }
-
 .errorlist li {
 	font-size: 1rem;
 	color: rgb(255, 151, 17);
@@ -1622,7 +1535,6 @@ p:last-of-type {
 }
 
 /* Purposly used !important here because I wanted to overwrite the Crispy form and Bootstrap style settings*/
-
 .my_contact_input {
     width: 100%;
 	height: 52px;
@@ -1662,66 +1574,6 @@ p:last-of-type {
 	height: 190px;
 }
 
-
-
-
-/*********************************
-8. Footer
-*********************************/
-
-.skills
-{
-	padding-top: 100px;
-	padding-bottom: 100px;
-}
-.skills_content
-{
-	padding-bottom: 14px;
-}
-.skills .section_title
-{
-	font-size: 48px;
-	margin-top: 6px;
-}
-.skills_text
-{
-	margin-top: 31px;
-}
-.progress_bar_container
-{
-	margin-top: 52px;
-}
-.pb_item
-{
-	display: block;
-	position: relative;
-	box-sizing: border-box;
-	margin-bottom: 20px;
-}
-.pb_item:last-child
-{
-	margin-bottom: 0px;
-}
-.pb_item h5
-{
-	font-size: 14px;
-	line-height: 0.75;
-	font-weight: 600;
-	margin-top: 33px;
-	color: #262626;
-}
-.progressbar-text
-{
-	top: 37px !important;
-	line-height: 0.75 !important;
-	font-size: 14px !important;
-	font-weight: 600 !important;
-	color: #262626 !important;
-}
-.skill_bars
-{
-	height: 4px;
-}
 .extra
 {
 	width: 100%;
@@ -2544,17 +2396,27 @@ p:last-of-type {
 	.alert {
 		font-size: .9rem;
 	}
+	.profile_home {
+		height: 190vh;
+	}
 	.profile_title {
 		font-size: 34px;
 		font-weight: 300;
+		margin-top: -50px;
+	}
+	.profile_content {
+		width: 100%;
 	}
 	.username_title,
+	.username_email_subtitle,
 	.strong_profile {
 		font-size: 12px;
+		width: 100%;
 	}
 	/* our meals */
 	.section_title {
-		font-size: 21px;
+		font-size: 29px;
+		font-weight: 500;
 	}
 	.service_text {
 		min-height: 270px;
