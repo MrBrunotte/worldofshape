@@ -1166,7 +1166,7 @@ p:last-of-type {
 .testimonials
 {
 	padding-top: 310px;
-	padding-bottom: 100px;
+	padding-bottom: 95px;
 }
 
 .testimonals_bottom {
@@ -1398,7 +1398,6 @@ form {
 .cart_title_checkout {
 	font-size: 24px;
 	font-weight: 400;
-	
 	text-transform: uppercase;
 }
 .cart_title {
@@ -1553,8 +1552,7 @@ option {
 
 .alert {
 	position: relative;
-	margin: 70px 0 0 !important;
-	padding: 0;
+	margin: 65px 0 0 !important;
 	border: 1px solid transparent;
 	border-radius: 0 !important;
 	text-align: center;
@@ -2152,6 +2150,9 @@ p:last-of-type {
 	{
 		max-width: 50%;
 	}
+	.boxes {
+		margin-top: -190px;
+	}
 	/* profile */
 	.alert {
 		font-size: 1.125rem;
@@ -2180,6 +2181,10 @@ p:last-of-type {
 
 @media only screen and (min-width: 767px) and  (max-width: 991px)
 {		
+	.testimonials {
+		padding-top: 200px;
+		padding-bottom: 30px;
+	}
 	.testimonial_large_img {
 		display: none;
 	}
@@ -2192,6 +2197,18 @@ p:last-of-type {
 	.testimonial_xs_img {
 		display: none;
 	}
+	.home
+	{
+		height: 80vh;
+	}
+	.home_title, .training_home_title {
+		font-size: 65px;
+		padding: 20px 0;
+		font-weight: 600;
+	}
+	.boxes {
+		margin-top: 5px;
+	}
 	.box
 	{
 		width: 100%;
@@ -2202,7 +2219,10 @@ p:last-of-type {
 	}
 	.box:not(:last-child)
 	{
-		margin-bottom: 60px;
+		margin-bottom: 20px;
+	}
+	.text-center {
+		margin-bottom: 25px;
 	}
 	.test_text p {
 		width: 80%;
@@ -2254,6 +2274,10 @@ p:last-of-type {
 
 @media only screen and (min-width: 575px) and (max-width: 767px)
 {	
+	.testimonials {
+		padding-top: 120px;
+		padding-bottom: 100px;
+	}
 	.testimonial_large_img {
 		display: none;
 	}
@@ -2269,6 +2293,15 @@ p:last-of-type {
 	.hamburger_bar
 	{
 		right: calc((100vw - 510px) / 2 - 15px);
+	}
+	.home
+	{
+		height: 50vh;
+	}
+	.home_title, .training_home_title {
+		font-size: 26px;
+		padding: 20px 0;
+		font-weight: 600;
 	}
 	.about_home_title
 	{
@@ -2331,9 +2364,14 @@ p:last-of-type {
 
 @media only screen and (max-width: 574px)
 {
-	p
-	{
-		font-size: 10px;
+	#submit_payment_btn {
+		width: 180px;
+	}
+	label {
+		width: 100% !important;
+	}
+	.text_highlight_testimonials {
+		font-size: 8px;
 	}
 	.hamburger {
 		padding: 15px 20px 15px;
@@ -2344,7 +2382,7 @@ p:last-of-type {
 		height: 65px;
 	}
 	.logo {
-		left: 25px;
+		left: 5px;
 	}
 	.logo > div {
 		font-size: 16px;
@@ -2356,9 +2394,12 @@ p:last-of-type {
 	.video_text {
 		font-size: 12px;
 	}
+	.home_container {
+		top: 20%;
+	}
 	.home
 	{
-		height: 70vh;
+		height: 65vh;
 	}
 	.home_title,
 	.training_home_title {
@@ -2371,7 +2412,7 @@ p:last-of-type {
 		font-size: 12px;
 	}
 	.training_home {
-		height: 360px;
+		height: 100vh;
 	}
 	.about_services {
 		padding-top: 5px;
@@ -2380,7 +2421,7 @@ p:last-of-type {
 	
 	.home_button
 	{
-		margin-top: 33px;
+		margin-top: 133px;
 	}
 	.home_button a
 	{
@@ -2400,7 +2441,7 @@ p:last-of-type {
 	.box {
 		width: 90%;
 		margin: 0 auto;
-		height: 355px;
+		height: 450px;
 	}
 	.box_text p {
 		height: 80px;
@@ -2418,13 +2459,16 @@ p:last-of-type {
 		top: 35%;
 	}
 	.text_highlight {
-		font-size: 10px;
+		font-size: 13px;
 	}
 	.about_button {
 		margin-bottom: 42px;
 	}
 	.testimonials {
 		padding:70px 25px 40px ;
+	}
+	.testimonial_img {
+		width: 100%;
 	}
 	.testimonial_large_img {
 		display: none;
@@ -2443,6 +2487,7 @@ p:last-of-type {
 	}
 	.test_text p {
 		width: 100%;
+		font-size: 9px;
 	}
 	.header_content,
 	.header.scrolled .header_content
@@ -2451,8 +2496,16 @@ p:last-of-type {
 	}
 	.about_home_title
 	{
-        font-size: 48px;
+        font-size: 34px;
         margin-bottom: 14px;
+	}
+	.about_home_subtitle {
+		font-size: 14px;
+	}
+	.about_about, 
+	.about_services {
+		padding-top: 0px;
+		padding-bottom: 50px;
 	}
 	.team
 	{
@@ -2462,6 +2515,31 @@ p:last-of-type {
 	{
 		font-size: 48px;
 	}
+	.cart_text {
+		font-size: 12px;
+	}
+	.cart_total {
+		font-size: 16px;
+	}
+	.cart_title_checkout {
+		color: white;
+		font-size: 16px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		font-weight: 700;
+	}
+	.cart_total_checkout {
+		font-size: 16px;
+	}
+	.cart_text_checkout {
+		color: white;
+		font-size: 11px;
+		line-height: 1.5;
+	}
+	.section_title_container {
+		padding-top: 70px;
+	}
+	
 	/* profile */
 	.alert {
 		font-size: .9rem;
@@ -2491,6 +2569,15 @@ p:last-of-type {
 		margin-top: 31px;
 	}
 	/* login, register and contact */
+	.my_logo > div {
+		font-size: 22.3px;
+	}
+	.text-muted {
+		font-size: 8px;
+	}
+	.no_padding {
+		padding: 0px;
+	}
 	.register_login {
 		height: 100vh;
 	}
@@ -2507,12 +2594,25 @@ p:last-of-type {
 	.contact_container {
 		top: 62%
 	}
+	.contact_form_container {
+		margin-top: 25px;
+	}
+	.contact_text {
+		margin-top: 10px;
+	}
+	.contact_text p {
+		font-size: 10px;
+	}
 	.contact {
 		padding-top: 15px;
 	}
 	.contact_home {
 		/*height: 473px;*/
 		height: 245px;
+	}
+	.contact_list {
+		padding-left: 0px;
+		margin-top: 15px;
 	}
 	.contact_list ul li > div:last-of-type {
 		font-size: 8px;
@@ -2524,12 +2624,16 @@ p:last-of-type {
 		font-size: 25px;
 		padding: 40px;
 	}
+	.meal_image {
+		height: 200px;
+	}
 	/* Weight analysis page */
 	.register_home {
 		height: 130vh;
 	}
 	.testimonials_home_title {
 		font-size: 24px;
+		padding-top: 90px;
 		padding-bottom: 10px;
 	}
 	.testimonials_home_subtitle {
@@ -2553,7 +2657,8 @@ p:last-of-type {
 	input {
 		width: 100%
 	}
-	#id_gender, #id_current_weight,
+	#id_gender, 
+	#id_current_weight,
 	#id_expected_weight_loss,
 	#id_current_age,
 	#id_training_level {
@@ -2561,6 +2666,12 @@ p:last-of-type {
 	}
 	.text_left {
 		margin: 10px 0;
+	}
+	.text_left label {
+		width: 100% !important;
+	}
+	.program_text {
+		font-size: 12px;
 	}
 	/* footer content */
 	.footer {
