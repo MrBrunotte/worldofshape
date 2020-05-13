@@ -15,7 +15,7 @@
   - [**UX - User Experience**](#ux---user-experience)
   - [**User Experience**](#user-experience)
     - [**User Stories:**](#user-stories)
-    - [**Wireframe**](#wireframe)
+    - [**Mockup**](#mockup)
   - [**Features**](#features)
     - [**Existing features**](#existing-features)
     - [**Features left to implement**](#features-left-to-implement)
@@ -79,7 +79,7 @@ Please feel free to register a user to fully test the [World of Shape website](A
 
 [Back to: _"Table of Contents"_](#table-of-contents)
 
-## **UX - User Experience**ö
+## **UX - User Experience**
 
 The typical user is a man or a woman of all ages that want to get in shape but have struggled in the past. World of Shape helps these users to attain this goal by giving them the tools to effectivly reach the goal set by the user. World of Shape helps the user by supplying the necessary tools to best loose weight and get in shape. These tools consists of training programs, mealplans and access to World of Shapes personal trainer on the web.
 
@@ -120,13 +120,13 @@ _**Developer**:_
 * As a **Developer** I wanted to build a project that I could showcase alongside my other projects to potential future employers or customers on GitHub and on my personal portfolio.
 * As a **Developer** I wanted to improve the existing website [World of Shape](https://worldofshape.com/) and make it a more inviting and user friendly website.
 
-### **Wireframe**
+### **Mockup**
 
 [AdobexD](https://www.adobe.com/se/products/xd.html) was used for the mockup.
 
 #### **Desktop & Mobile **
 
-See the [WorldofShape Mockups here](https://xd.adobe.com/view/4e26e532-1880-4f4f-665d-769778239027-3817/) 
+See the WorldofShape Mockups [here](https://xd.adobe.com/view/4e26e532-1880-4f4f-665d-769778239027-3817/) Click on "World of shape" in the top left corner to see all 10 mockups. 
 
 [Back to: _"Table of Contents"_](#table-of-contents)
 
