@@ -1445,7 +1445,8 @@ a:hover {
 	width: 320px;
 	color: #f98c00;
 	background-color: transparent;
-	border: none;
+	border: 1px solid #f98c00;
+	border-radius: 5px;
 	padding: 0 15px 0;
 	text-align: right;
 	text-transform: capitalize;
@@ -1606,6 +1607,99 @@ p:last-of-type {
 	margin-top: 47px;
 }
 
+*/
+/*********************************
+8. Footer
+*********************************/
+
+.skills
+{
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+.skills_content
+{
+	padding-bottom: 14px;
+}
+.skills .section_title
+{
+	font-size: 48px;
+	margin-top: 6px;
+}
+.skills_text
+{
+	margin-top: 31px;
+}
+.progress_bar_container
+{
+	margin-top: 52px;
+}
+.pb_item
+{
+	display: block;
+	position: relative;
+	box-sizing: border-box;
+	margin-bottom: 20px;
+}
+.pb_item:last-child
+{
+	margin-bottom: 0px;
+}
+.pb_item h5
+{
+	font-size: 14px;
+	line-height: 0.75;
+	font-weight: 600;
+	margin-top: 33px;
+	color: #262626;
+}
+.progressbar-text
+{
+	top: 37px !important;
+	line-height: 0.75 !important;
+	font-size: 14px !important;
+	font-weight: 600 !important;
+	color: #262626 !important;
+}
+.skill_bars
+{
+	height: 4px;
+}
+.extra
+{
+	width: 100%;
+	height: 100%;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-top: 50px;
+	padding-bottom: 65px;
+}
+.extra_title
+{
+	font-family: 'Allerta Stencil', sans-serif;
+	font-size: 60px;
+	color: #FFFFFF;
+	line-height: 1.1;
+}
+.extra_text
+{
+	text-align: center;
+	margin-top: 32px;
+}
+.extra_text p
+{
+	color: #FFFFFF;
+	font-weight: 600;
+}
+.extra_button
+{
+	border: solid 1px #FFFFFF;
+	margin-top: 47px;
+}
+
+/*********************************
+10. Services
+*********************************/
 
 .services
 {
@@ -1614,7 +1708,7 @@ p:last-of-type {
 	background: #FFFFFF;
 }
 .services_meals {
-	margin-top: 40px;
+	margin-top: 4zxc0px;
 }
 .meal_row,
 .product_row {
@@ -1901,6 +1995,9 @@ p:last-of-type {
 	{
 		margin-left: 90px;
 	}
+	.register_home {
+		height: 115vh;
+	}
 	.about_home
 	{
 		padding-bottom: 0px;
@@ -1955,6 +2052,9 @@ p:last-of-type {
 	}
 	.testimonial_xs_img {
 		display: none;
+	}
+	.register_home {
+		height: 115vh;
 	}
 	.home
 	{
@@ -2081,6 +2181,9 @@ p:last-of-type {
 	.about_about_image {
 		bottom: -112px;
 	}
+	.register_home {
+		height: 130vh;
+	}
 	.home_button
 	{
 		margin-top: 37px;
@@ -2189,7 +2292,7 @@ p:last-of-type {
 	
 	.home_button
 	{
-		margin-top: 133px;
+		margin-top: 0px;
 	}
 	.home_button a
 	{
@@ -2357,6 +2460,9 @@ p:last-of-type {
 	.no_padding {
 		padding: 0px;
 	}
+	.register_home {
+		height: 70vh;
+	}
 	.register_login {
 		height: 100vh;
 	}
@@ -2407,12 +2513,10 @@ p:last-of-type {
 		height: 200px;
 	}
 	/* Weight analysis page */
-	.register_home {
-		height: 130vh;
-	}
+	
 	.testimonials_home_title {
 		font-size: 24px;
-		padding-top: 90px;
+		padding-top: 40px;
 		padding-bottom: 10px;
 	}
 	.testimonials_home_subtitle {

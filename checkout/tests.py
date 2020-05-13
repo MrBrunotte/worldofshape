@@ -5,7 +5,7 @@ from checkout.views import checkout
 
 # Create your tests here.
 
-# urls test
+# urls test - run: python manage.py test checkout
 
 
 class TestUrls(SimpleTestCase):

@@ -2,8 +2,7 @@ from django.test import SimpleTestCase, TestCase, Client
 from django.urls import reverse, resolve
 from cart.views import (
     view_cart,
-    add_to_cart,
-    adjust_cart
+    add_meal_to_cart
 )
 
 

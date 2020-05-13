@@ -1,14 +1,17 @@
 from django.test import SimpleTestCase, TestCase, Client
 from django.urls import reverse, resolve
+from meals.views import (
+    all_meals,
+    MealDetailView
+)
 from products.views import (
     all_products,
-    all_meals,
     all_programs,
     one_program,
-    MealDetailView,
     ProductDetailView
 )
-from products.models import Product, Meal, Program
+from products.models import Product, Program
+from meals.models import Meal
 import json
 
 # Create your tests here.
@@ -63,7 +66,7 @@ class TestViews(TestCase):
         response = self.client.get(self.meals_url)
 
         self.assertEquals(response.status_code, 200)
-        self.assertTemplateUsed(response, 'products/meals.html')
+        self.assertTemplateUsed(response, 'meals/meals.html')
 
     def test_all_program_GET(self):
         response = self.client.get(self.programs_url)
