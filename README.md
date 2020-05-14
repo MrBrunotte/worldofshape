@@ -1,11 +1,10 @@
 # Welcome to **"World of Shape"**
 
+[![Build Status](https://travis-ci.org/MrBrunotte/worldofshape.svg?branch=master)](https://travis-ci.org/MrBrunotte/worldofshape)
+
 ![alt text](https://github.com/MrBrunotte/worldofshape/blob/master/media/images/landingpage.PNG "World of Shape")
 
 **World of Shape - Your journey starts now!**
-
-[![Build Status](https://travis-ci.org/MrBrunotte/worldofshape.svg?branch=master)](https://travis-ci.org/MrBrunotte/worldofshape)
-
 
 ## **Table of Contents:**
 
