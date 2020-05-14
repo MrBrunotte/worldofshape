@@ -1,1 +1,1 @@
-web: gunicorn worldofshape.wsgi
+web: gunicorn worldofshape.wsgi:application

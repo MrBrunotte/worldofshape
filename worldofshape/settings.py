@@ -13,20 +13,16 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import os
 import dj_database_url
 import django_heroku
-# imports the env.py file and keys
-# from os import path
-
-# if path.exists('env.py'):
-#    import env
 import environ
-
 env = environ.Env(
-    # set casting, default value
     DEBUG=(bool, False)
 )
-# reading.env file
 environ.Env.read_env()
 
+if os.environ.get('DEVELOPMENT'):
+    development = True
+else:
+    development = False
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -43,9 +39,10 @@ SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = 'DEBUG' original setting
-DEBUG = env('DEBUG')
+DEBUG = development
 
-ALLOWED_HOSTS = ['127.0.0.1', 'worldofshape.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1',
+                 os.environ.get('HOSTNAME')]
 
 
 # Application definition
@@ -105,15 +102,15 @@ WSGI_APPLICATION = 'worldofshape.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
-
-DATABASES = {'default': dj_database_url.parse(
-    'postgres://uudaardhllohym:5e4b2b2cec26c626ec094a544eee3a1620219e17637e2ae74bd52c17a389a946@ec2-54-228-251-117.eu-west-1.compute.amazonaws.com:5432/ddaebjabegt7jd')}
+if development:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
+else:
+    DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -199,5 +196,5 @@ EMAIL_HOST_PASSWORD = env('EMAIL_PASS')
 STRIPE_PUBLISHABLE = env('STRIPE_PUBLISHABLE')
 STRIPE_SECRET = env('STRIPE_SECRET')
 
-# DJANGO settings
-# django_heroku.settings(locals())
+#DJANGO settings
+django_heroku.settings(locals())
