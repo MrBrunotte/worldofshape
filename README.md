@@ -336,7 +336,7 @@ If you want to clone this website you need to create the necessary key!
 1. Login or create an account at [Stripe](https://stripe.com/en-se) to get your Stripe keys. 
    1. Follow the instructions and if you create a new account verify your email and activate your Stripe account.
    2. Click on _Get your test API keys_ to see your **Publishable key** and your **Secret key**.
-2. Create your [SECRET_KEY](https://miniwebtool.com/password-generator/) and set as environment variable (in .env file). 
+2. Create a random [SECRET_KEY](https://miniwebtool.com/password-generator/) and set as environment variable (in .env file).
     * MacOS and Linux ````export SECRET_KEY=<secret key>````
     * Windows ````set SECRET_KEY=<secret key>````
 3. When you have your three keys store them in your .env file in the directiory app _**worldofshape**_ (not in the root folder!).

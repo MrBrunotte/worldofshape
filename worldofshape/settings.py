@@ -42,7 +42,7 @@ SECRET_KEY = env('SECRET_KEY')
 DEBUG = development
 
 ALLOWED_HOSTS = ['127.0.0.1',
-                 os.environ.get('HOSTNAME')]
+                 'worldofshape.herokuapp.com']
 
 
 # Application definition
@@ -110,7 +110,7 @@ if development:
         }
     }
 else:
-    DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
+    DATABASES = {'default': dj_database_url.parse(env('DATABASE_URL'))}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -196,5 +196,5 @@ EMAIL_HOST_PASSWORD = env('EMAIL_PASS')
 STRIPE_PUBLISHABLE = env('STRIPE_PUBLISHABLE')
 STRIPE_SECRET = env('STRIPE_SECRET')
 
-#DJANGO settings
+# DJANGO settings
 django_heroku.settings(locals())
