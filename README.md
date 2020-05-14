@@ -1,6 +1,6 @@
 # Welcome to **"World of Shape"**
 
-![alt text](https://github.com/MrBrunotte/worldofshape/blob/master/media/images/landingpage.png "World of Shape")
+![alt text](https://github.com/MrBrunotte/worldofshape/blob/master/media/images/landingpage.PNG "World of Shape")
 
 **World of Shape - Your journey starts now!**
 
