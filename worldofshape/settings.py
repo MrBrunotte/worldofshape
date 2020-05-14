@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import dj_database_url
 import django_heroku
 # imports the env.py file and keys
 # from os import path
@@ -104,13 +105,15 @@ WSGI_APPLICATION = 'worldofshape.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 
+DATABASES = {'default': dj_database_url.parse(
+    'postgres://uudaardhllohym:5e4b2b2cec26c626ec094a544eee3a1620219e17637e2ae74bd52c17a389a946@ec2-54-228-251-117.eu-west-1.compute.amazonaws.com:5432/ddaebjabegt7jd')}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -168,7 +171,7 @@ STATICFILES_LOCATION = 'static'
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),
-)
+                    )
 
 MEDIAFILES_LOCATION = 'media'
 #DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'

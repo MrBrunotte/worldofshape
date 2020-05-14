@@ -30,6 +30,9 @@
   - [**Technologies Used**](#technologies-used)
     - [**Languages, Frameworks, Editor and Version Control**](#languages-frameworks-editor-and-version-control)
     - [**Tools used:**](#tools-used)
+  - [**Deployment**](#deployment)
+    - [**Deploy code locally**](#deploy-code-locally)
+    - [**Deploy to Heroku**](#deploy-to-heroku)
   - [**Credits**](#credits)
     - [**Content**](#content)
     - [**Acknowledgments**](#acknowledgments)
@@ -325,6 +328,80 @@ Steps to set up url patterns and getting it to work!
 * [Firefox Dev Tools](https://developer.mozilla.org/en-US/docs/Tools)
 * [Adobe Xd](https://www.adobe.com/se/products/xd.html)
 ****
+
+## **DEPLOYMENT**
+
+If you want to clone this website you need to create the necessary key!
+
+1. Login or create an account at [Stripe](https://stripe.com/en-se) to get your Stripe keys. 
+   1. Follow the instructions and if you create a new account verify your email and activate your Stripe account.
+   2. Click on _Get your test API keys_ to see your **Publishable key** and your **Secret key**.
+2. Create your [SECRET_KEY](https://miniwebtool.com/password-generator/) and set as environment variable (in .env file). 
+    * MacOS and Linux ````export SECRET_KEY=<secret key>````
+    * Windows ````set SECRET_KEY=<secret key>````
+3. When you have your three keys store them in your .env file in the directiory app _**worldofshape**_ (not in the root folder!).
+
+### **Deploy code locally**
+
+If you wish to run this code locally then please follow the instructions below.
+
+1. Download the code from the Github repository from [here](https://github.com/MrBrunotte/worldofshape).
+2. Click on _"Clone"_ or _"download then Download ZIP"_. This will download the code into a ZIP folder locally on your computer.
+3. Uncompress the ZIP folder.
+4. Create a virtual environment.
+   1. Create .env file in the **worldofshape** app (not the root folder!)
+   2. Make sure you have theses settings in the settings.py file, so that the environment variables can be read:
+      1. Import: ````import environ````
+      2. Set: ````env = environ.Env(DEBUG=(bool, False))````
+      3. Set: ````environ.Env.read_env()````
+      4. Set: ````SECRET_KEY = env('SECRET_KEY')````
+      5. Set: ````STRIPE_PUBLISHABLE = env('STRIPE_PUBLISHABLE')````
+      6. Set: ````STRIPE_SECRET = env('STRIPE_SECRET')````
+5. Activate the virtual environment.
+6. Install the necessary Python packages in the requirements.txt file.
+    * ````pip freeze --local > requirements.txt````
+7.  Open up a terminal and run ````python manage.py runserver````.
+8.  Follow the link by (Ctrl + click) on **http://127.0.0.1:8000** to view _**World of Shape**_ in your browser.
+
+
+### **Deploy to Heroku**
+
+This project was deployed to Heroku and uses Heroku for its production environment. Below you have instructions on how to deploy this web application to a production environment in Heroku.
+
+*Git must be installed onto your computer. Instructions for installing Git can be found here.
+
+**Heroku CLI must be installed in order to deploy to Heroku using these instructions. Please follow the instructions here to download and install Heroku CLI.
+
+1.  Login to [Heroku](https://id.heroku.com/login)
+2.  Select _New > Create New App_ and fill out the details required then hit _Create App_.
+3.  Select _Settings > Reveal Config Vars_. Enter the following environment variables:
+    1. DATABASE_URL: the url is automaically set when you add the _add on_ from the _Overview_ tab in the Heroku dashboard.
+    2. PORT: 5000
+    3. SECRET_KEY: The generated key
+    4. STRIPE_PUBLISHABLE: From your env. file
+    5. STRIPE_SECRET: From your env. file
+ 1. Download the code from the Github repository [here](https://github.com/MrBrunotte/foodictionary).
+4. Click on _Clone_ or _download then Download ZIP_. This will download the code into a ZIP folder locally on your computer.
+5. Uncompress the ZIP folder.
+6. Open up a terminal or cmd prompt and login into Heroku CLI.
+    * ````heroku login````
+7. Check the app is present.
+    * ````heroku apps````
+8. A Procfile have already been created for this project but make sure that it is present. If for some 
+reason it is not then follow the steps below to create it.
+    
+    * Procfile
+        * In a terminal make sure you are in the root directory of the project then run ````web: gunicorn worldofshape.wsgi > Procfile````.
+        * Add the following text to the Procfile **web: python manage.py runserver 0.0.0.0:8000**.
+1.  Add a new git remote for Heroku.
+    * ````git remote add heroku git@heroku.comYOUR_APP_NAME.git````
+2.  Push to Heroku.
+    * ````git push heroku master````
+3.  Give Heroku a few minutes to get it all set up and then check the activity logs under Activity tab in your Heroku 
+dashboard. 
+13. Once the build is complete click on **open app** top right to see _**World of Shape**_ in action. 
+
+[Back to: _"Table of Contents"_](#table-of-contents)
 
 ## **Credits**
 
