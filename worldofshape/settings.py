@@ -165,8 +165,8 @@ AWS_S3_OBJECT_PARAMETERS = {
 }
 AWS_STORAGE_BUCKET_NAME = 'worldofshape'
 AWS_S3_REGION_NAME = 'eu-north-1'
-AWS_ACCESS_KEY_ID = env('AWS_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY = env('AWS_SECRET_ACCESS_KEY')
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 # to make sure files are not overwritten if they have the same name
 AWS_S3_FILE_OVERWRITE = False
@@ -174,7 +174,6 @@ AWS_DEFAULT_ACL = None
 
 STATICFILES_LOCATION = 'static'
 STATICFILES_STORAGE = 'custom_storages.StaticStorage'
-#STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),
@@ -184,7 +183,6 @@ MEDIAFILES_LOCATION = 'media'
 DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-#MEDIA_URL = '/media/'
 MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -199,12 +197,12 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = env('EMAIL_USER')
-EMAIL_HOST_PASSWORD = env('EMAIL_PASS')
+EMAIL_HOST_USER = os.environ.get('EMAIL_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
 
 # Stripe payment keys
-STRIPE_PUBLISHABLE = env('STRIPE_PUBLISHABLE')
-STRIPE_SECRET = env('STRIPE_SECRET')
+STRIPE_PUBLISHABLE = os.environ.get('STRIPE_PUBLISHABLE')
+STRIPE_SECRET = os.environ.get('STRIPE_SECRET')
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
