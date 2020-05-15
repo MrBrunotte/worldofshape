@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import env
 import dj_database_url
 import django_heroku
 import environ
@@ -36,7 +37,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env('SECRET_KEY')
+#SECRET_KEY = env('SECRET_KEY')
+SECRET_KEY = os.environ.get('SECRET_KEY', "Env value not loaded")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = 'DEBUG' original setting
@@ -105,7 +107,7 @@ WSGI_APPLICATION = 'worldofshape.wsgi.application'
 
 if "DATABASE_URL" in env:
     DATABASES = {'default': dj_database_url.parse(
-        env('DATABASE_URL'))}
+        os.environ.get("DATABASE_URL"))}
 else:
     print("Database URL not found. Using SQLite instead")
     DATABASES = {
