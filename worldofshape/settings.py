@@ -113,25 +113,11 @@ else:
             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
-<<<<<<< HEAD
-
-# if development:
+# else:
 #    DATABASES = {
 #        'default': {
-#            'ENGINE': 'django.db.backends.sqlite3',
-#            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#        }
+#            'name': env('DATABASE_URL')}
 #    }
-# else:
-#    DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
-
-=======
-else:
-    DATABASES = {
-        'default': {
-            'name': env('DATABASE_URL')}
-    }
->>>>>>> parent of 1b154cb... Change back to previous settings for db
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
