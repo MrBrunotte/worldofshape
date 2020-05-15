@@ -119,9 +119,6 @@ urlpatterns = [
 
     # media path
     url(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT}),
-
-    # blog app
-    path('blog/', include('blog.urls')),
 ]
 
 # We use this urlpattern when we are in DEBUG mode
