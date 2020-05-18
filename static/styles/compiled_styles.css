@@ -1249,6 +1249,8 @@ p:last-of-type {
 	line-height: 1.2;
 	margin-top: -9px;
 	text-align: center;
+	height: 300px;
+	width: 300px;
 }
 .reset_title{
 	font-size: 72px;

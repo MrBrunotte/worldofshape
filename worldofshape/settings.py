@@ -29,15 +29,15 @@ else:
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
-#env = environ.Env(DEBUG=(bool, False))
-#env_file = os.path.join(BASE_DIR, ".env")
+# env = environ.Env(DEBUG=(bool, False))
+# env_file = os.path.join(BASE_DIR, ".env")
 # environ.Env.read_env(env_file)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-#SECRET_KEY = env('SECRET_KEY')
+# SECRET_KEY = env('SECRET_KEY')
 SECRET_KEY = os.environ.get('SECRET_KEY', "Env value not loaded")
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -104,24 +104,24 @@ WSGI_APPLICATION = 'worldofshape.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-if "DATABASE_URL" in env:
-    DATABASES = {'default': dj_database_url.parse(
-        os.environ.get("DATABASE_URL"))}
-else:
-    print("Database URL not found. Using SQLite instead")
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        }
-    }
-
-# DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+# if "DATABASE_URL" in env:
+#    DATABASES = {'default': dj_database_url.parse(
+#        os.environ.get("DATABASE_URL"))}
+# else:
+#    print("Database URL not found. Using SQLite instead")
+#    DATABASES = {
+#        'default': {
+#            'ENGINE': 'django.db.backends.sqlite3',
+#            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#        }
 #    }
-# }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -160,48 +160,45 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 # https://django-storages.readthedocs.io/en/latest/backends/amazon-S3.html
 
-AWS_S3_OBJECT_PARAMETERS = {
-    'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
-    'CacheControl': 'max-age=94608000',
-}
-AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
-AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
+# AWS_S3_OBJECT_PARAMETERS = {
+#    'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+#    'CacheControl': 'max-age=94608000',
+# }
+# AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+# AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+# AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
 # to make sure files are not overwritten if they have the same name
-AWS_S3_FILE_OVERWRITE = False
-AWS_DEFAULT_ACL = None
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3,S3Boto3Storage'
-
-AWS_S3_REGION_NAME = 'eu-north-1'
-AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
-
-
+# AWS_S3_FILE_OVERWRITE = False
+# AWS_DEFAULT_ACL = None
+# AWS_S3_REGION_NAME = 'eu-north-1'
+# AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 # This will make sure that the file URL does not have unnecessary parameters like your access key.
 # This is usefull when the bucket is public like this one
-AWS_QUERYSTRING_AUTH = False
+# AWS_QUERYSTRING_AUTH = False
 
-STATICFILES_LOCATION = 'static'
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# Static files
+# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3,S3Boto3Storage'
+#STATICFILES_LOCATION = 'static'
+# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 #STATICFILES_STORAGE = 'custom_storages.StaticStorage'
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),
-                    )
+STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 
-MEDIAFILES_LOCATION = 'media'
-DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
-
+# Media files
+#MEDIAFILES_LOCATION = 'media'
+#DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
+MEDIA_URL = '/media/'
+# MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
 
+# Crispy forms from Bootstrap4
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_REDIRECT_URL = '/'
 LOGIN_URL = 'login'
 
-# myaccount.google.com/lesssecureapps
-# myaccount.google.com/apppasswords
-# accounts.google.com/DisplayUnlockCaptcha
+# G-mail settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
