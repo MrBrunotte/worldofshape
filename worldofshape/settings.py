@@ -22,10 +22,10 @@ if os.path.exists("env.py"):
 # )
 # environ.Env.read_env()
 
-if os.environ.get('DEVELOPMENT'):
-    development = True
-else:
-    development = False
+# if os.environ.get('DEVELOPMENT'):
+#    development = True
+# else:
+#    development = False
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -43,7 +43,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', "Env value not loaded")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = 'DEBUG' original setting
-DEBUG = development
+DEBUG = 'DEBUG'
 
 ALLOWED_HOSTS = ['127.0.0.1',
                  'worldofshape.herokuapp.com']
