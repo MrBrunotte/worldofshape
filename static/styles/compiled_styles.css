@@ -1255,6 +1255,7 @@ p:last-of-type {
 .profile_title {
 	height: 300px;
 	width: 300px;
+	margin: 0 auto;
 }
 .reset_title{
 	font-size: 72px;
