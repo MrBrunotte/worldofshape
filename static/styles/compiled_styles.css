@@ -1392,6 +1392,7 @@ form {
 .program_separator {
 	padding-bottom: 25px;
 	border-bottom: 2px solid #f98c00;
+	margin-bottom: 30px;
 }
 .form_control_cart:hover {
 	color: #ff9711 !important;
@@ -1798,7 +1799,7 @@ p:last-of-type {
 }
 .product_image {
 	height: 110px;
-	margin: 0 auto;
+	text-align: center;
 }
 .meal_image {
 	height: 517px;
