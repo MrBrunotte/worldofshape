@@ -50,7 +50,7 @@
             {% for meal in meals %}
             <div class="col-xl-4 col-md-6 service_col program_separator">
                 <div class="service">
-                    <div class="meal_image" style="background-image: url('{{ MEDIA_URL }}{{ meal.image }}')">
+                    <div class="product_image"><img src="{{ meal.image }}" alt="Meal program image">
                     </div>
                     <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
                         <div class="service_title_meal">{{ meal.name }}</div>
