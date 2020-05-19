@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 import env
-import dj_database_url
+#import dj_database_url
 import django_heroku
 import environ
 
@@ -177,9 +177,9 @@ USE_TZ = True
 
 # Static files
 # DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3,S3Boto3Storage'
-#STATICFILES_LOCATION = 'static'
+# STATICFILES_LOCATION = 'static'
 # STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-#STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+# STATICFILES_STORAGE = 'custom_storages.StaticStorage'
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
@@ -212,4 +212,4 @@ STRIPE_SECRET = os.environ.get('STRIPE_SECRET')
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
 # DJANGO settings
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
