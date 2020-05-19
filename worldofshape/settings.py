@@ -43,7 +43,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', "Env value not loaded")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = 'DEBUG' original setting
-DEBUG = True
+DEBUG = development
 
 ALLOWED_HOSTS = ['127.0.0.1',
                  'worldofshape.herokuapp.com']
