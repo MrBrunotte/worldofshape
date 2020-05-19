@@ -9,11 +9,11 @@ https://docs.djangoproject.com/en/3.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
-
+import os
 import environ
 import django_heroku
 import dj_database_url
-import os
+
 if os.path.exists("env.py"):
     import env
 
@@ -105,7 +105,7 @@ WSGI_APPLICATION = 'worldofshape.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-if "DATABASE_URL" in env:
+if "DATABASE_URL" in os.environ:
     DATABASES = {'default': dj_database_url.parse(
         os.environ.get("DATABASE_URL"))}
 else:
