@@ -10,16 +10,17 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
-import os
-import env
-import dj_database_url
-import django_heroku
 import environ
+import django_heroku
+import dj_database_url
+import os
+if os.path.exists("env.py"):
+    import env
 
-env = environ.Env(
-    DEBUG=(bool, False)
-)
-environ.Env.read_env()
+# env = environ.Env(
+#     DEBUG=(bool, False)
+# )
+# environ.Env.read_env()
 
 if os.environ.get('DEVELOPMENT'):
     development = True
