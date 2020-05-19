@@ -1249,6 +1249,10 @@ p:last-of-type {
 	line-height: 1.2;
 	margin-top: -9px;
 	text-align: center;
+}
+/* TODO is this correct or should i do it in the profile.html file??
+/* to control the image size on the screen */
+.profile_title {
 	height: 300px;
 	width: 300px;
 }
