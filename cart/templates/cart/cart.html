@@ -30,7 +30,7 @@
                     <div class="col-12 bottom_separator">
                         <div class="service">
                             {% if item.meal %}
-                            <div class="product_image"><img src="{{ product.image }}" alt="Program image">
+                            <div class="product_image"><img src="{{ item.meal.image }}" alt="Image of Mealplan">
                             </div>
                             <div
                                 class="service_title_container d-flex flex-row align-items-center justify-content-start">
@@ -43,25 +43,15 @@
                             <form class="form_group" action="{% url 'delete_meal_item' item.meal.id %}" method="post">
                                 {% csrf_token %}
                                 <div class="form_group">
-                                    <!--TODO Remove this!<div class="input_group">
-                                        <div class="cart_amount">Current Cart Qty:</div>
-                                        <div class="cart_amount cart_amount_mb">{{ item.quantity }}</div>
-                                        <input type="number" name="quantity" min="0" max="999"
-                                            class="form_group_search cart_qty_checkout"
-                                            placeholder="Add 'New Qty' or set to '0' to delete...">
-                                    </div>-->
                                 </div>
-                                <!-- TODO do i need to move the buttons outside the form??-->
+
                                 <div class="cart_button ml-auto mr-auto mb-4">
-                                    <!--TODO remove the view and urlpattern! <button class="button home_button mr-5" type="submit">
-                                        Update cart</button>-->
                                     <button class="button home_button" type="submit">
                                         Delete item</button>
                                 </div>
                             </form>
                             {% else %}
-                            <div class="product_image"
-                                style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')">
+                            <div class="product_image"><img src="{{ item.product.image }}" alt="Program image">
                             </div>
                             <div
                                 class="service_title_container d-flex flex-row align-items-center justify-content-start">
