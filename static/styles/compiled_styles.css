@@ -1798,13 +1798,11 @@ p:last-of-type {
 	width: 100%;
 }
 .product_image {
-	height: 110px;
 	text-align: center;
+	margin-top: 40px;
 }
 .meal_image {
-	height: 517px;
-	background-position: center; /* Center the image */
-  	background-repeat: no-repeat; /* Do not repeat the image */
+	height: 340px;
 }
 .price,
 .price_checkout {

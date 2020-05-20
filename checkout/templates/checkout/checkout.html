@@ -40,8 +40,7 @@
                                 <div class="col-12 bottom_separator">
                                     <div class="service">
                                         {% if item.meal %}
-                                        <div class="product_image"
-                                            style="background-image: url('{{ MEDIA_URL }}{{ item.meal.image }}')">
+                                        <div class="product_image"><img src="{{ product.image }}" alt="Program image">
                                         </div>
                                         <div
                                             class="service_title_container d-flex flex-row align-items-center justify-content-start">
