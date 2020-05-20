@@ -21,8 +21,8 @@
     - [**Travis CI - platform**](#travis-ci---continuous-integration)
     - [**Automated Testing**](#automated-testing)
     - [**Manual Testing**](#manual-testing)
+    - [**Responsiveness**](#Responsiveness)
     - [**Code check**](#code-check)
-  - [Setting up URLs](#setting-up-urls)
   - [**Technologies Used**](#technologies-used)
     - [**Languages, Frameworks, Editor and Version Control**](#languages-frameworks-editor-and-version-control)
     - [**Tools used:**](#tools-used)
@@ -363,6 +363,30 @@ _**Checkout** page:_
 * Test that the payment works and that the user is redirected to the homepage and a message is shown saying: _**"You have successfully paid"**_ 
 * Test that the if something with the payment is wrong the message _**"We Were Unable To Take Payment With That Card!"**_ will be displayed and the user is redirected to the checkout page. 
 
+### **Responsiveness**
+
+I have used media queries to build a responsive website. I have looked for "natural" breakpoints on my site and these are the best breakpoints for my design:
+
+  * **Hamburger menu break** ~ @media only screen and (max-width: 1190px)
+  * **> 1200px** ~ @media only screen and (min-width: 1199px)
+  * **992 - 1199px** ~ @media only screen and (min-width: 991px) and (max-width: 1199px)
+  * **768 - 991px** ~ @media only screen and (min-width: 767px) and  (max-width: 991px)
+  * **575 - 767px** ~ @media only screen and (min-width: 575px) and (max-width: 767px)
+  * **< 575px** ~ @media only screen and (max-width: 574px)
+
+I have tested the responsiveness in browsers:
+
+* Firefox and 
+* Chrome
+  
+and I have used their developer tools to check the responsivness on:
+
+* Iphone 5
+* Iphone 8
+* Iphone X
+* Kindle Fire HDX
+* Galaxy S9
+
 ### **Code Check**
 
 I have ran all my code through differnt validators to make sure that my code is ok and up to date with current code standards.
@@ -385,21 +409,6 @@ Everything else was labeled **"valid CSS information"** by the validator!
 My Python code was checked with [PEP8 online](http://pep8online.com/)
 
 When testing I have ignored the code result W291 which is an indication of "trailing whitespace".
-
-[Back to: _"Table of Contents"_](#table-of-contents)
-
-## Setting up URLs
-
-Steps to set up url patterns and getting it to work!
-
-**Testimonials example**
-1)  Create html page - set Codeblock and DOCTYPE
-2) Go to Project urls (WorldofShape) and set urlpattern: path('testimonials/', home_views.contact, name='testimonials'),
-3) Go to Home/Views: def testimonials(request):
-    """ Contact view takes us to our contactpage """
-    return render(request, 'home/testimonials.html')
-4) Set urlpattern in Home: path('testimonials/', views.testimonials,
-         name='testimonials'),  # from contact view
 
 [Back to: _"Table of Contents"_](#table-of-contents)
 
