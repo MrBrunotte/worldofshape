@@ -49,15 +49,9 @@ urlpatterns = [
     path('testimonials/', home_views.contact, name='testimonials'),
 
     # home app 404 error
-    # TODO how do i make this page appear when there is a 404 error??
     path('404/', auth_views.LogoutView.as_view(template_name='home/404.html'), name='404'),
 
-    # home app 405 error
-    # TODO how do i make this page appear when there is a 404 error??
-    path('405/', auth_views.LogoutView.as_view(template_name='home/405.html'), name='405'),
-
     # home app 500 error
-    # TODO how do i make this page appear when there is a 404 error??
     path('500/', auth_views.LogoutView.as_view(template_name='home/500.html'), name='500'),
 
     # users app register view
@@ -104,7 +98,6 @@ urlpatterns = [
     path('weight_loss/', products_views.WeightLossAnalysis,
          name='weight_loss_analysis'),
 
-    # TODO Might have to fix this! to products/
     # products app
     url(r'^$', all_products, name='index'),
 

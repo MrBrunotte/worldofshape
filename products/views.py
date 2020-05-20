@@ -34,7 +34,8 @@ def program_section(request):
 
 def WeightLossAnalysis(request):
     """
-    This is the weightlossanalysis form that gives the user the correct training program according to their situation
+    This is the weightlossanalysis form that gives the user the correct 
+    training program according to their situation
     """
     if request.method == 'POST':
         form = WeightLossAnalysisForm(request.POST)
@@ -59,7 +60,8 @@ def WeightLossAnalysis(request):
 
 def correct_program(request):
     """
-    This is the weightlossanalysis form that gives the user the correct training program according to their situation
+    This is the weightlossanalysis form that gives the user the correct 
+    training program according to their situation
     """
 
     correct_products = []

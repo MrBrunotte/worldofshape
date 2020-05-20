@@ -10,19 +10,16 @@ def view_cart(request):
     """A View that renders the cart contents page"""
     return render(request, "cart/cart.html")
 
-# products.html/product.html/meals.html
-
 
 def add_product_to_cart(request, id):
-    """
-    Add a training program to cart based on its ID. 
+    """ Add a training program to cart based on its ID. 
     One program is added.
-    If cart is empty create two dict ‘meal’ and ‘product’, if items in cart they are added to the dict
+    If cart is empty create two dict ‘meal’ and ‘product’, 
+    if items in cart they are added to the dict
     If the product already exists in cart add quantity (1)
     Else add one product to cart
     Put new product in cart
-    Redirect user to cart template
-    """
+    Redirect user to cart template"""
     quantity = 1
 
     cart = request.session.get('cart', {'meal': {}, 'product': {}})
@@ -36,10 +33,10 @@ def add_product_to_cart(request, id):
 
 
 def add_meal_to_cart(request, id):
-    """
-    Add a meal to cart based on its ID. 
+    """ Add a meal to cart based on its ID. 
     One meal is added.
-    If cart is empty create two dict ‘meal’ and ‘product’, if items in cart they are added to the dict
+    If cart is empty create two dict ‘meal’ and ‘product’, 
+    if items in cart they are added to the dict
     If the meal already exists in cart add quantity (1)
     Else add one meal to cart
     Put new meal in cart
@@ -55,10 +52,6 @@ def add_meal_to_cart(request, id):
 
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))
-
-# cart.html
-
-# TODO Fix the update items finctions with the update button in cart.html
 
 
 def update_product_item(request, id):
@@ -79,9 +72,6 @@ def update_product_item(request, id):
 def update_meal_item(request, id):
     quantity = int(request.POST.get('quantity'))
     cart = request.session.get('cart', ('meal', {'quantity'}))
-    # print(cart)
-
-    #print('meal', {quantity})
 
     if quantity in cart > 0:
         cart['meal'][id] = quantity
@@ -117,50 +107,3 @@ def delete_product_item(request, id):
     messages.success(
         request, f'Your program was removed from your cart!')
     return redirect(reverse('view_cart'))
-
-
-"""
-def delete_product_item(request, id):
-    cartitem = cart_items.objects.get(id=id)
-    cartitem.delete()
-    messages.success(
-        request, f'Your program was removed from your cart!')
-    return redirect(reverse('view_cart'))
-"""
-"""
-def delete_product_item(request, id):
-
-    cart = request.session.get('cart', {})
-    cart.delete(id)
-    request.session['cart'] = cart
-    messages.success(
-        request, f'Your meal has been deleted from your cart!')
-    return redirect(reverse('view_cart'))
-"""
-
-"""
-def remove_product(request, id):
-    
-    View for button removing items from cart from the users stored items
-  
-    product = get_object_or_404(Product, pk=id)
-    cart = request.session.get('cart', {})
-    del cart[id]
-    request.session['cart'] = cart
-    messages.success(request, '%s was removed from the cart' % (product.title))
-    return redirect('view_cart')
- """
-
-"""
-def remove_product(request, id):
-    cart = view_cart(request)
-    product = get_object_or_404(Product, pk=id)
-    cart.remove(product)
-    return redirect(reverse('view_cart'))
-
-def remove_meal(request, id):
-    cart = view_cart(request)
-    meal = get_object_or_404(Meal, pk=id)
-    cart.remove(meal)
-    return redirect(reverse('view_cart'))
-"""

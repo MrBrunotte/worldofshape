@@ -21,6 +21,7 @@
     - [**Travis CI - platform**](#travis-ci---continuous-integration)
     - [**Automated Testing**](#automated-testing)
     - [**Manual Testing**](#manual-testing)
+    - [**Code check**](#code-check)
   - [Setting up URLs](#setting-up-urls)
   - [**Technologies Used**](#technologies-used)
     - [**Languages, Frameworks, Editor and Version Control**](#languages-frameworks-editor-and-version-control)
@@ -279,7 +280,7 @@ I then used [**Coverage**](https://coverage.readthedocs.io/en/coverage-5.1/) to 
 
 I ran the tests on my SQlite development database.
 
-See the Coverage report **[here!](ADD COVERAGE REPORT HERE)**
+See the Coverage report **[here!](https://github.com/MrBrunotte/worldofshape/blob/master/media/html_images/coverage_report.jpg)**
 See the Automated tests (_TestCase and SimpleTestCase_) **[here!](https://github.com/MrBrunotte/worldofshape/blob/master/media/html_images/automated_testing_results.PNG)**
 
 ### **Manual Testing**
@@ -362,6 +363,29 @@ _**Checkout** page:_
 * Test that the payment works and that the user is redirected to the homepage and a message is shown saying: _**"You have successfully paid"**_ 
 * Test that the if something with the payment is wrong the message _**"We Were Unable To Take Payment With That Card!"**_ will be displayed and the user is redirected to the checkout page. 
 
+### **Code Check**
+
+I have ran all my code through differnt validators to make sure that my code is ok and up to date with current code standards.
+
+#### **HTML code**
+
+<!--TODO Check how to check the Django HTML -->
+My HTML code was checked with [Validator W3 Org](https://validator.w3.org/#validate_by_input)
+
+#### **CSS code**
+
+My CSS code was checked with [Jigsaw W3 Org](https://jigsaw.w3.org/css-validator/#validate_by_input)
+
+I got 96 warnings and they were all warnings about unknown vendor extension. These came with the css code from the template I downloaded so I have ignored them!
+
+Everything else was labeled **"valid CSS information"** by the validator!
+
+#### **Python code**
+
+My Python code was checked with [PEP8 online](http://pep8online.com/)
+
+When testing I have ignored the code result W291 which is an indication of "trailing whitespace".
+
 [Back to: _"Table of Contents"_](#table-of-contents)
 
 ## Setting up URLs
@@ -398,6 +422,8 @@ Steps to set up url patterns and getting it to work!
 
 ### **Tools used:**
 * [Pep 8 Online Validator](http://pep8online.com/) ~ Check python code for PEP8 requirements
+* [Jigsaw W3 Org](https://jigsaw.w3.org/css-validator/#validate_by_input) ~ Check CSS code
+* [Validator W3 Org](https://validator.w3.org/#validate_by_input) ~ Check HTML code
 * [Fontawsome](https://fontawesome.com/)
 * [Firefox Dev Tools](https://developer.mozilla.org/en-US/docs/Tools)
 * [Adobe Xd](https://www.adobe.com/se/products/xd.html)

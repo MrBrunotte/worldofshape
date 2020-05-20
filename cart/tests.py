@@ -7,7 +7,6 @@ from cart.views import (
 
 
 # Create your tests here.
-
 # urls test - run: python manage.py test cart
 
 

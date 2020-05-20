@@ -8,7 +8,6 @@ def cart_contents(request):
     Ensures that the cart contents are available when rendering
     every page
     """
-    #cart = request.session.get('cart', {})
     cart = request.session.get('cart', {"meal": {}, "program": {}})
 
     cart_items = []
@@ -20,7 +19,6 @@ def cart_contents(request):
 
     for category, values in cart.items():
         for id, quantity in values.items():
-            #print(category, values, id, quantity)
             if category == 'meal':
                 meal = get_object_or_404(Meal, pk=id)
                 total_meal += quantity * meal.price
@@ -32,11 +30,13 @@ def cart_contents(request):
                 total_product += quantity * product.price
                 product_quantity += quantity
                 cart_items.append(
-                    {'id': id, 'product_quantity': product_quantity, 'product': product})
+                    {'id': id, 'product_quantity': product_quantity, 
+                     'product': product})
 
     total_cart_items = meal_quantity + product_quantity
 
-    # print(cart_items)
-    # print(total_cart_items)
-
-    return {'cart_items': cart_items, 'total': total_meal + total_product, 'product_quantity': product_quantity, 'meal_quantity': meal_quantity, 'total_cart_items': total_cart_items}
+    return {'cart_items': cart_items, 
+            'total': total_meal + total_product, 
+            'product_quantity': product_quantity, 
+            'meal_quantity': meal_quantity, 
+            'total_cart_items': total_cart_items}

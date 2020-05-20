@@ -4,7 +4,6 @@ from checkout.views import checkout
 
 
 # Create your tests here.
-
 # urls test - run: python manage.py test checkout
 
 

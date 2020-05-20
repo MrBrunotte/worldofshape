@@ -8,7 +8,6 @@ from PIL import Image
 class Profile(models.Model):
     """
     one-to-one model, one user can have one account
-
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     image = models.ImageField(default='default.jpg',
@@ -16,9 +15,6 @@ class Profile(models.Model):
 
     def __str__(self):
         return f'{self.user.username} Profile'
-
-    # Comment def save() below it does not work with S3 this way
-    # If I want to use this in need to use the 'AWS lambda function' that resizes automatically when they are uploaded to S3
 
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)

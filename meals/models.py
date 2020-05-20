@@ -14,7 +14,6 @@ class Meal(models.Model):
     full_description = models.TextField(default='')
     price = models.DecimalField(max_digits=6, decimal_places=2)
     image = models.TextField(default='')
-    #image = models.ImageField(upload_to='images')
 
     def __str__(self):
         return self.name
@@ -28,7 +27,6 @@ class MealProgram(models.Model):
     description = models.TextField(default='')
     price = models.DecimalField(max_digits=6, decimal_places=2)
     image = models.TextField(default='')
-    #image = models.ImageField(upload_to='images')
 
     def __str__(self):
         return self.name

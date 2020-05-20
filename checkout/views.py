@@ -53,7 +53,8 @@ def checkout(request):
     """
     This method gets the posted data in the orderform and pyamentform.
     If both forms are ok it is saved in order
-    it then gets the cart content and assigns the valut to cart, it creates three starting variabls.
+    it then gets the cart content and assigns the valut to cart, 
+    it creates three starting variabls.
     A outer for loops gets the categori
     """
     if request.method == "POST":
@@ -73,9 +74,7 @@ def checkout(request):
             order.date = timezone.now()
             order.save()
 
-            # cart = request.session.get('cart', {})
             cart = request.session.get('cart', {"meal": {}, "program": {}})
-            # print(cart)
             total = 0
             total_product = 0
             total_meal = 0
@@ -110,15 +109,6 @@ def checkout(request):
             total = total_meal + total_product
 
             print(total)
-            # print(cart)
-            # print(program_line_item)
-            # print(order)
-            # print(product)
-            # print(quantity)
-            # print(meal_line_item)
-            # print(order)
-            # print(meal)
-            # print(quantity)
 
             try:
                 customer = stripe.Charge.create(

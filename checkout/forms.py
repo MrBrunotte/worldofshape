@@ -20,7 +20,7 @@ class MakePaymentForm(forms.Form):
 class OrderForm(forms.ModelForm):
 
     last_name = forms.CharField(label='last name', required=False)
-    
+
     class Meta:
         model = Order
         fields = (
@@ -32,5 +32,4 @@ class OrderForm(forms.ModelForm):
             'postcode',
             'town_or_city',
             'country',
-
         )
