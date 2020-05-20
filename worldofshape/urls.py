@@ -122,6 +122,9 @@ urlpatterns = [
 ]
 
 # We use this urlpattern when we are in DEBUG mode
+# + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+# We use this urlpattern when we are in DEBUG mode
 # if settings.DEBUG:
 #    urlpatterns += static(settings.MEDIA_URL,
 #                          document_root=settings.MEDIA_ROOT)
