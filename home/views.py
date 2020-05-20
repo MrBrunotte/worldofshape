@@ -38,3 +38,17 @@ def contact(request):
 def testimonials(request):
     """ Contact view takes us to our contactpage """
     return render(request, 'home/testimonials.html')
+
+
+def error_404(request, exception):
+    """
+    Render the World of Shape 404.html error page
+    """
+    return render(request, 'home/404.html')
+
+
+def error_500(request):
+    """
+    Render the World of Shape 500.html page
+    """
+    return render(request, 'home/500.html')

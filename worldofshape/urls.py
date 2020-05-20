@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.contrib.auth import views as auth_views
 from django.urls import path, include
 from django.conf import settings
-from django.conf.urls import url
+from django.conf.urls import url, handler403, handler404, handler500
 from django.conf.urls.static import static
 from users import views as user_views
 from home import views as home_views
@@ -31,6 +31,9 @@ from checkout import urls as urls_checkout
 from cart import urls as urls_cart
 from django.views import static
 from .settings import MEDIA_ROOT
+
+handler404 = 'home.views.error_404'
+handler500 = 'home.views.error_500'
 
 urlpatterns = [
     # admin template
