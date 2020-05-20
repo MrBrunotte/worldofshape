@@ -1,8 +1,8 @@
-# Welcome to **"World of Shape"**
+# Welcome to [**"World of Shape"**](https://worldofshape.herokuapp.com/)
 
 [![Build Status](https://travis-ci.org/MrBrunotte/worldofshape.svg?branch=master)](https://travis-ci.org/MrBrunotte/worldofshape)
 
-![alt text](https://github.com/MrBrunotte/worldofshape/blob/master/media/images/landingpage.PNG "World of Shape")
+![World of shape landingpage](https://github.com/MrBrunotte/worldofshape/blob/master/media/images/landingpage.PNG "World of Shape")
 
 **World of Shape - Your journey starts now!**
 
@@ -19,9 +19,8 @@
     - [**Existing features**](#existing-features)
     - [**Features left to implement**](#features-left-to-implement)
   - [**Testing**](#testing)
-    - [**Travis CI - platform**](#travis-ci---platform)
-    - [**What is CI - Continuous Integration?**](#what-is-ci---continuous-integration)
-    - [**CI Builds and Automation: Building, Testing, Deploying**](#ci-builds-and-automation-building-testing-deploying)
+    - [**Travis CI - platform**](#travis-ci---continuous-integration)
+      - [**CI Builds and Automation: Building, Testing, Deploying**](#ci-builds-and-automation-building-testing-deploying)
     - [**Bugs**](#bugs)
   - [**Automated Testing**](#automated-testing)
     - [**Coverage**](#coverage)
@@ -38,10 +37,10 @@
     - [**Contact**](#contact)
 ## **World of Shape**
 
-World of Shape is a website that aims to get the user in shape and lose weight in 30 days! 
+World of Shape is a website that aims to get the user in shape and lose weight within 30 days! 
 
 
-This is attained when the user purchase and attends a 30-day excercise program where the user will have access to World of Shapes personal trainers, the training program and mealplans the user chose to purchase. The user is encuraged to take a "before" and "after" picture of themself in order to monitor thier progress. The World of Shape concept has a proven system that can be validated in the testimonial section of the website.
+The user purchase and attends a 30-day excercise program where the user will have access to World of Shapes personal trainers, training programs and mealplans the user choose to purchase. The user is encuraged to take a "before" and "after" picture of themself in order to monitor their progress. The World of Shape concept has a proven system that can be validated in the testimonial section of the website.
 
 ### **Purpose of Project**
 
@@ -140,15 +139,15 @@ See the WorldofShape Mockups [here](https://xd.adobe.com/view/4e26e532-1880-4f4f
 
 _**Navigation and buttons**:_ 
 
-The navigation consist of a "logged in" navigation and a "guest" navigation. The difference between the two is that when the user is logged in they will be able to reach the "profile" section and the user is also able to add programs and meals to the shopping cart.
+The navigation consist of a "logged in" navigation and a "guest" navigation. The difference between the two is that when the user is logged in they will be able to reach the "profile" section and the user is also able to add programs and meals to the shopping cart. If a user isnt logged in and adds something to the cart they will be directed to the login page before they are able to checkout and pay for the item.
 
-There is a navigation row for larger screens and a "hamburger" menu for smaller screens. there is also a navigation bar in the footer.
+There is a navigation row for larger screens and a "hamburger" menu for smaller screens. There is also a navigation bar in the footer.
 
 The idea behind the navigation both from the navigation bar and the different buttons is to direct the user to the correct location so that it is easy for the user to buy the training programs or meals or get the correct information so that they will feel confident and start one of the programs.
 
 The site is constructed so that the user have to do as few clicks as possible to make a purchase, this makes it more likely that the user purchases a product.
 
-On all pages exept "contact" and "Profile" there are buttons for the user to click on to join the program and get directed to a purchase opportunity. 
+On all pages except "contact" and "Profile" there are buttons for the user to click on to join the program and get directed to a purchase opportunity. 
 
 _**Home** page:_ 
 
@@ -181,9 +180,9 @@ _**Program** and **Meals** page:_
 
 This page displays an indivicual program/meal available for purchase.
 
-* The **Add To Cart** button at the top and bottom puts the program/meal in the shopping cart and the cart navigation in the top navigation bar displays the number of products/meals in the cart. It redirects the user to the shopping cart so they can checkout and pay for the program/meal.
+* The **Add To Cart** button at the top and bottom puts the program/meal in the shopping cart and also displays the amount of items currently in the cart. It redirects the user to the shopping cart so they can checkout and pay for the program/meal.
 
-The user is intentially redirected to the shopping cart because it is most likely that they will only buy one program/meal at a time, so it is better to redirect the user to the checkout rather than back to the homepage or anywhere else.
+The user is intentially redirected to the shopping cart because it is most likely that they will only buy one program/meal at a time, so it is better to redirect the user to the checkout rather than back to the homepage or somewhere else.
 
 _**Testimonials** page:_ 
 
@@ -196,7 +195,7 @@ _**Contact form**:_
 From the contact page the user can send an email to World of Shape. After the message is sent the user is informed the the message has been delivered and World of Shape will be in touch soon.
 
 <p align="center">
-    <img src="https://github.com/MrBrunotte/worldofshape/blob/master/static/images/contact_form_message.PNG" alt="Message to sender">
+    <img src="https://github.com/MrBrunotte/worldofshape/blob/master/static/images/contact_form_message.PNG" alt="Message to sender that we will contact you shortly">
 </p>
 
 _**Login** page:_ 
@@ -207,7 +206,7 @@ _**Login** page:_
 
 **Register** page:_ 
 
-* The user register a username, emal, password and confirms the password. There is help-text below each input field that informs the user what format is needed, the help-text is highlited when hovered over.
+* The user register a username, email, password, and confirms the password. There is help-text below each input field that informs the user what format is needed, the help-text is highlited when hovered over.
 * When the user clicks register, the user is redirected to hte login page and a message is displayed "_Your Account Has Been Created! You Can Now Log In._"
 * If user already is registered there is a link to the login page.
 
@@ -240,27 +239,35 @@ The checkout page summarizes the items and lets the user scroll down to make sur
 * The user inserts the "Payment Details" and "Card Details" before submitting payment. 
   * If something with the payment is wrong the message "We Were Unable To Take Payment With That Card!" will be displayed and the user is redirected to the checkout page. 
   * If the payment is ok
+  
+_**Error** pages:_
+
+There are two custom error pages, **404-error** and **500-error**
+
+On the error pages the user is informed what the error is and they are able to click on a link that takes them back to the homepage.
+
+See an example of the error page here: [404.html]()
 
 ### **Features left to implement**
 
-* Add a blog function (_already axists as an app in the project_).
-* The form help text form Django forms could be displayed more aligned to the input field box.
+* Add static, and media files to an S3 bucket.
+* Add a blog function for the registered users to communicate with each other.
 * The **Get Discount** button in the 15% discount section needs a discount message displayed in form of a popup with the discount code or message.
 
 [Back to: _"Table of Contents"_](#table-of-contents)
 
 ## **Testing**
 
-### **Travis CI - platform**
+### **Travis CI - Continuous Integration**
 
-### **What is CI - Continuous Integration?**
-
-I have used the practice of CI (Continuous Integration), which is the the practice of merging in small code changes frequently - rather than merging in a large change at the end of a development cycle. The goal is to build healthier software by developing and testing in smaller increments. 
+I have used the practice of CI (Continuous Integration), which is the practice of merging in small code changes frequently - rather than merging in a large change at the end of a development cycle. The goal is to build healthier software by developing and testing in smaller increments. 
 As a continuous integration platform, Travis CI supports your development process by automatically building and testing code changes, providing immediate **feedback** on the success of the change. Travis CI can also automate other parts of your development process by managing deployments and notifications.
 
-### **CI Builds and Automation: Building, Testing, Deploying**
+#### **CI Builds and Automation: Building, Testing, Deploying**
 
 When you run a build, Travis CI clones your GitHub repository into a brand-new virtual environment, and carries out a series of tasks to build and test your code. If one or more of those tasks fail, the build is considered **broken**. If none of the tasks fail, the build is considered **passed** and Travis CI can deploy your code to a web server or application host.
+
+Read more about Travis [here](https://docs.travis-ci.com/user/for-beginners/)
 
 ### **Bugs**
 
@@ -273,12 +280,18 @@ To fix this problem do this:
 2. Search for: **#same-site-by-default-cookies** and change it from "default" to "Enable".
 3. Search for: **#cookies-without-same-site-must-be-secure** and change it from "default" to "Enable".
 
+[Back to: _"Table of Contents"_](#table-of-contents)
+
 ## **Automated Testing** 
 
 ### **Coverage**
 
+I have used Coverage to measure my code coverage, It shows which parts of my code are being exercised by tests, and which are not.
+
+When Coverage is run it creates a covh
 I have used the package 'coverage' to see how effective my testing is. 
 I installed the covarage package with 'pip install coverage' and then I ran 'Coverage' and created a covhtml file.
+To see my results
 
 run with:   coverage run --source='users' manage.py test && coverage report && coverage html
             Go to the htmlcov file and run the index file to get the report.
@@ -286,6 +299,7 @@ and:        python manage.py test users
     
 **"coverage run --source='users' manage.py test && coverage report && coverage html"**
 
+Read more about Coverage [here](https://coverage.readthedocs.io/en/coverage-5.1/)
 
 [Automated testing results](static/img/automated_testing_results.PNG)
 
@@ -338,24 +352,25 @@ If you want to clone this website you need to create the necessary key!
 2. Create a random [SECRET_KEY](https://miniwebtool.com/password-generator/) and set as environment variable (in .env file).
     * MacOS and Linux ````export SECRET_KEY=<secret key>````
     * Windows ````set SECRET_KEY=<secret key>````
-3. When you have your three keys store them in your .env file in the directiory app _**worldofshape**_ (not in the root folder!).
+3. When you have your three keys store them in your env.py file in the directory app _**worldofshape**_ (not in the root folder!).
 
 ### **Deploy code locally**
 
 If you wish to run this code locally then please follow the instructions below.
 
-1. Download the code from the Github repository from [here](https://github.com/MrBrunotte/worldofshape).
+1. Download the code from the GitHub repository from [here](https://github.com/MrBrunotte/worldofshape).
 2. Click on _"Clone"_ or _"download then Download ZIP"_. This will download the code into a ZIP folder locally on your computer.
 3. Uncompress the ZIP folder.
 4. Create a virtual environment.
-   1. Create .env file in the **worldofshape** app (not the root folder!)
-   2. Make sure you have theses settings in the settings.py file, so that the environment variables can be read:
-      1. Import: ````import environ````
-      2. Set: ````env = environ.Env(DEBUG=(bool, False))````
-      3. Set: ````environ.Env.read_env()````
-      4. Set: ````SECRET_KEY = env('SECRET_KEY')````
-      5. Set: ````STRIPE_PUBLISHABLE = env('STRIPE_PUBLISHABLE')````
-      6. Set: ````STRIPE_SECRET = env('STRIPE_SECRET')````
+   1. Create env.py file in the **worldofshape** app (not the root folder!)
+   2. Make sure you have theses settings in the env.py file, so that the environment variables can be read:
+      1. Import: ````import os````
+      3. Set: ````os.environ[’SECRET_KEY] = ‘ …. ‘ ````
+      4. Set: ```` os.environ[’EMAIL_USER’] = ‘ …. ‘ ````
+      5. Set: ```` os.environ[’EMAIL_PASS’] = ‘ …. ‘ ````
+      6. Set: ```` os.environ[’STIRIPE_PUBLISHABLE’] = ‘ …. ‘ ````
+      7. Set: ```` os.environ[’STIRIPE_SECRET’] = ‘ …. ‘ ````
+      8. Set: ```` os.environ[’DATABASE_URL’] = ‘ …. ‘ ````
 5. Activate the virtual environment.
 6. Install the necessary Python packages in the requirements.txt file.
     * ````pip freeze --local > requirements.txt````
@@ -369,17 +384,21 @@ This project was deployed to Heroku and uses Heroku for its production environme
 
 *Git must be installed onto your computer. Instructions for installing Git can be found here.
 
-**Heroku CLI must be installed in order to deploy to Heroku using these instructions. Please follow the instructions here to download and install Heroku CLI.
+**Heroku CLI must be installed to deploy to Heroku using these instructions. Please follow the instructions here to download and install Heroku CLI.
 
 1.  Login to [Heroku](https://id.heroku.com/login)
 2.  Select _New > Create New App_ and fill out the details required then hit _Create App_.
 3.  Select _Settings > Reveal Config Vars_. Enter the following environment variables:
-    1. DATABASE_URL: the url is automaically set when you add the _add on_ from the _Overview_ tab in the Heroku dashboard.
-    2. PORT: 5000
+    1. DATABASE_URL: the URL is automatically set when you add the _add on_ from the _Overview_ tab in the Heroku dashboard.
+    2. PORT: 8000
     3. SECRET_KEY: The generated key
-    4. STRIPE_PUBLISHABLE: From your env. file
-    5. STRIPE_SECRET: From your env. file
- 1. Download the code from the Github repository [here](https://github.com/MrBrunotte/foodictionary).
+    4. STRIPE_PUBLISHABLE: From your env.py file
+    5. STRIPE_SECRET: From your env.py file
+    6. EMAIL_USER: Your Gmail username
+    7. EMAIL_PASS: Your Gmail password
+    8. Set: DISABLE_COLLECTSTATIC = 1
+    9. Set: HOSTNAME = “name of app”
+ 1. Download the code from the GitHub repository [here](https://github.com/MrBrunotte/foodictionary).
 4. Click on _Clone_ or _download then Download ZIP_. This will download the code into a ZIP folder locally on your computer.
 5. Uncompress the ZIP folder.
 6. Open up a terminal or cmd prompt and login into Heroku CLI.
@@ -390,8 +409,8 @@ This project was deployed to Heroku and uses Heroku for its production environme
 reason it is not then follow the steps below to create it.
     
     * Procfile
-        * In a terminal make sure you are in the root directory of the project then run ````web: gunicorn worldofshape.wsgi > Procfile````.
-        * Add the following text to the Procfile **web: python manage.py runserver 0.0.0.0:8000**.
+        * In a terminal make sure you are in the root directory of the project then run ````web: gunicorn worldofshape.wsgi:application > Procfile````.
+        * Add the following text to the Procfile **web: gunicorn worldofshape.wsgi:application**.
 1.  Add a new git remote for Heroku.
     * ````git remote add heroku git@heroku.comYOUR_APP_NAME.git````
 2.  Push to Heroku.
@@ -400,7 +419,6 @@ reason it is not then follow the steps below to create it.
 dashboard. 
 13. Once the build is complete click on **open app** top right to see _**World of Shape**_ in action. 
 
-[Back to: _"Table of Contents"_](#table-of-contents)
 
 ## **Credits**
 
