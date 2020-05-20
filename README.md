@@ -12,7 +12,6 @@
     - [**Purpose of Project**](#purpose-of-project)
     - [**Functionality of Project**](#functionality-of-project)
   - [**UX - User Experience**](#ux---user-experience)
-  - [**User Experience**](#user-experience)
     - [**User Stories:**](#user-stories)
     - [**Mockup**](#mockup)
   - [**Features**](#features)
@@ -20,10 +19,8 @@
     - [**Features left to implement**](#features-left-to-implement)
   - [**Testing**](#testing)
     - [**Travis CI - platform**](#travis-ci---continuous-integration)
-      - [**CI Builds and Automation: Building, Testing, Deploying**](#ci-builds-and-automation-building-testing-deploying)
-    - [**Bugs**](#bugs)
-  - [**Automated Testing**](#automated-testing)
-    - [**Coverage**](#coverage)
+    - [**Automated Testing**](#automated-testing)
+    - [**Manual Testing**](#manual-testing)
   - [Setting up URLs](#setting-up-urls)
   - [**Technologies Used**](#technologies-used)
     - [**Languages, Frameworks, Editor and Version Control**](#languages-frameworks-editor-and-version-control)
@@ -55,42 +52,47 @@ The purpose of the project was to create a Full Stack Framework Django site and 
 
 The appliction uses Django 3 to encourage rapid development, by following a MTV (model-template-view) architecture pattern. I have used the [**separation of concerns**](https://livebook.manning.com/book/code-like-a-pro/chapter-2/) in the application to utilize the Django Framework effectively.
 
-Alongside the Django framework, I have used sqlite in the project's development phase for local testing. Sqlite is a selfcontained highly reliable SQL database engine that features all the normal relational database management. When the project was ready for deployment I switched to Postgres (PostGreSQL) to ensure that any data entered was visible in my deployed Heroku application. Postgres is open source and boosts a fully technical and easy to use Object relational database management system.
+Alongside the Django framework, I have used SQlite in the project's development phase for local testing. SQlite is a selfcontained highly reliable SQL database engine that features all the normal relational database management. When the project was ready for deployment I switched to Postgres (PostGreSQL) to ensure that any data entered was visible in my deployed Heroku application. PostGreSQL is open source and boosts a fully technical and easy to use Object relational database management system.
 
-The admin user of World of Shape has full access to the Admin dashboard where the admin can **create, read, update and delete** the training programs or mealplans. 
+The admin user of World of Shape has full access to the Admin dashboard where the admin can **create, read, update and delete** the Training programs, Mealplans, User settings and Checkout orders. 
 The Admin dashboard is custom made for the World of Shape website. From the Django dashboard the admin can do the CRUD operations in all 6 applocations. 
 
-The 6 applications are:
-* Authentication & authorization
-* Blog _(not implemented yet, but is fully functional)_
+The 7 applications are:
+* **Worldofshape**
+* Cart
 * Checkout
-* Meal
+* Home
+* Meals
 * Products
 * Users
 
 The project uses Git and GitHub for version controll and is deployed via Heroku. 
 
-All secret variables are stored in an *env.py* filte that is then ignored by the version control with the gitignore file. This is done to ensure that the project integrity is held at a high security standard.
+All secret variables are stored in an *env.py* file that is then ignored by the version control with the .gitignore file. This is done to ensure that the project integrity is held at a high security standard.
 
-The application uses Stripe as payment method and when testing the payment functionality please make sure to use the [**Stripe test card numbers**](https://stripe.com/docs/testing#cards). Throughout the development phase of this project I have used:
+The application uses Stripe as payment method and when testing the payment functionality please make sure to use the [**Stripe test card numbers**](https://stripe.com/docs/testing#cards). Throughout the development phase of this project I have used, and they can be used to test the production version as well:
 * Card number: **4242 4242 4242 4242**
 * CVV: **Any 3 digit number**
 * Card Date: **Any future date**
 
-Please feel free to register a user to fully test the [World of Shape website](ADD HEROKU ADRESS HERE)
+Please feel free to [register](https://worldofshape.herokuapp.com/register/) a user to fully test the World of Shape website
+
+You can also [login](https://worldofshape.herokuapp.com/login/) as the testuser:
+ * Username: testuser
+ * Email: testuser@gmail.com
+ * Password: testworldofshape
 
 [Back to: _"Table of Contents"_](#table-of-contents)
 
 ## **UX - User Experience**
 
-The typical user is a man or a woman of all ages that want to get in shape but have struggled in the past. World of Shape helps these users to attain this goal by giving them the tools to effectivly reach the goal set by the user. World of Shape helps the user by supplying the necessary tools to best loose weight and get in shape. These tools consists of training programs, mealplans and access to World of Shapes personal trainer on the web.
+The typical user is a man or a woman of all ages that want to get in shape but have struggled in the past. World of Shape helps these users to attain this goal by giving them the tools to effectivly reach the goal set by the user. World of Shape helps the user by supplying the necessary tools to best loose weight and get in shape. These tools consists of training programs, mealplans and access to World of Shapes personal trainers on the web.
 
 ### **User Stories:**
 
 _**Generic** (Guest/Public) User:_
 
 * As a **Generic** User I can browse the site and access all necessary information I need before making a purchase.
-* As a **Generic** User I can search the site by typing keywords that describe my search qriteria.
 * As a **Generic** User I can register a profile and add a profile picture.
 * As a **Generic** User I can contact World of Shape by sending them a message from the website contact form.
 * As a **Generic** User I can view the site on any device I may have, (mobile/tablet/desktop).
@@ -99,9 +101,9 @@ _**Registered** (Logged in) User:_
 
 * As a **Registered** User I can login to my site.
 * As a **Registered** User I can update my profile picture, username and email settings.
-* As a **Registered** User I add products to my shopping cart.
-* As a **Registered** User I change the number of items or delete my cart items.
-* As a **Registered** User I checkout and pay for my shopping cart items.
+* As a **Registered** User I can add products to my shopping cart.
+* As a **Registered** User I can delete my cart items.
+* As a **Registered** User I can checkout and pay for my shopping cart items.
 
 _**Application** Admin User:_
 
@@ -109,8 +111,9 @@ _**Application** Admin User:_
     * Update, add, change or delete **Users**,
     * Update, add, change or delete **Meals**,
     * Update, add, change or delete **Programs**,
-    * Update, add, change or delete **Profiles**,
-    * Update, add, change or delete **Orders**.
+    * Update, add, change or delete **User-profiles**,
+    * Update, add, change or delete **Orders**,
+    * Change or delete **User-passwords**,
 
 _**Application** Owner:_
 
@@ -119,7 +122,7 @@ _**Application** Owner:_
 _**Developer**:_
 
 * As a **Developer** I wanted to demonstrate my skills as a junior Full Stack Software developer.
-* As a **Developer** I wanted to build a project that I could showcase alongside my other projects to potential future employers or customers on GitHub and on my personal portfolio.
+* As a **Developer** I wanted to build a project that I could showcase alongside my other projects to potential future employers or customers on GitHub and in my personal portfolio: [Stefan Brunottes Portfolio](www.stefanbrunotte.com).
 * As a **Developer** I wanted to improve the existing website [World of Shape](https://worldofshape.com/) and make it a more inviting and user friendly website.
 
 ### **Mockup**
@@ -143,9 +146,9 @@ The navigation consist of a "logged in" navigation and a "guest" navigation. The
 
 There is a navigation row for larger screens and a "hamburger" menu for smaller screens. There is also a navigation bar in the footer.
 
-The idea behind the navigation both from the navigation bar and the different buttons is to direct the user to the correct location so that it is easy for the user to buy the training programs or meals or get the correct information so that they will feel confident and start one of the programs.
+The idea behind the navigation both from the navigation bar, footer and different buttons is to easily direct the user to the correct location so that it is easy for the user to buy the training programs or meals or get the correct information so that they will feel confident and start one of the programs.
 
-The site is constructed so that the user have to do as few clicks as possible to make a purchase, this makes it more likely that the user purchases a product.
+The site is constructed so that the user have to do as few clicks as possible to make a purchase, this makes it more likely that the user purchases a product or mealplan.
 
 On all pages except "contact" and "Profile" there are buttons for the user to click on to join the program and get directed to a purchase opportunity. 
 
@@ -238,7 +241,7 @@ The checkout page summarizes the items and lets the user scroll down to make sur
 * The **Change Order** button redirects the user back to the cart to delete an item.
 * The user inserts the "Payment Details" and "Card Details" before submitting payment. 
   * If something with the payment is wrong the message "We Were Unable To Take Payment With That Card!" will be displayed and the user is redirected to the checkout page. 
-  * If the payment is ok
+  * If the payment is ok the user will be redirected to the homepage and a message will be shown that states _**"You have successfully paid"**_
   
 _**Error** pages:_
 
@@ -246,7 +249,7 @@ There are two custom error pages, **404-error** and **500-error**
 
 On the error pages the user is informed what the error is and they are able to click on a link that takes them back to the homepage.
 
-See an example of the error page here: [404.html]()
+See an example of the error page here: [404.html](https://github.com/MrBrunotte/worldofshape/blob/master/media/html_images/404_error_page.PNG)
 
 ### **Features left to implement**
 
@@ -257,33 +260,18 @@ See an example of the error page here: [404.html]()
 
 [Back to: _"Table of Contents"_](#table-of-contents)
 
-## **Testing**
+## **TESTING**
 
 ### **Travis CI - Continuous Integration**
 
 I have used the practice of CI (Continuous Integration), which is the practice of merging in small code changes frequently - rather than merging in a large change at the end of a development cycle. The goal is to build healthier software by developing and testing in smaller increments. 
 As a continuous integration platform, Travis CI supports your development process by automatically building and testing code changes, providing immediate **feedback** on the success of the change. Travis CI can also automate other parts of your development process by managing deployments and notifications.
 
-#### **CI Builds and Automation: Building, Testing, Deploying**
-
-When you run a build, Travis CI clones your GitHub repository into a brand-new virtual environment, and carries out a series of tasks to build and test your code. If one or more of those tasks fail, the build is considered **broken**. If none of the tasks fail, the build is considered **passed** and Travis CI can deploy your code to a web server or application host.
+When I run a build, Travis CI clones the worldofshape GitHub repository into a brand-new virtual environment, and carries out a series of tasks to build and test the code. If one or more of those tasks fail, the build is considered **failing**. If none of the tasks fail, the build is considered **passed** and Travis CI will deploy my code to Heroku.
 
 Read more about Travis [here](https://docs.travis-ci.com/user/for-beginners/)
 
-### **Bugs**
-
-#### **Chrome webbrowser**
-When the site was manually tested there was a bug when I tried to play the video on the home- and aboutpage. The bug was due to settings in default settings in Chrome.
-
-To fix this problem do this:
-
-1. Go to [chrome://flags/](chrome://flags/) in your chrome browser.
-2. Search for: **#same-site-by-default-cookies** and change it from "default" to "Enable".
-3. Search for: **#cookies-without-same-site-must-be-secure** and change it from "default" to "Enable".
-
-[Back to: _"Table of Contents"_](#table-of-contents)
-
-## **Automated Testing** 
+### **Automated Testing** 
 
 Automated testing was conducted on each app. I used Djangos [**TestCase**](https://docs.djangoproject.com/en/3.0/topics/testing/tools/#testcase) and [**SimpleTestCase**](https://docs.djangoproject.com/en/3.0/topics/testing/tools/#simpletestcase) to test the apps. 
 
@@ -291,7 +279,90 @@ I then used [**Coverage**](https://coverage.readthedocs.io/en/coverage-5.1/) to 
 
 I ran the tests on my SQlite development database.
 
-See the results here: [My Coverage Report]()
+See the Coverage report **[here!](ADD COVERAGE REPORT HERE)**
+See the Automated tests (_TestCase and SimpleTestCase_) **[here!](https://github.com/MrBrunotte/worldofshape/blob/master/media/html_images/automated_testing_results.PNG)**
+
+### **Manual Testing**
+
+I have conducted testing both as a **Guest** user and as a **Logged in** user.
+
+_**Navigation and buttons**:_ 
+
+* Test that all URLs patterns in the navbar point to the correct view.
+* Make sure that the there is a profile and logout option in the navbar and that they point to the correct view.
+* Test the "hamburger" menu on smaller screens and make sure all navbar options work correctly.
+* Test the footer navbar and make sure all navbar options work correctly.
+
+_**Home** page:_ 
+
+* Test that the **Join Now** button directs the user to the products page.
+* Test that the **Read More** button in the "training programs" box directs the user to the products page.
+* Test that the **Read More** button in the "Weight Loss Analysis" box directs the user to the weight loss page.
+* Test that the **Read More** button in the "Healthy Diet Plan" box directs the user to meal page.
+* Test that the **Read More** button below About world of Shape directs the user to the About Us page.
+* Test that the names of each testimonial is linked to the the testimonials page.
+* Test that the **Join Now** button at the bottom of the page directs the user to the products page.
+
+_**About Us** page:_ 
+
+* Test that the **Read More** button directs the user to the text below.
+* Test that the **Find Out How It Works Video** pops up and the video is played.
+* Test that the **Join Now** button directs the user to the products page.
+* Test that the **Get Discount** button at the bottom of the page is a dummy link and the user stays on the about page.
+
+_**Our Training** and **Our Meals** page:_
+
+* Test that the **Read More** button directs the user to the text below.
+* Test that the **Find My Program** button directs the user to the "weight loss".
+* Test that the **Read More** button below each program/meal directs the user to the correct program/meal page.
+* Test that the **Add To Cart** button puts the chosen program/meal in the shopping cart and the cart navigation in the top navigation bar displays the number of programs/meals in the cart.
+* Test that the **Get Discount** button at the bottom of the page is a dummy link and the user stays on the current page.
+
+_**Program** and **Meals** page:_
+
+* Test that the **Add To Cart** button at the top and bottom puts the program/meal in the shopping cart and also displays the amount of items currently in the cart. And redirects the user to the shopping cart so they can checkout and pay for the program/meal.
+
+_**Testimonials** page:_ 
+
+* Test that the **Read More** button directs the user to the text below.
+* Test that the names of each testimonial is linked to the the programs page.
+* Test that the **Join Now** button at the bottom directs the user to the products page.
+
+_**Contact form**:_ 
+
+Test that the user the user can send an email to World of Shape, and gets a message telling the user that the email was sent.
+
+_**Login** page:_ 
+
+* Test that the user can log in with username and password and get directed to the homepage.
+* Test that the "Forgot Password?" link works correctly.
+* Test that the "sign up now" link works and redirects the user to the register page.
+
+**Register** page:_ 
+
+* Test that the user can register as a user and is redirected to the login page and greated with a message saying: "_Your Account Has Been Created! You Can Now Log In._"
+* Test that the link to the login page works and redirects the user to the login page.
+
+_**Reset Password** page:_ 
+
+* Test that the link to create a new password works correctly and redirects the user to the reset password page
+* Test that the user can log in again after they have followed the instructions in their mail inbox.
+* Test that the link back to the homepage works.
+
+_**Cart** page:_ 
+
+* Test that the **Checkout** button redirects the user to the payment page.
+* Test that each program/meal in the cart can be deleted by clicking on the **Delete Item** button.
+* Teest to make sur that if there are more than one item in the cart the total ammount is displayed below the checkout button.
+
+_**Checkout** page:_ 
+
+* Test that the **Change Order** button redirects the user back to the cart.
+* Test that the user is able to inserts "Payment Details" and "Card Details" properly.
+* Test that the payment works and that the user is redirected to the homepage and a message is shown saying: _**"You have successfully paid"**_ 
+* Test that the if something with the payment is wrong the message _**"We Were Unable To Take Payment With That Card!"**_ will be displayed and the user is redirected to the checkout page. 
+
+[Back to: _"Table of Contents"_](#table-of-contents)
 
 ## Setting up URLs
 
@@ -326,7 +397,7 @@ Steps to set up url patterns and getting it to work!
 * [Heroku](https://www.heroku.com/home)
 
 ### **Tools used:**
-* [Pep 8 Online Validotr](http://pep8online.com/) ~ Check python code for PEP8 requirements
+* [Pep 8 Online Validator](http://pep8online.com/) ~ Check python code for PEP8 requirements
 * [Fontawsome](https://fontawesome.com/)
 * [Firefox Dev Tools](https://developer.mozilla.org/en-US/docs/Tools)
 * [Adobe Xd](https://www.adobe.com/se/products/xd.html)
@@ -423,6 +494,8 @@ All images used with permission from [**WorldofShape**](https://worldofshape.com
 I would like to thank my good friend [**Niklas Lind**](https://github.com/niklaslind) for his support and guidance during the development of this project. 
 
 I would also like to thank my mentor [**Maranatha Ilesanmi**](https://github.com/mbilesanmi) and the tutors at Code Institute for their help.
+
+Finally I would like to thank all the tutors at Code Institute for their fantastic help in guiding me in the correct direction, especially Tim and Stephen for their patience and great tutoring!
 
 ### **Contact**
 
