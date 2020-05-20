@@ -17,33 +17,16 @@ import dj_database_url
 if os.path.exists("env.py"):
     import env
 
-# env = environ.Env(
-#     DEBUG=(bool, False)
-# )
-# environ.Env.read_env()
-
-# if os.environ.get('DEVELOPMENT'):
-#    development = True
-# else:
-#    development = False
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-
-# env = environ.Env(DEBUG=(bool, False))
-# env_file = os.path.join(BASE_DIR, ".env")
-# environ.Env.read_env(env_file)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = env('SECRET_KEY')
 SECRET_KEY = os.environ.get('SECRET_KEY', "Env value not loaded")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = 'DEBUG' original setting
-# DEBUG = False in production
+# DEBUG = 'DEBUG' original setting, DEBUG = False in production
 DEBUG = 'DEBUG'
 
 ALLOWED_HOSTS = ['127.0.0.1',
@@ -120,10 +103,10 @@ else:
     }
 
 # DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#    }
 # }
 
 # Password validation
@@ -162,39 +145,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-# AWS_S3_OBJECT_PARAMETERS = {
-#    'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
-#    'CacheControl': 'max-age=94608000',
-# }
-# AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
-# AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
-# AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
-# to make sure files are not overwritten if they have the same name
-# AWS_S3_FILE_OVERWRITE = False
-# AWS_DEFAULT_ACL = None
-# AWS_S3_REGION_NAME = 'eu-north-1'
-# AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
-# This will make sure that the file URL does not have unnecessary parameters like your access key.
-# This is usefull when the bucket is public like this one
-# AWS_QUERYSTRING_AUTH = False
-
-# Static files
-# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3,S3Boto3Storage'
-# STATICFILES_LOCATION = 'static'
-# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-# STATICFILES_STORAGE = 'custom_storages.StaticStorage'
-
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 
 # Media files
-#MEDIAFILES_LOCATION = 'media'
-#DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
-# MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
 
 # Crispy forms from Bootstrap4
 CRISPY_TEMPLATE_PACK = 'bootstrap4'

@@ -253,6 +253,7 @@ See an example of the error page here: [404.html]()
 * Add static, and media files to an S3 bucket.
 * Add a blog function for the registered users to communicate with each other.
 * The **Get Discount** button in the 15% discount section needs a discount message displayed in form of a popup with the discount code or message.
+* Add tests to get 100% coverage in all apps.
 
 [Back to: _"Table of Contents"_](#table-of-contents)
 
@@ -284,24 +285,13 @@ To fix this problem do this:
 
 ## **Automated Testing** 
 
-### **Coverage**
+Automated testing was conducted on each app. I used Djangos [**TestCase**](https://docs.djangoproject.com/en/3.0/topics/testing/tools/#testcase) and [**SimpleTestCase**](https://docs.djangoproject.com/en/3.0/topics/testing/tools/#simpletestcase) to test the apps. 
 
-I have used Coverage to measure my code coverage, It shows which parts of my code are being exercised by tests, and which are not.
+I then used [**Coverage**](https://coverage.readthedocs.io/en/coverage-5.1/) to see the "coverage" of my tests, I was not able to get 100% on all apps but that is mentioned above in the section: _Features left to implement_.
 
-When Coverage is run it creates a covh
-I have used the package 'coverage' to see how effective my testing is. 
-I installed the covarage package with 'pip install coverage' and then I ran 'Coverage' and created a covhtml file.
-To see my results
+I ran the tests on my SQlite development database.
 
-run with:   coverage run --source='users' manage.py test && coverage report && coverage html
-            Go to the htmlcov file and run the index file to get the report.
-and:        python manage.py test users
-    
-**"coverage run --source='users' manage.py test && coverage report && coverage html"**
-
-Read more about Coverage [here](https://coverage.readthedocs.io/en/coverage-5.1/)
-
-[Automated testing results](static/img/automated_testing_results.PNG)
+See the results here: [My Coverage Report]()
 
 ## Setting up URLs
 
