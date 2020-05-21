@@ -776,15 +776,19 @@ Menu
 .extra_padding {
 	margin: 15px 0 30px 0;
 }
+.modal_button,
 .home_button, 
 .submit_button {
 	border: solid 1px #FFFFFF;
-	
+}
+.modal_button {
+	width: 70px;
+	height: 30px;
 }
 .home_button {
 	margin-top: 44px;
 }
-
+.modal_button:hover,
 .home_button:hover,
 .add_to_cart_button:hover {
 	color:white;
@@ -795,6 +799,20 @@ Menu
 .home_button a
 {
 	line-height: 41px;
+}
+.modal-content {
+	background-color: #0000007d;
+	padding-bottom: 1rem;
+}
+.modal-body {
+	padding: 1rem 1rem 0 1rem;
+}
+.modal-header {
+	border-bottom: none;
+}
+.modal-footer {
+	border-top: none;
+	padding: 0 1rem;
 }
 .my_logo > div
 {

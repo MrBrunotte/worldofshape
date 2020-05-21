@@ -8,7 +8,7 @@
 2. Set Header
 3. Init Menu
 4. Init Video
-5. Init Gallery
+5. Bootstrap modal
 
 
 ******************************/
@@ -106,36 +106,10 @@ $(document).ready(function()
 
 	/* 
 
-	5. Init Gallery
+	5. Bootstrap modal
 
 	*/
-
-	function initGallery()
-	{
-		if($('.gallery_slider').length)
-		{
-			var gallery = $('.gallery_slider');
-			gallery.owlCarousel(
-			{
-				autoplay:true,
-				loop:true,
-				smartSpeed:1200,
-				nav:false,
-				dots:false,
-				center:true,
-				responsive:
-				{
-					0:
-					{
-						items:3
-					},
-					991:
-					{
-						items:5
-					}
-				}
-			});
-		}
-	}
-
+	$('#myModal').on('shown.bs.modal', function () {
+		$('#myInput').trigger('focus')
+	  })
 });
