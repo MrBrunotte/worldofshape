@@ -43,6 +43,7 @@ def add_meal_to_cart(request, id):
     Redirect user to cart template
     """
     quantity = 1
+    info = 'This program is already in your cart'
 
     cart = request.session.get('cart', {'meal': {}, 'product': {}})
     if id in cart['meal']:
@@ -75,10 +76,8 @@ def update_meal_item(request, id):
 
     if quantity in cart > 0:
         cart['meal'][id] = quantity
-        print(cart)
     else:
         cart.pop(quantity)
-    print(quantity)
 
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))
@@ -88,7 +87,6 @@ def delete_meal_item(request, id):
     """Delete a meal in the cart"""
 
     cart = request.session.get('cart', id)
-    print(cart)
     del cart['meal'][id]
     request.session["cart"] = cart
     messages.success(

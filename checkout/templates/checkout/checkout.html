@@ -40,8 +40,6 @@
                                 <div class="col-12 bottom_separator">
                                     <div class="service">
                                         {% if item.meal %}
-                                        <div class="product_image"><img src="{{ meal.image }}" alt="Image of Mealplan">
-                                        </div>
                                         <div
                                             class="service_title_container d-flex flex-row align-items-center justify-content-start">
                                             <div class="cart_title_checkout">{{ item.meal.name }}</div>
@@ -50,60 +48,58 @@
                                         <p class="cart_text_checkout">{{ item.meal.description }}</p>
                                         <p class="price_checkout">Price: {{ item.meal.price }}</p>
                                         {% else %}
-                                        <div class="product_image"><img src="{{ product.image }}"
-                                                alt="Image of Program">
-                                        </div>
-                                        <div
-                                            class="service_title_container d-flex flex-row align-items-center justify-content-start">
-                                            <div class="cart_title_checkout">{{ item.product.name }}</div>
-                                        </div>
-                                        <p class="cart_text_checkout">{{ item.product.description }}</p>
-                                        <p class="price_checkout">Price: {{ item.product.price }}</p>
-                                        {% endif %}
                                     </div>
+                                    <div
+                                        class="service_title_container d-flex flex-row align-items-center justify-content-start">
+                                        <div class="cart_title_checkout">{{ item.product.name }}</div>
+                                    </div>
+                                    <p class="cart_text_checkout">{{ item.product.description }}</p>
+                                    <p class="price_checkout">Price: {{ item.product.price }}</p>
+                                    {% endif %}
                                 </div>
-                                {% endfor %}
                             </div>
+                            {% endfor %}
                         </div>
-                    </div>
-                </div>
-                <div class="button home_button ml-auto mr-auto mb-4">
-                    <a href="{% url 'view_cart' %}">
-                        Change Order</a>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="cart_total_checkout">Cart Total:</div>
-                        <div class="cart_total_checkout cart_total_pb top_separators">{{ total }}</div>
                     </div>
                 </div>
             </div>
-            <form role="form" action="{% url 'checkout' %}" id="payment-form" method="post">
-
-                <div id="credit-card-errors" style="display:none">
-                    <div class="alert-message block-message error" id="stripe-error-message"></div>
+            <div class="button home_button ml-auto mr-auto mb-4">
+                <a href="{% url 'view_cart' %}">
+                    Change Order</a>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="cart_total_checkout">Cart Total:</div>
+                    <div class="cart_total_checkout cart_total_pb top_separators">{{ total }}</div>
                 </div>
-                <div class="row">
-                    <div class="form-group col-lg-6 mr-auto ml-auto">
-                        <legend>Payment Details</legend>
-                        {{ order_form }}
-                    </div>
-                    <div class="form-group col-lg-6 mr-auto ml-auto">
-                        <legend>Card Details</legend>
-                        {{ payment_form }}
-                    </div>
-                    {% csrf_token %}
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="row test_button_row testimonals_bottom">
-                            <input class="button submit_button mr-auto ml-auto" id="submit_payment_btn" name="commit"
-                                type="submit" value="Submit Payment">
-                        </div>
-                    </div>
-                </div>
-            </form>
+            </div>
         </div>
+        <form role="form" action="{% url 'checkout' %}" id="payment-form" method="post">
+
+            <div id="credit-card-errors" style="display:none">
+                <div class="alert-message block-message error" id="stripe-error-message"></div>
+            </div>
+            <div class="row">
+                <div class="form-group col-lg-6 mr-auto ml-auto">
+                    <legend>Payment Details</legend>
+                    {{ order_form }}
+                </div>
+                <div class="form-group col-lg-6 mr-auto ml-auto">
+                    <legend>Card Details</legend>
+                    {{ payment_form }}
+                </div>
+                {% csrf_token %}
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row test_button_row testimonals_bottom">
+                        <input class="button submit_button mr-auto ml-auto" id="submit_payment_btn" name="commit"
+                            type="submit" value="Submit Payment">
+                    </div>
+                </div>
+            </div>
+        </form>
     </div>
+</div>
 </div>
 {% endblock content %}
