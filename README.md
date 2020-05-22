@@ -1,7 +1,5 @@
 # Welcome to [**"World of Shape"**](https://worldofshape.herokuapp.com/)
 
-[![Build Status](https://travis-ci.org/MrBrunotte/worldofshape.svg?branch=master)](https://travis-ci.org/MrBrunotte/worldofshape)
-
 ![World of shape landingpage](https://github.com/MrBrunotte/worldofshape/blob/master/media/images/landingpage.PNG "World of Shape")
 
 **World of Shape - Your journey starts now!**
@@ -262,15 +260,6 @@ See an example of the error page here: [404.html](https://github.com/MrBrunotte/
 [Back to: _"Table of Contents"_](#table-of-contents)
 
 ## **TESTING**
-
-### **Travis CI - Continuous Integration**
-
-I have used the practice of CI (Continuous Integration), which is the practice of merging in small code changes frequently - rather than merging in a large change at the end of a development cycle. The goal is to build healthier software by developing and testing in smaller increments. 
-As a continuous integration platform, Travis CI supports your development process by automatically building and testing code changes, providing immediate **feedback** on the success of the change. Travis CI can also automate other parts of your development process by managing deployments and notifications.
-
-When I run a build, Travis CI clones the worldofshape GitHub repository into a brand-new virtual environment, and carries out a series of tasks to build and test the code. If one or more of those tasks fail, the build is considered **failing**. If none of the tasks fail, the build is considered **passed** and Travis CI will deploy my code to Heroku.
-
-Read more about Travis [here](https://docs.travis-ci.com/user/for-beginners/)
 
 ### **Automated Testing** 
 
