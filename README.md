@@ -16,7 +16,6 @@
     - [**Existing features**](#existing-features)
     - [**Features left to implement**](#features-left-to-implement)
   - [**Testing**](#testing)
-    - [**Travis CI - platform**](#travis-ci---continuous-integration)
     - [**Automated Testing**](#automated-testing)
     - [**Manual Testing**](#manual-testing)
     - [**Responsiveness**](#Responsiveness)
