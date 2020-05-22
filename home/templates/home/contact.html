@@ -6,7 +6,7 @@
 
 <div class="contact_home">
     <div class="background_image" style="background-image:url(/media/html_images/contact.jpg)"></div>
-    <div class="overlay"></div>
+    <!--<div class="overlay"></div>-->
     <div class="contact_container">
         <div class="container">
             <div class="row">
@@ -71,14 +71,14 @@
             </div>
 
             <!-- Contact Form -->
-            <div class="col-lg-8 contact_col">
+            <div class="col-lg-8 contact_col mail_content">
                 {% if message_name %}
                 <center>
                     <div class="email_message_title">Thanks {{ message_name }}</div>
                     <p class="email_message_subtitle">We received your email and will respond shortly...</p>
                 </center>
                 {% else %}
-                <div class="contact_title">Get in touch</div>
+                <div class="contact_title">Contact us</div>
                 <div class="contact_form_container">
                     <form action="{% url 'contact' %}" method="POST" id="contact_form" class="contact_form">
                         {% csrf_token %}
