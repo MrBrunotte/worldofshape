@@ -2257,6 +2257,9 @@ p:last-of-type {
 	.form_group {
 		padding-top: 35px;
 	}
+	.login_content {
+		margin-top: 150px;
+	}
 	.footer_content {
 		padding-bottom: 345px;
 	}
@@ -2326,6 +2329,7 @@ p:last-of-type {
 	}
 	.home_title {
 		font-weight: 600;
+		margin-top: 120px;
 	}
 	.home_title,
 	.training_home_title {
