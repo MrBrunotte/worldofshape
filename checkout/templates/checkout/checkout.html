@@ -40,7 +40,7 @@
                                 <div class="col-12 bottom_separator">
                                     <div class="service">
                                         {% if item.meal %}
-                                        <div class="product_image"><img src="{{ product.image }}" alt="Program image">
+                                        <div class="product_image"><img src="{{ meal.image }}" alt="Image of Mealplan">
                                         </div>
                                         <div
                                             class="service_title_container d-flex flex-row align-items-center justify-content-start">
@@ -50,8 +50,8 @@
                                         <p class="cart_text_checkout">{{ item.meal.description }}</p>
                                         <p class="price_checkout">Price: {{ item.meal.price }}</p>
                                         {% else %}
-                                        <div class="product_image"
-                                            style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')">
+                                        <div class="product_image"><img src="{{ product.image }}"
+                                                alt="Image of Program">
                                         </div>
                                         <div
                                             class="service_title_container d-flex flex-row align-items-center justify-content-start">
