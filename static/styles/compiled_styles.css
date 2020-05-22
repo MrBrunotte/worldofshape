@@ -2374,6 +2374,9 @@ p:last-of-type {
 	.training_home_container {
 		top: 50%;
 	}
+	.training_home_container {
+		top: 25%;
+	}
 	.about_about_text {
 		margin-top: 15px;
 	}
