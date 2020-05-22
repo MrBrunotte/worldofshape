@@ -10,11 +10,12 @@
         <div class="container">
             <div class="row">
                 <div class="col">
+
+                    <div class="profile_title">Profile
+                        <img class="rounded-circle account-img" src="{{ user.profile.image.url }}" alt="Profile image">
+                    </div>
+                    <br>
                     <div class="profile_content">
-                        <div class="profile_title">Profile
-                            <img class="rounded-circle account-img" src="{{ user.profile.image.url }}"
-                                alt="Profile image">
-                        </div>
                         <div class="username_title">Current Username: <strong class="strong_profile">
                                 {{ user.username }} </strong>
                             <p class="username_email_subtitle">Current Email:

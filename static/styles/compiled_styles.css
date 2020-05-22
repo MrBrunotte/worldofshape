@@ -727,7 +727,8 @@ Menu
 	text-transform: capitalize;
 }
 .username_title {
-	margin-top: 90px;
+	margin-top: 20px;
+
 }
 .username_email_subtitle {
 	padding-top: 5px;
@@ -1256,6 +1257,13 @@ p:last-of-type {
 	margin-top: 160px;
 	background-color: #00000057;
 }
+.profile_content {
+	margin:0 auto;
+	width: 60%;
+	background-color: #00000057;
+	padding: 20px;
+	border-radius: 5px;
+}
 .mail_content {
 	background-color: #000000eb;
 	-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
@@ -1268,11 +1276,7 @@ p:last-of-type {
 	padding: 1rem;
 	border-radius: 5px;
 }
-.profile_content {
-	padding-top: 0;
-	margin:0 auto;
-	width: 60%;
-}
+
 .login_title,
 .register_title,
 .profile_title,
@@ -2549,7 +2553,7 @@ p:last-of-type {
 		font-size: .9rem;
 	}
 	.profile_home {
-		height: 145vh;
+		height: 115vh;
 	}
 	.profile_title {
 		font-size: 30px;
