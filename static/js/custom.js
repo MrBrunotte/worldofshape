@@ -8,13 +8,13 @@
 2. Set Header
 3. Init Menu
 4. Init Video
-5. Bootstrap modal
+5. Init Gallery
+6. Bootstrap Modal
 
 
 ******************************/
 
-$(document).ready(function()
-{
+$(document).ready(function () {
 	"use strict";
 
 	/* 
@@ -29,18 +29,15 @@ $(document).ready(function()
 
 	setHeader();
 
-	$(window).on('resize', function()
-	{
+	$(window).on('resize', function () {
 		setHeader();
 
-		setTimeout(function()
-		{
+		setTimeout(function () {
 			$(window).trigger('resize.px.parallax');
 		}, 375);
 	});
 
-	$(document).on('scroll', function()
-	{
+	$(document).on('scroll', function () {
 		setHeader();
 	});
 
@@ -54,15 +51,12 @@ $(document).ready(function()
 
 	*/
 
-	function setHeader()
-	{
-		if($(window).scrollTop() > 91)
-		{
+	function setHeader() {
+		if ($(window).scrollTop() > 91) {
 			header.addClass('scrolled');
 			hamburgerBar.addClass('scrolled');
 		}
-		else
-		{
+		else {
 			header.removeClass('scrolled');
 			hamburgerBar.removeClass('scrolled');
 		}
@@ -74,13 +68,10 @@ $(document).ready(function()
 
 	*/
 
-	function initMenu()
-	{
-		if($('.menu').length)
-		{
+	function initMenu() {
+		if ($('.menu').length) {
 			var menu = $('.menu');
-			hamburger.on('click', function()
-			{
+			hamburger.on('click', function () {
 				hamburger.toggleClass('active');
 				menu.toggleClass('active');
 			});
@@ -93,23 +84,54 @@ $(document).ready(function()
 
 	*/
 
-	function initVideo()
-	{
+	function initVideo() {
 		$(".vimeo").colorbox(
-		{
-			iframe:true,
-			innerWidth:640,
-			innerHeight:409,
-			maxWidth: '90%'
-		});
+			{
+				iframe: true,
+				innerWidth: 640,
+				innerHeight: 409,
+				maxWidth: '90%'
+			});
 	}
 
 	/* 
 
-	5. Bootstrap modal
+	5. Init Gallery
+
+	*/
+
+	function initGallery() {
+		if ($('.gallery_slider').length) {
+			var gallery = $('.gallery_slider');
+			gallery.owlCarousel(
+				{
+					autoplay: true,
+					loop: true,
+					smartSpeed: 1200,
+					nav: false,
+					dots: false,
+					center: true,
+					responsive:
+					{
+						0:
+						{
+							items: 3
+						},
+						991:
+						{
+							items: 5
+						}
+					}
+				});
+		}
+	}
+	/* 
+
+	6. Bootstrap modal
 
 	*/
 	$('#myModal').on('shown.bs.modal', function () {
 		$('#myInput').trigger('focus')
-	  })
+	})
+
 });
