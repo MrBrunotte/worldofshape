@@ -255,10 +255,13 @@ See an example of the error page here: [404.html](https://github.com/MrBrunotte/
 * Add a blog function for the registered users to communicate with each other.
 * The **Get Discount** button in the 15% discount section needs a discount message displayed in form of a popup with the discount code or message.
 * Add tests to get 100% coverage in all apps.
+* Work on Accessibililty features and make the web page adhere more to the [WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/) (Web Content Accessibility Guidelines)
 
 [Back to: _"Table of Contents"_](#table-of-contents)
 
 ## **TESTING**
+
+I have conducted both manual and automated testing on the website.
 
 ### **Automated Testing** 
 
@@ -268,10 +271,13 @@ I then used [**Coverage**](https://coverage.readthedocs.io/en/coverage-5.1/) to 
 
 I ran the tests on my SQlite development database.
 
-See the Coverage report **[here!](https://github.com/MrBrunotte/worldofshape/blob/master/media/html_images/coverage_report.jpg)**
-See the Automated tests (_TestCase and SimpleTestCase_) **[here!](https://github.com/MrBrunotte/worldofshape/blob/master/media/html_images/automated_testing_results.PNG)**
+**[See](https://github.com/MrBrunotte/worldofshape/blob/master/media/html_images/coverage_report.jpg)** the Coverage report.
+
+**[See](https://github.com/MrBrunotte/worldofshape/blob/master/media/html_images/automated_testing_results.PNG)** the Automated tests (_TestCase and SimpleTestCase_).
 
 ### **Manual Testing**
+
+Summary of manual testing of user functions [here](https://github.com/MrBrunotte/worldofshape/blob/master/media/images/manual_testing_page_functions.PNG)
 
 I have conducted testing both as a **Guest** user and as a **Logged in** user.
 
@@ -289,7 +295,7 @@ _**Home** page:_
 * Test that the **Read More** button in the "Weight Loss Analysis" box directs the user to the weight loss page.
 * Test that the **Read More** button in the "Healthy Diet Plan" box directs the user to meal page.
 * Test that the **Read More** button below About world of Shape directs the user to the About Us page.
-* Test that the names of each testimonial is linked to the the testimonials page.
+* Test that the names of each testimonial is linked to the testimonials page.
 * Test that the **Join Now** button at the bottom of the page directs the user to the products page.
 
 _**About Us** page:_ 
@@ -353,6 +359,8 @@ _**Checkout** page:_
 
 ### **Responsiveness**
 
+Summary of manual testing of responsivness [see it here](https://github.com/MrBrunotte/worldofshape/blob/master/media/images/manual_testing_responsivness.PNG)
+
 I have used media queries to build a responsive website. I have looked for "natural" breakpoints on my site and these are the best breakpoints for my design:
 
   * **Hamburger menu break** ~ @media only screen and (max-width: 1190px)
@@ -367,13 +375,7 @@ I have tested the responsiveness in browsers:
 * Firefox and 
 * Chrome
   
-and I have used their developer tools to check the responsivness on:
-
-* Iphone 5
-* Iphone 8
-* Iphone X
-* Kindle Fire HDX
-* Galaxy S9
+I have also tested responsivness for portrait and landscape settings.
 
 ### **Code Check**
 
