@@ -43,13 +43,13 @@
                     <p class="service_text_single_top">{{ meal.description }}</p>
                     <p class="service_text_single">{{ meal.full_description }}</p>
                     <p class="price_program">{{ meal.price }}</p>
-                    <span class="input_group">
-                        <div class="button add_to_cart_button ml-auto mr-auto">
+                    <div class="input_group">
+                        <span class="button add_to_cart_button ml-auto mr-auto">
                             <a href="{% url 'add_meal_to_cart' meal.id %}">Add
                                 to
                                 Cart</a>
-                        </div>
-                    </span>
+                        </span>
+                    </div>
                 </div>
             </div>
 

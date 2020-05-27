@@ -705,6 +705,7 @@ Menu
 .email_message_title,
 .email_message_subtitle {
 	color: #ff9711;
+	text-align: center;
 }
 .email_message_title {
 	font-size: 72px;
@@ -1225,6 +1226,8 @@ p:last-of-type {
 }
 .wla_home {
 	height: 115vh;
+	width: 100%;
+	overflow: hidden;
 }
 
 .background_image_logout {
@@ -1364,6 +1367,8 @@ input:hover {
 }
 legend {
 	padding: 5px 20px;
+	font-size: 24px;
+	font-weight: 600;
 }
 form {
 	margin: 0 auto;
@@ -1975,6 +1980,79 @@ p:last-of-type {
 .footer_image img
 {
 	max-width: 100%;
+}
+
+/* Testing HTML Page styles */
+.container_test {
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+}
+.h1_test,
+.h2_test,
+.h3_test,
+.h4_test {
+	font-family: 'Montserrat', sans-serif;
+	margin: 25px 0 0;
+}
+.h1_test {
+	margin-top: 105px;
+}
+.h1_test,
+.h2_test,
+.h3_test {
+	padding-bottom: 20px;
+}
+.img_test {
+	height: 200px;
+	width: auto;
+}
+.img_no_error {
+	height: 60px;
+	width: auto;
+}
+.img_error_filter {
+	width: 60%;
+	margin-bottom: 25px;
+}
+.apps {
+	font-size: 16px;
+	font-weight: 900;
+	color: #f98c00 !important;
+}
+.apps:hover {
+	font-size: 1rem !important;
+}
+.apps p {
+	font-size: 11px;
+}
+.apps_span {
+	font-size: 12px;
+	font-style: italic;
+	font-weight: 600;
+}
+.link_test {
+	text-decoration: none;
+}
+.html_test_container {
+	border: red 3px solid;
+	min-height: 800px;
+	margin-bottom: 40px;
+}
+.html_code_to_be_tested {
+	margin: 30px;
+	background-color: #d4d4d4;
+	margin: 0 auto;
+	width: 90%;
+	border: red 2px solid;
+	border-radius: 25px;
+	min-height: 700px;
+}
+.p_validation_text {
+	margin: 20px 0 20px 0;
+	padding-bottom: 20px;
+	font-size: 24px;
+	font-weight: 600;
 }
 /* [Table of Contents about responsivness]
 
@@ -3004,9 +3082,6 @@ Lansdcape
 
 	.wla_home {
 		height: 80vh;
-	}
-	.wla_content {
-
 	}
 }
 

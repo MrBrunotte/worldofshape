@@ -29,7 +29,7 @@
   - [**Credits**](#credits)
     - [**Content**](#content)
     - [**Acknowledgments**](#acknowledgments)
-    - [**Contact**](#contact)
+  - [**Contact**](#contact)
 ## **World of Shape**
 
 World of Shape is a website that aims to get the user in shape and lose weight within 30 days! 
@@ -82,7 +82,7 @@ You can also [login](https://worldofshape.herokuapp.com/login/) as the testuser:
 
 [Back to: _"Table of Contents"_](#table-of-contents)
 
-## **UX - User Experience**
+## **UX - USER EXPERIENCE**
 
 The typical user is a man or a woman of all ages that want to get in shape but have struggled in the past. World of Shape helps these users to attain this goal by giving them the tools to effectivly reach the goal set by the user. World of Shape helps the user by supplying the necessary tools to best loose weight and get in shape. These tools consists of training programs, mealplans and access to World of Shapes personal trainers on the web.
 
@@ -133,8 +133,7 @@ See the WorldofShape Mockups [here](https://xd.adobe.com/view/4e26e532-1880-4f4f
 
 [Back to: _"Table of Contents"_](#table-of-contents)
 
-
-## **Features**
+## **FEATURES**
 
 ### **Existing features**
 
@@ -402,7 +401,7 @@ When testing I have ignored the code result W291 which is an indication of "trai
 
 [Back to: _"Table of Contents"_](#table-of-contents)
 
-## **Technologies Used**
+## **TECHNOLOGIES USED**
 
 ### **Languages, Frameworks, Editor and Version Control**
 
@@ -427,6 +426,8 @@ When testing I have ignored the code result W291 which is an indication of "trai
 * [Firefox Dev Tools](https://developer.mozilla.org/en-US/docs/Tools)
 * [Chrome Dev Tools](https://developers.google.com/web/tools/chrome-devtools)
 * [Adobe Xd](https://www.adobe.com/se/products/xd.html)
+
+[Back to: _"Table of Contents"_](#table-of-contents)
 
 ## **DEPLOYMENT**
 
@@ -505,8 +506,9 @@ reason it is not then follow the steps below to create it.
 dashboard. 
 13. Once the build is complete click on **open app** top right to see _**World of Shape**_ in action. 
 
+[Back to: _"Table of Contents"_](#table-of-contents)
 
-## **Credits**
+## **CREDITS**
 
 ### **Content**
 
@@ -522,6 +524,8 @@ I would also like to thank my mentor [**Maranatha Ilesanmi**](https://github.com
 
 Finally I would like to thank all the tutors at Code Institute for their fantastic help in guiding me in the correct direction, especially Tim and Stephen for their patience and great tutoring!
 
-### **Contact**
+## **CONTACT**
 
 Created by [Stefan Brunotte](mrbrunotte@gmail.com)
+
+[Back to: _"Table of Contents"_](#table-of-contents)
