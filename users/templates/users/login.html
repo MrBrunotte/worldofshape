@@ -3,14 +3,14 @@
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
-<div class="register_login">
+<div class="register_login login_landscape">
     <div class="background_image" style="background-image:url(/media/html_images/services.jpg)"></div>
     <div class="register_container">
         <div class="container"></div>
         <div class="row">
             <div class="col">
                 <div class="login_content">
-                    <div class="register_title mb-4">Login</div>
+                    <div class="register_title login_title_landscape mb-4">Login</div>
                     <form method="POST">
                         {% csrf_token %}
                         <fieldset class="form_group">

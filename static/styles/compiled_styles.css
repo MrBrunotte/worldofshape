@@ -1220,9 +1220,11 @@ p:last-of-type {
 }
 .logout_home,
 .login_home,
-.register_home,
 .register_login {
 	height: 100vh;
+}
+.wla_home {
+	height: 115vh;
 }
 
 .background_image_logout {
@@ -1240,10 +1242,11 @@ p:last-of-type {
 .register_login {
 	width: 100%;
 	overflow: hidden;
+	height: 100vh;
 }
 .login_container,
 .register_container {
-	width: 60%;
+	width: 40%;
 	margin: 0 auto;
 }
 .contact_home{
@@ -1516,14 +1519,24 @@ a:hover {
 #id_expected_weight_loss,
 #id_current_age,
 #id_training_level {
-	width: 320px;
-	color: #f98c00;
-	background-color: transparent;
-	border: 1px solid #f98c00;
-	border-radius: 5px;
-	padding: 0 15px 0;
-	text-align: right;
-	text-transform: capitalize;
+	width: 100%;
+	height: 52px;
+	border-radius: 5px !important;
+	border: none !important;
+    border-left-color: currentcolor;
+    border-left-style: none;
+    border-left-width: medium;
+	border-left-color: currentcolor !important;
+	border-left-style: none !important;
+	border-left-width: medium !important;
+	outline: none !important;
+	background: #eff4f6 !important;
+    background-color: rgb(239, 244, 246);
+	padding-left: 25px !important;
+	border-left: solid 2px transparent !important;
+	text-align: left !important;
+	color: black;
+	font-weight: 500;
 }
 #id_expiry_month,
 #id_expiry_year {
@@ -1965,16 +1978,22 @@ p:last-of-type {
 }
 /* [Table of Contents about responsivness]
 
-1. > 1200px
-2. 992 - 1199px
-3. 768 - 991px
-4. 575 - 767px
-5. < 575px
+1. "Hamburger" breakpoint 1199px
+2. > 1200px
+3. 992 - 1199px
+4. 768 - 991px
+5. 575 - 767px
+6. < 575px
+
+Lansdcape
+7. 667- 812px
+8. 568 - 667px
+9. < 567px
 
 ******************************/
 
 /*************************************
-1. Hamburger menu below 1760px widht
+1. Hamburger menu below 1760px width
 **************************************/
 
 @media only screen and (max-width: 1190px)
@@ -1992,9 +2011,14 @@ p:last-of-type {
 	{
 		display: none;
 	}
+	.login_container,
+	.register_container {
+	width: 60%;
+	margin: 0 auto;
+}
 }
 /************
-1. >1200px
+2. >1200px
 ************/
 
 @media only screen and (min-width: 1199px)
@@ -2018,7 +2042,7 @@ p:last-of-type {
 }
 
 /************
-2. > 992 - 1199px
+3. > 992 - 1199px
 ************/
 
 @media only screen and (min-width: 991px) and (max-width: 1199px)
@@ -2088,7 +2112,7 @@ p:last-of-type {
 
 
 /************
-3. 768 - 991px
+4. 768 - 991px
 ************/
 
 @media only screen and (min-width: 767px) and  (max-width: 991px)
@@ -2119,7 +2143,7 @@ p:last-of-type {
 	.home_title, .training_home_title {
 		font-size: 65px;
 		padding: 20px 0;
-		font-weight: 600;
+		font-weight: 200;
 	}
 	.boxes {
 		margin-top: 5px;
@@ -2154,10 +2178,9 @@ p:last-of-type {
 	.about_about_image
 	{
 		position: relative;
-		top: auto;
+		top: -80px;
 		left: auto;
-		right: -20px;
-		max-width: 100%;
+		right: -287px;
 	}
 	.about_about_image img
 	{
@@ -2187,7 +2210,7 @@ p:last-of-type {
 
 
 /************
-4. 576 - 767px
+5. 576 - 767px
 ************/
 
 @media only screen and (min-width: 575px) and (max-width: 767px)
@@ -2236,6 +2259,7 @@ p:last-of-type {
 	}
 	.about_about_image {
 		bottom: -112px;
+		right: 15px;
 	}
 	.register_home {
 		height: 130vh;
@@ -2291,14 +2315,10 @@ p:last-of-type {
 
 
 /************
-5. < 575px
+6. < 575px
 ************/
 
-
-
-
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 574px)
+@media only screen and (max-width: 575px)
 {
 	#submit_payment_btn {
 		width: 180px;
@@ -2383,6 +2403,7 @@ p:last-of-type {
 	.about_home_container,
 	.training_home_container {
 		top: 50%;
+		padding: 0 15px;
 	}
 	.training_home_container {
 		top: 25%;
@@ -2544,9 +2565,9 @@ p:last-of-type {
 		height: 280px;
 		width: auto;
 	}
-	.product_image {
+	/*.product_image {
 		display: none;
-	}
+	}*/
 	.section_subtitle {
 		margin-top: 15px;
 	}
@@ -2581,9 +2602,18 @@ p:last-of-type {
 		width: 100%;
 	}
 	input,
-	.my_contact_input {
+	.my_contact_input,
+	#id_gender,
+	#id_current_weight,
+	#id_expected_weight_loss,
+	#id_current_age,
+	#id_training_level {
 		height: 30px;
 	}
+	.text_left {
+		font-size: 11px;
+	}
+	
 	.contact_textarea {
 		height: 200px;
 	}
@@ -2601,6 +2631,9 @@ p:last-of-type {
 	.service_text {
 		min-height: 270px;
 		font-size: 10px;
+	}
+	.service_text_meals {
+		min-height: 195px;
 	}
 	.service_text_meal {
 		min-height: 85px;
@@ -2629,7 +2662,7 @@ p:last-of-type {
 		margin-top: 125px;
 	}
 	.register_home {
-		height: 70vh;
+		height: 130vh;
 	}
 	.register_login {
 		height: 100vh;
@@ -2706,10 +2739,10 @@ p:last-of-type {
 		padding-top: 15px;
 	}
 	.register_content {
-		padding-top: 110px;
+		padding-top: 0px;
 	}
 	.register_container {
-		width: 70%;
+		width: 90%;
 	}
 	
 	.label {
@@ -2754,10 +2787,9 @@ p:last-of-type {
 		margin-right: 0px;
 		margin-bottom: 10px;
 	}
-	.footer_image
-	{
-		opacity: 0.5;
-		bottom: -185px
+	.footer_image {
+		top: 38px;
+		width: 50%;
 	}
 	.footer_logo .logo > div {
 		font-size: 16px;
@@ -2766,24 +2798,220 @@ p:last-of-type {
 		display: none;
 	}
 	.wos_disclaimer {
-		padding-top: 175px;
+		padding-top: 123px;
+	}
+
+	.wla_home {
+		height: 126vh;
+	}
+	.wla_content {
+		padding-top: 0px;
+		margin-top: 120px;
 	}
 }
 /* Landscape settings */ 
 
+/* X. 813 - 1280px */
 @media screen and (max-width: 812px) and (orientation:landscape) {
+
+}
+/* 7. 667 - 812px */
+@media screen and (max-width: 812px) and (orientation:landscape) {
+	.menu_content ul li a {
+		font-size: 16px;
+	}
+	/*.text-center {
+		margin: 20px 0 0;
+	}*/
+	.text-center {
+		margin: 0;
+	}
+	.menu_content ul li:not(:last-child) {
+		margin-bottom: 9px;
+	}
+	.menu {
+		padding-bottom: 0px;
+	}
 	.overlay {
 		display: none;
 	}
-	.home
+	.home,
+	.about_home, 
+	.training_home
 	{
 		height: 100vh;
 	}
 	.home_container {
 		top: 20%;
 	}
+	.home_title {
+		font-weight: 200;
+	}
+	.section_title {
+		font-size: 44px;
+	}
+	.text_highlight, 
+	.program_text {
+		font-size: 12px;
+	}
+	.home_about_text, 
+	.about_about_text p{
+		font-size: 12px;
+	}
+	.about_about, 
+	.about_services {
+		padding-top: 100px;
+		padding-bottom: 0px;
+	}
+	.about_about_image {
+		right: -400px;
+		max-width: 32%;
+		bottom: 97px;
+	}
+	
+	/* Programs and meals*/
+	.training_home_title {
+		font-size: 50px;
+		font-weight: 200;
+	}
+	.training_home_container {
+		top: 39%;
+	}
+	.program_text {
+		margin-top: 15px;
+	}
+	
+	.program_separator {
+		margin-bottom: 0px;
+	}
+	.product_image {
+		margin: 20px 0;
+	}
+	.service_title {
+		font-size: 20px;
+		margin-bottom: 10px;
+	}
+	.service_text{
+		font-size: 11px;
+		min-height: 250px;
+	}
+
+	.testimonials_home_container {
+		top: 34%;
+	}
+	.testimonials_home_title {
+		font-size: 50px;
+	}
+	.testimonials_home_subtitle {
+		font-size: 12px;
+		font-weight: 600;
+	}
+	.text_highlight_testimonials {
+		display: none;
+	}
+	.testimonials {
+		padding-top: 100px;
+	}
+	.test_name {
+		margin-top: 20px;
+	}
+	.test_text p {
+		font-size: 12px;
+		width: 100%;
+	}
+
+	.contact_home {
+		height: 100vh;
+	}
+	.contact_title {
+		font-size: 45px;
+		margin-top: 0px;
+	}
+	.contact_text {
+		margin-top: 15px;
+	}
+	.contact_list {
+		margin: 15px 0;
+	}
+	input,
+	.my_contact_input {
+		height: 40px;
+	}
+	.contact_textarea {
+		height: 80px;
+	}
+
+	.profile_home {
+		height: 228vh;
+	}
+	.account-img {
+		width: 80%;
+	}
+	.profile_title {
+		font-size: 65px;
+		top: 25px;
+	}
+	.username_title,
+	.username_email_subtitle {
+		margin-top: 0px;
+		font-size: 12px;
+	}
+	.strong_profile {
+		font-size: 1.2em;
+	}
+
+	.cart_item_img,
+	.product_image {
+		display: none;
+	}
+	.cart_text {
+		margin-top: 30px;
+	}
+	.cart_title_checkout {
+		font-size: 16px;
+	}
+	.cart_text_checkout {
+		font-size: 12px;
+	}
+
+	.register_home {
+		height: 215vh;
+	}
+	.register_title {
+		font-size: 45px;
+	}
+	.register_content {
+		margin-top: 120px;
+	}
+
+	.login_landscape {
+		height: 150vh;
+	}
+	.login_content {
+		margin-top: 160px;
+	}
+	.login_title_landscape {
+		font-size: 45px;
+	}
+
+	.text-muted {
+		color: #aeaeae !important;
+	}
+
+	.logout_title {
+		font-size: 45px;
+	}
+
+	.wla_home {
+		height: 80vh;
+	}
+	.wla_content {
+
+	}
 }
 
+
+/* 8. 568 - 667px */
 @media screen and (max-width: 667px) and (orientation:landscape) 
 {  
 	.overlay {
@@ -2846,6 +3074,8 @@ p:last-of-type {
 	}
 }
 
+
+/* 9. < 568px */
 @media screen and (max-width: 568px) and (orientation:landscape) 
 {  
 	.home
