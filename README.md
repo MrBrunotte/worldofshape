@@ -382,8 +382,15 @@ I have ran all my code through differnt validators to make sure that my code is 
 
 #### **HTML code**
 
-<!--TODO Check how to check the Django HTML -->
-My HTML code was checked with [Validator W3 Org](https://validator.w3.org/#validate_by_input)
+It is a bit tricky to test the HTML code due to the use of a base.html, templates and jinja. Therefore I created a HTML testing template called **code_testing.html**. I created a base layout and tested it with the Validator and got no errors. I then pasted in the HTML between the "block content" and the "endblock content" from each app template and tested it in the HTML validator.
+
+I filtered out **"bad Values"**
+
+[Bad Values](https://github.com/MrBrunotte/worldofshape/blob/master/media/html_images/error_html_filter.PNG)
+
+When the filter was applied all my templates passed the validator.
+
+To validate my HTML code I used: [Validator W3 Org](https://validator.w3.org/#validate_by_input)
 
 #### **CSS code**
 
