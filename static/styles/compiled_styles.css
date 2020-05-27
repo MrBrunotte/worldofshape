@@ -2036,7 +2036,7 @@ p:last-of-type {
 }
 .html_test_container {
 	border: red 3px solid;
-	min-height: 800px;
+	min-height: 200px;
 	margin-bottom: 40px;
 }
 .html_code_to_be_tested {
