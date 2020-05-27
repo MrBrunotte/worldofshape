@@ -384,6 +384,8 @@ I have ran all my code through differnt validators to make sure that my code is 
 
 It is a bit tricky to test the HTML code due to the use of a base.html, templates and jinja. Therefore I created a HTML testing template called **code_testing.html**. I created a base layout and tested it with the Validator and got no errors. I then pasted in the HTML between the "block content" and the "endblock content" from each app template and tested it in the HTML validator.
 
+My [code_testing.html](https://github.com/MrBrunotte/worldofshape/blob/master/media/html_images/code_testing_html.PNG) template
+
 I filtered out **"bad Values"**
 
 [Bad Values](https://github.com/MrBrunotte/worldofshape/blob/master/media/html_images/error_html_filter.PNG)
