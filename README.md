@@ -425,8 +425,8 @@ When testing I have ignored the code result W291 which is an indication of "trai
 * [Validator W3 Org](https://validator.w3.org/#validate_by_input) ~ Check HTML code
 * [Fontawsome](https://fontawesome.com/)
 * [Firefox Dev Tools](https://developer.mozilla.org/en-US/docs/Tools)
+* [Chrome Dev Tools](https://developers.google.com/web/tools/chrome-devtools)
 * [Adobe Xd](https://www.adobe.com/se/products/xd.html)
-****
 
 ## **DEPLOYMENT**
 
