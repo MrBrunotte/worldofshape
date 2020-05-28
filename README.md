@@ -196,7 +196,7 @@ _**Contact form**:_
 From the contact page the user can send an email to World of Shape. After the message is sent the user is informed the the message has been delivered and World of Shape will be in touch soon.
 
 <p align="center">
-    <img src="https://github.com/MrBrunotte/worldofshape/blob/master/static/images/contact_form_message.PNG" alt="Message to sender that we will contact you shortly">
+    <img src="https://github.com/MrBrunotte/worldofshape/blob/master/media/html_images/contact_form_message.PNG" alt="Message to sender that we will contact you shortly">
 </p>
 
 _**Login** page:_ 
@@ -243,11 +243,15 @@ The checkout page summarizes the items and lets the user scroll down to make sur
   
 _**Error** pages:_
 
-There are three custom error pages, **403-error**, **404-error** and **500-error**
+There are three custom error pages, **403-error**, **404-error** and **500-error**. All three error pages have the same format and design.
 
 On the error pages the user is informed what the error is and they are able to click on a link that takes them back to the homepage.
 
-See an example of the error page here: [404.html](https://github.com/MrBrunotte/worldofshape/blob/master/media/html_images/404_error_page.PNG)
+See the 404-error page here: 
+
+<p align="center">
+    <img src="https://github.com/MrBrunotte/worldofshape/blob/master/media/html_images/404_error_page.PNG" alt="Image of 404-error page">
+</p>
 
 ### **Features left to implement**
 
