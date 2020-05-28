@@ -215,13 +215,13 @@ _**Reset Password** page:_
 * If the user forgot their password they can click on the link to create a new password. They will then be directed to the reset password page
 
 <p align="center">
-    <img src="https://github.com/MrBrunotte/worldofshape/blob/master/static/images/reset_password_page.PNG" alt="Reset Password">
+    <img src="https://github.com/MrBrunotte/worldofshape/blob/master/media/html_images/reset_password_page.PNG" alt="Reset Password">
 </p>
 
 * When the user have requested a reset of their password they are redirected to a message page where they can log in again after they have followed the instructions in their mail inbox or they can go back to the homepage.
 
 <p align="center">
-    <img src="https://github.com/MrBrunotte/worldofshape/blob/master/static/images/reset_password_page_message.PNG" alt="Reset Password Message">
+    <img src="https://github.com/MrBrunotte/worldofshape/blob/master/media/html_images/reset_password_page_message.PNG" alt="Reset Password Message">
 </p>
 
 _**Cart** page:_ 
