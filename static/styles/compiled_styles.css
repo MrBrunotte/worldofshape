@@ -1224,12 +1224,6 @@ p:last-of-type {
 .register_login {
 	height: 100vh;
 }
-.wla_home {
-	height: 115vh;
-	width: 100%;
-	overflow: hidden;
-}
-
 .background_image_logout {
 	position: absolute;
 	top: 0;
@@ -1251,6 +1245,15 @@ p:last-of-type {
 .register_container {
 	width: 40%;
 	margin: 0 auto;
+}
+.wla_home {
+	height: 100vh;
+	width: 100%;
+	overflow: hidden;
+	top: 70px;
+}
+.wla_container {
+	top: 60px;
 }
 .contact_home{
 	height: 667px;
@@ -1353,13 +1356,7 @@ input {
 	border-left: solid 2px transparent !important;
 	text-align: left !important;
 	color: black;
-	font-weight: 500;
 }
-/*input:hover {
-	background-color: #f98c00 !important;
-	color: black !important;
-	border: solid 1px #FFFFFF !important;
-}*/
 input:focus,
 input:hover {
     border-left: solid 2px #ff9711 !important;
@@ -1515,9 +1512,11 @@ a:hover {
 }
 .text_left {
 	text-align: left;
-	margin: 60px 0;
+	margin: 20px 0;
 }
-
+.text_left {
+	font-size: 11px;
+}
 
 #id_gender,
 #id_current_weight,
@@ -2272,6 +2271,13 @@ Lansdcape
 		-o-transform: none;
 		transform: none;
 	}
+	.contact_content {
+		padding-bottom: 20px;
+	}
+	.email_message_title {
+		font-size: 72px;
+		padding: 0px;
+	}
 	.section_subtitle {
 		margin-top: 0px;
 		}
@@ -2403,6 +2409,8 @@ Lansdcape
 	}
 	label {
 		width: 100% !important;
+		text-align: center;
+		padding-bottom: 5px;
 	}
 	.text_highlight_testimonials {
 		font-size: 8px;
@@ -2508,7 +2516,7 @@ Lansdcape
 	}
 	.form_group {
 		padding-top: 33px;
-		text-align: left;
+		text-align: center;
 	}
 	.boxes {
 		margin-top: 5px;
@@ -2688,9 +2696,7 @@ Lansdcape
 	#id_training_level {
 		height: 30px;
 	}
-	.text_left {
-		font-size: 11px;
-	}
+	
 	
 	.contact_textarea {
 		height: 200px;
@@ -2885,6 +2891,7 @@ Lansdcape
 	.wla_content {
 		padding-top: 0px;
 		margin-top: 120px;
+		text-align: center;
 	}
 }
 /* Landscape settings */ 
