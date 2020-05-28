@@ -40,6 +40,13 @@ def testimonials(request):
     return render(request, 'home/testimonials.html')
 
 
+def error_403(request, exception):
+    """
+    Render the World of Shape 403.html error page
+    """
+    return render(request, 'home/403.html')
+
+
 def error_404(request, exception):
     """
     Render the World of Shape 404.html error page

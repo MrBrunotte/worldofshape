@@ -32,6 +32,7 @@ from cart import urls as urls_cart
 from django.views import static
 from .settings import MEDIA_ROOT
 
+handler403 = 'home.views.error_403'
 handler404 = 'home.views.error_404'
 handler500 = 'home.views.error_500'
 

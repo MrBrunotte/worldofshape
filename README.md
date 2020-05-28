@@ -22,6 +22,7 @@
     - [**Code check**](#code-check)
   - [**Technologies Used**](#technologies-used)
     - [**Languages, Frameworks, Editor and Version Control**](#languages-frameworks-editor-and-version-control)
+    - [**Databases used**](#databases-used)
     - [**Tools used:**](#tools-used)
   - [**Deployment**](#deployment)
     - [**Deploy code locally**](#deploy-code-locally)
@@ -120,7 +121,7 @@ _**Application** Owner:_
 _**Developer**:_
 
 * As a **Developer** I wanted to demonstrate my skills as a junior Full Stack Software developer.
-* As a **Developer** I wanted to build a project that I could showcase alongside my other projects to potential future employers or customers on GitHub and in my personal portfolio: [Stefan Brunottes Portfolio](www.stefanbrunotte.com).
+* As a **Developer** I wanted to build a project that I could showcase alongside my other projects to potential future employers or customers on GitHub and in my personal portfolio: [Stefan Brunottes Portfolio](www.stefanbrunotte.com) Site is under constructio!.
 * As a **Developer** I wanted to improve the existing website [World of Shape](https://worldofshape.com/) and make it a more inviting and user friendly website.
 
 ### **Mockup**
@@ -242,7 +243,7 @@ The checkout page summarizes the items and lets the user scroll down to make sur
   
 _**Error** pages:_
 
-There are two custom error pages, **404-error** and **500-error**
+There are three custom error pages, **403-error**, **404-error** and **500-error**
 
 On the error pages the user is informed what the error is and they are able to click on a link that takes them back to the homepage.
 
@@ -427,6 +428,10 @@ When testing I have ignored the code result W291 which is an indication of "trai
 * [GitHub](https://github.com/)
 * [Heroku](https://www.heroku.com/home)
 
+### **Databases used:**
+* [SQLite](https://www.sqlite.org/index.html) ~ Database used in **development**
+* [Heroku Postgres](https://elements.heroku.com/addons/heroku-postgresql) ~ Database used in **production**
+  
 ### **Tools used:**
 * [Pep 8 Online Validator](http://pep8online.com/) ~ Check python code for PEP8 requirements
 * [Jigsaw W3 Org](https://jigsaw.w3.org/css-validator/#validate_by_input) ~ Check CSS code
@@ -440,7 +445,7 @@ When testing I have ignored the code result W291 which is an indication of "trai
 
 ## **DEPLOYMENT**
 
-If you want to clone this website you need to create the necessary key!
+If you want to clone this website you need to create the necessary keys!
 
 1. Login or create an account at [Stripe](https://stripe.com/en-se) to get your Stripe keys. 
    1. Follow the instructions and if you create a new account verify your email and activate your Stripe account.
@@ -449,6 +454,8 @@ If you want to clone this website you need to create the necessary key!
     * MacOS and Linux ````export SECRET_KEY=<secret key>````
     * Windows ````set SECRET_KEY=<secret key>````
 3. When you have your three keys store them in your env.py file in the directory app _**worldofshape**_ (not in the root folder!).
+
+In order to make the contact form work you need your gmail username and password.
 
 ### **Deploy code locally**
 
@@ -470,7 +477,7 @@ If you wish to run this code locally then please follow the instructions below.
 5. Activate the virtual environment.
 6. Install the necessary Python packages in the requirements.txt file.
     * ````pip freeze --local > requirements.txt````
-7.  Open up a terminal and run ````python manage.py runserver````.
+7.  Open up a terminal (VSCode) and run ````python manage.py runserver````.
 8.  Follow the link by (Ctrl + click) on **http://127.0.0.1:8000** to view _**World of Shape**_ in your browser.
 
 
@@ -494,24 +501,25 @@ This project was deployed to Heroku and uses Heroku for its production environme
     7. EMAIL_PASS: Your Gmail password
     8. Set: DISABLE_COLLECTSTATIC = 1
     9. Set: HOSTNAME = “name of app”
- 1. Download the code from the GitHub repository [here](https://github.com/MrBrunotte/foodictionary).
-4. Click on _Clone_ or _download then Download ZIP_. This will download the code into a ZIP folder locally on your computer.
-5. Uncompress the ZIP folder.
-6. Open up a terminal or cmd prompt and login into Heroku CLI.
+4. Download the code from the GitHub repository [here](https://github.com/MrBrunotte/foodictionary).
+5. Click on _Clone_ or _download then Download ZIP_. This will download the code into a ZIP folder locally on your computer.
+6. Uncompress the ZIP folder.
+7. Open up a terminal or cmd prompt and login into Heroku CLI.
     * ````heroku login````
-7. Check the app is present.
+8. Check the app is present.
     * ````heroku apps````
-8. A Procfile have already been created for this project but make sure that it is present. If for some 
+9. A Procfile have already been created for this project but make sure that it is present. If for some 
 reason it is not then follow the steps below to create it.
     
     * Procfile
         * In a terminal make sure you are in the root directory of the project then run ````web: gunicorn worldofshape.wsgi:application > Procfile````.
-        * Add the following text to the Procfile **web: gunicorn worldofshape.wsgi:application**.
-1.  Add a new git remote for Heroku.
+        * Check that the following text is in the Procfile **web: gunicorn worldofshape.wsgi:application**.
+  
+10.   Add a new git remote for Heroku.
     * ````git remote add heroku git@heroku.comYOUR_APP_NAME.git````
-2.  Push to Heroku.
+11.  Push to Heroku.
     * ````git push heroku master````
-3.  Give Heroku a few minutes to get it all set up and then check the activity logs under Activity tab in your Heroku 
+12.  Give Heroku a few minutes to get it all set up and then check the activity logs under Activity tab in your Heroku 
 dashboard. 
 13. Once the build is complete click on **open app** top right to see _**World of Shape**_ in action. 
 
@@ -529,12 +537,12 @@ All images used with permission from [**WorldofShape**](https://worldofshape.com
 
 I would like to thank my good friend [**Niklas Lind**](https://github.com/niklaslind) for his support and guidance during the development of this project. 
 
-I would also like to thank my mentor [**Maranatha Ilesanmi**](https://github.com/mbilesanmi) and the tutors at Code Institute for their help.
+I would also like to thank my mentor [**Maranatha Ilesanmi**](https://github.com/mbilesanmi).
 
 Finally I would like to thank all the tutors at Code Institute for their fantastic help in guiding me in the correct direction, especially Tim and Stephen for their patience and great tutoring!
 
 ## **CONTACT**
 
-Created by [Stefan Brunotte](mrbrunotte@gmail.com)
+Created by [Stefan Brunotte](stefanbrunotte.com) (site under construction)
 
 [Back to: _"Table of Contents"_](#table-of-contents)

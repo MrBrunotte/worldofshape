@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Stefan Brunotte, mrbrunotte@gmail.com">
+    <meta name="description" content="Django porject - World of Shape - Milestone four project, Code Institute">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Style links -->
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap-4.1.2/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/compiled_styles.css' %}">
+
+
+    {% if title %}
+    <title>World of Shape - {{ title }}</title>
+    {% else %}
+    <title>World of Shape</title>
+    {% endif %}
+</head>
+
+<body>
+    <div class="logout_home">
+        <div class="background_image_logout" style="background-image:url(/media/html_images/contact.jpg)"></div>
+        <div class="logout_home_container">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div>
+                            <div class="about_home_title">403 - Forbidden</div>
+                            <div class="about_home_subtitle">
+                                You do not have permission to access this page on this server.
+                            </div>
+                            <div class="border-top pt-3">
+                                <small class="text-muted">
+                                    <a class="anchor_color" href="{% url 'main-home' %}">Back to homepage</a>
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
