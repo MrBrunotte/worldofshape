@@ -1,4 +1,4 @@
-# Welcome to [**"World of Shape"**](https://worldofshape.herokuapp.com/)
+# Welcome to **["World of Shape"](https://worldofshape.herokuapp.com/)**
 
 ![World of shape landingpage](https://github.com/MrBrunotte/worldofshape/blob/master/media/images/landingpage.PNG "World of Shape")
 
