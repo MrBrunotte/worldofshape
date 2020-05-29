@@ -4,10 +4,16 @@
 
 **World of Shape - Your journey starts now!**
 
-You can test **World of Shape** by [register as a new user](https://worldofshape.herokuapp.com/register/) or you can [login as "testuser"](https://worldofshape.herokuapp.com/login/) with the followingcredentials:
+You have two options to test **World of Shape**
 
- * Username: **testuser**
- * Password: **testworldofshape**
+1. [Register](https://worldofshape.herokuapp.com/register/) as a new user
+   
+   or
+
+2. [Login](https://worldofshape.herokuapp.com/login/)  as "testuser" with the following credentials:
+
+   * Username: **testuser**
+    * Password: **testworldofshape**
 
 ## **Table of Contents:**
 
