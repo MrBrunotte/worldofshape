@@ -4,6 +4,11 @@
 
 **World of Shape - Your journey starts now!**
 
+You can test **World of Shape** by [register as a new user](https://worldofshape.herokuapp.com/register/) or you can [login as "testuser"](https://worldofshape.herokuapp.com/login/) with the followingcredentials:
+
+ * Username: **testuser**
+ * Password: **testworldofshape**
+
 ## **Table of Contents:**
 
   - [**World of Shape**](#world-of-shape)
@@ -74,11 +79,9 @@ The application uses Stripe as payment method and when testing the payment funct
 * CVV: **Any 3 digit number**
 * Card Date: **Any future date**
 
-Please feel free to [register](https://worldofshape.herokuapp.com/register/) a user to fully test the World of Shape website
+Please feel free to [register](https://worldofshape.herokuapp.com/register/) a user to fully test the World of Shape website or you can [login](https://worldofshape.herokuapp.com/login/) as the **_testuser_**:
 
-You can also [login](https://worldofshape.herokuapp.com/login/) as the testuser:
  * Username: testuser
- * Email: testuser@gmail.com
  * Password: testworldofshape
 
 [Back to: _"Table of Contents"_](#table-of-contents)
