@@ -5,7 +5,7 @@
 
 ![World of shape landingpage](https://github.com/MrBrunotte/worldofshape/blob/master/media/images/landingpage.PNG "World of Shape")
 
-Vist my site [**World of Shape**](https://worldofshape.herokuapp.com/)
+Vist my site [**World of Shape - Your journey starts now!**](https://worldofshape.herokuapp.com/)
 
 You have two options to test **World of Shape**
 
@@ -18,8 +18,9 @@ You have two options to test **World of Shape**
    * Username: **testuser**
     * Password: **testworldofshape**
 
+## World of Shape
 
-## <h2><strong>World of Shape</strong> table of content</h2>
+**_Table of Contents_**
 
   - [**Welcome to "World of Shape"**](#world-of-shape)
     - [**Purpose of Project**](#purpose-of-project)
@@ -146,7 +147,7 @@ _**Developer**:_
 
 See the WorldofShape Mockups [here](https://xd.adobe.com/view/4e26e532-1880-4f4f-665d-769778239027-3817/) Click on "World of shape" in the top left corner to see all 10 mockups. 
 
-[Back to: _"Table of Contents"_](#table-of-contents)
+[Back to: _"Table of Contents"_](#World-of-Shape)
 
 ## **FEATURES**
 
@@ -275,7 +276,7 @@ See the 404-error page here:
 * Add tests to get 100% coverage in all apps.
 * Work on Accessibililty features and make the web page adhere more to the [WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/) (Web Content Accessibility Guidelines)
 
-[Back to: _"Table of Contents"_](#table-of-contents)
+[Back to: _"Table of Contents"_](#World-of-Shape)
 
 ## **TESTING**
 
@@ -427,7 +428,7 @@ My Python code was checked with [PEP8 online](http://pep8online.com/)
 
 When testing I have ignored the code result W291 which is an indication of "trailing whitespace".
 
-[Back to: _"Table of Contents"_](#table-of-contents)
+[Back to: _"Table of Contents"_](#World-of-Shape)
 
 ## **TECHNOLOGIES USED**
 
@@ -459,7 +460,7 @@ When testing I have ignored the code result W291 which is an indication of "trai
 * [Chrome Dev Tools](https://developers.google.com/web/tools/chrome-devtools)
 * [Adobe Xd](https://www.adobe.com/se/products/xd.html)
 
-[Back to: _"Table of Contents"_](#table-of-contents)
+[Back to: _"Table of Contents"_](#World-of-Shape)
 
 ## **DEPLOYMENT**
 
@@ -541,7 +542,7 @@ reason it is not then follow the steps below to create it.
 dashboard. 
 13. Once the build is complete click on **open app** top right to see _**World of Shape**_ in action. 
 
-[Back to: _"Table of Contents"_](#table-of-contents)
+[Back to: _"Table of Contents"_](#World-of-Shape)
 
 ## **CREDITS**
 
@@ -563,4 +564,4 @@ Finally I would like to thank all the tutors at Code Institute for their fantast
 
 Created by [Stefan Brunotte](stefanbrunotte.com) (site under construction)
 
-[Back to: _"Table of Contents"_](#table-of-contents)
+[Back to: _"Table of Contents"_](#World-of-Shape)
