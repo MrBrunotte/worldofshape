@@ -75,6 +75,7 @@ def checkout(request):
             order.save()
 
             cart = request.session.get('cart', {"meal": {}, "program": {}})
+
             total = 0
             total_product = 0
             total_meal = 0
@@ -121,7 +122,7 @@ def checkout(request):
                 messages.error(request, "Your card was declined!")
 
             if customer.paid:
-                messages.error(request, "You have successfully paid")
+                messages.success(request, "You have successfully paid")
                 request.session['cart'] = {}
                 return redirect(reverse('main-home'))
             else:
@@ -131,6 +132,11 @@ def checkout(request):
             messages.error(
                 request, "We were unable to take a payment with that card!")
     else:
+        cart = request.session.get('cart', {"meal": {}, "product": {}})
+        if cart['meal'] == {} and cart['product'] == {}:
+            messages.error(
+                request, "Your cart is empty, please add items to checkout")
+            return redirect(reverse('products'))
         payment_form = MakePaymentForm()
         order_form = OrderForm()
 
