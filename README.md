@@ -275,6 +275,7 @@ See the 404-error page here:
 * The **Get Discount** button in the 15% discount section needs a discount message displayed in form of a popup with the discount code or message.
 * Add tests to get 100% coverage in all apps.
 * Work on Accessibililty features and make the web page adhere more to the [WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/) (Web Content Accessibility Guidelines)
+* Store images in a AWS bucket instead of using "image location" and relying on someone elses image storage.
 
 [Back to: _"Table of Contents"_](#World-of-Shape)
 
