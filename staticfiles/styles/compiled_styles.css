@@ -1810,7 +1810,7 @@ p:last-of-type {
 .service_title
 {
 	font-size: 24px;
-	margin-bottom: 17px;
+	margin: 20px 0;
 }
 .service_title_meal {
 	font-size: 14px;
@@ -1859,7 +1859,8 @@ p:last-of-type {
 }
 .product_image {
 	text-align: center;
-	margin-bottom: 40px;
+	width: 320px;
+	margin: 0 auto;
 	border-radius: 5px;
 	-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 	-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
