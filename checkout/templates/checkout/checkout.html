@@ -87,17 +87,21 @@
                 <div class="form-group col-lg-6 mr-auto ml-auto">
                     <legend>Card Details</legend>
                     {{ payment_form }}
+                    <div class="row test_button_row">
+                        <input class="button submit_button mr-auto ml-auto" id="submit_payment_btn" name="commit"
+                            type="submit" value="Submit Payment">
+                    </div>
                 </div>
                 {% csrf_token %}
             </div>
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-lg-12">
                     <div class="row test_button_row testimonals_bottom">
                         <input class="button submit_button mr-auto ml-auto" id="submit_payment_btn" name="commit"
                             type="submit" value="Submit Payment">
                     </div>
                 </div>
-            </div>
+            </div>-->
         </form>
     </div>
 </div>

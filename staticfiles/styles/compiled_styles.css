@@ -658,7 +658,7 @@ Menu
     top: 48.1%;
 }
 .profile_container {
-	top: 7%;
+	top: 10%;
 }
 .logout_home_container {
 	top: 30%;
@@ -1213,6 +1213,9 @@ p:last-of-type {
 .test_button_row
 {
 	margin-top: 72px;
+}
+.submit_button:hover {
+	text-transform: uppercase;
 }
 .test_button
 {
@@ -2226,9 +2229,6 @@ Lansdcape
 	{
 		margin-bottom: 20px;
 	}
-	.text-center {
-		margin-bottom: 25px;
-	}
 	.test_text p {
 		width: 80%;
 	}
@@ -2582,6 +2582,7 @@ Lansdcape
 	}
 	.test_button_row {
 		margin-top: 0;
+		padding: 45px 0 0;
 	}
 	.section_title {
 		font-size: 43px;
@@ -2885,8 +2886,21 @@ Lansdcape
 }
 /* Landscape settings */ 
 
+/* 1024x768 Ipad*/
+@media screen and (max-width: 1024px) and (orientation:landscape) {
+	.profile_home {
+		height: 130vh;
+	}
+	.contact_home {
+		height: 475px;
+	}
+	.text-center {
+		margin-bottom: 0px;
+	}
+}
+
 /* X. 813 - 1280px */
-@media screen and (max-width: 812px) and (orientation:landscape) {
+@media screen and (max-width: 813px) and (orientation:landscape) {
 
 }
 /* 7. 667 - 812px */
@@ -3062,7 +3076,7 @@ Lansdcape
 		height: 150vh;
 	}
 	.login_content {
-		margin-top: 160px;
+		margin-top: 105px;
 	}
 	.login_title_landscape {
 		font-size: 45px;
@@ -3137,9 +3151,6 @@ Lansdcape
 	.footer {
 		padding-bottom: 15px;
 	}
-	.footer_content {
-		padding-bottom: 190px;
-	}
 	.footer_image img {
 		max-width: 50%;
 	}
@@ -3155,6 +3166,15 @@ Lansdcape
 	}
 	.home_container {
 		top: 0%;
+	}
+	.profile_home {
+		height: 305vh;
+	}
+	.login_landscape {
+		height: 195vh;
+	}
+	.register_home {
+		height: 240vh;
 	}
 	.box_text p {
 		height: 70px;
