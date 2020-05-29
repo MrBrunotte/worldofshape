@@ -5,7 +5,7 @@
 
 ![World of shape landingpage](https://github.com/MrBrunotte/worldofshape/blob/master/media/images/landingpage.PNG "World of Shape")
 
-[**World of Shape - Your journey starts now!**](https://worldofshape.herokuapp.com/)
+Vist my site [**World of Shape**](https://worldofshape.herokuapp.com/)
 
 You have two options to test **World of Shape**
 
@@ -17,7 +17,6 @@ You have two options to test **World of Shape**
 
    * Username: **testuser**
     * Password: **testworldofshape**
-
 
 
 ## <h2><strong>World of Shape</strong> table of content</h2>
