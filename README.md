@@ -6,11 +6,11 @@
 
 You have two options to test **World of Shape**
 
-1. [Register](https://worldofshape.herokuapp.com/register/) as a new user
+1. [**Register**](https://worldofshape.herokuapp.com/register/) as a new user
    
    or
 
-2. [Login](https://worldofshape.herokuapp.com/login/)  as "testuser" with the following credentials:
+2. [**Login**](https://worldofshape.herokuapp.com/login/)  as "testuser" with the following credentials:
 
    * Username: **testuser**
     * Password: **testworldofshape**
