@@ -586,7 +586,7 @@ Menu
 	height: 440px;
 }
 .correct_training_prog {
-	padding-bottom: 50px;
+	padding: 50px 0;
 }
 .correct_prog_image {
 	height: 110px;
