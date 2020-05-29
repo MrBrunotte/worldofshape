@@ -1859,7 +1859,11 @@ p:last-of-type {
 }
 .product_image {
 	text-align: center;
-	margin-top: 40px;
+	margin-bottom: 40px;
+	border-radius: 5px;
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 .meal_image {
 	height: 340px;
