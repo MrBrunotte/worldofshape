@@ -1,8 +1,11 @@
-# Welcome to **["World of Shape"](https://worldofshape.herokuapp.com/)**
+<h1 align="center">
+    Welcome to "World of Shape"
+</h1>
+
 
 ![World of shape landingpage](https://github.com/MrBrunotte/worldofshape/blob/master/media/images/landingpage.PNG "World of Shape")
 
-**World of Shape - Your journey starts now!**
+[**World of Shape - Your journey starts now!**](https://worldofshape.herokuapp.com/)
 
 You have two options to test **World of Shape**
 
@@ -15,9 +18,11 @@ You have two options to test **World of Shape**
    * Username: **testuser**
     * Password: **testworldofshape**
 
-## **Table of Contents:**
 
-  - [**World of Shape**](#world-of-shape)
+
+## <h2><strong>World of Shape</strong> table of content</h2>
+
+  - [**Welcome to "World of Shape"**](#world-of-shape)
     - [**Purpose of Project**](#purpose-of-project)
     - [**Functionality of Project**](#functionality-of-project)
   - [**UX - User Experience**](#ux---user-experience)
@@ -42,6 +47,7 @@ You have two options to test **World of Shape**
     - [**Content**](#content)
     - [**Acknowledgments**](#acknowledgments)
   - [**Contact**](#contact)
+
 ## **World of Shape**
 
 World of Shape is a website that aims to get the user in shape and lose weight within 30 days! 
