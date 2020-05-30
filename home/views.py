@@ -29,7 +29,8 @@ def contact(request):
             ['mrbrunotte@gmail.com'],  # Email goes to
         )
 
-        return render(request, 'home/contact.html', {'message_name': message_name})
+        return render(request, 'home/contact.html',
+                      {'message_name': message_name})
 
     else:
         return render(request, 'home/contact.html')
