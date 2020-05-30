@@ -376,6 +376,7 @@ _**Cart** page:_
 _**Checkout** page:_ 
 
 * Test that the **Change Order** button redirects the user back to the cart.
+* Test that the **Checkout** button redirects the user to the programs page if cart is empty.
 * Test that the user is able to inserts "Payment Details" and "Card Details" properly.
 * Test that the payment works and that the user is redirected to the homepage and a message is shown saying: _**"You have successfully paid"**_ 
 * Test that the if something with the payment is wrong the message _**"We Were Unable To Take Payment With That Card!"**_ will be displayed and the user is redirected to the checkout page. 
@@ -406,7 +407,7 @@ I have ran all my code through differnt validators to make sure that my code is 
 
 #### **HTML code**
 
-It is a bit tricky to test the HTML code due to the use of a base.html, templates and jinja. Therefore I created a HTML testing template called **code_testing.html**. I created a base layout and tested it with the Validator and got no errors. I then pasted in the HTML between the "block content" and the "endblock content" from each app template and tested it in the HTML validator.
+It is a bit tricky to test the HTML code due to the use of a base.html, templates and jinja. Therefore I created a HTML testing template called **code_testing.html**. I created a base layout and tested it with the Validator and got no errors. I then pasted in the HTML between the "block content" and the "endblock content" from each app template HTML file and tested it in the HTML validator.
 
 My [code_testing.html](https://github.com/MrBrunotte/worldofshape/blob/master/media/html_images/code_testing_html.PNG) template
 
@@ -424,7 +425,7 @@ My CSS code was checked with [Jigsaw W3 Org](https://jigsaw.w3.org/css-validator
 
 I got 96 warnings and they were all warnings about unknown vendor extension. These came with the css code from the template I downloaded so I have ignored them!
 
-Everything else was labeled **"valid CSS information"** by the validator!
+Everything else was labeled **"valid CSS information"** by the Jigsaw validator!
 
 #### **Python code**
 
