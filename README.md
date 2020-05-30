@@ -5,7 +5,7 @@
 
 ![World of shape landingpage](https://github.com/MrBrunotte/worldofshape/blob/master/media/images/landingpage.PNG "World of Shape")
 
-Vist my site [**World of Shape - Your journey starts now!**](https://worldofshape.herokuapp.com/)
+Visit my site [**World of Shape - Your journey starts now!**](https://worldofshape.herokuapp.com/)
 
 You have two options to test **World of Shape**
 
@@ -86,7 +86,7 @@ The project uses Git and GitHub for version controll and is deployed via Heroku.
 
 All secret variables are stored in an *env.py* file that is then ignored by the version control with the .gitignore file. This is done to ensure that the project integrity is held at a high security standard.
 
-The application uses Stripe as payment method and when testing the payment functionality please make sure to use the [**Stripe test card numbers**](https://stripe.com/docs/testing#cards). Throughout the development phase of this project I have used, and they can be used to test the production version as well:
+The application uses [Stripe](https://stripe.com/en-se) as payment method and when testing the payment functionality please make sure to use the [**Stripe test card numbers**](https://stripe.com/docs/testing#cards). Throughout the development phase of this project I have used, and they can be used to test the production version as well:
 * Card number: **4242 4242 4242 4242**
 * CVV: **Any 3 digit number**
 * Card Date: **Any future date**
@@ -131,7 +131,7 @@ _**Application** Admin User:_
 
 _**Application** Owner:_
 
-* As the **Owner** User I can receive emails from the sites contact from.
+* As the **Owner** I can receive emails from the sites contact from.
 
 _**Developer**:_
 
@@ -273,7 +273,7 @@ See the 404-error page here:
 
 ### **Features left to implement**
 
-* Add static, and media files to an S3 bucket.
+* Add static and media files to an S3 bucket.
 * Add a blog function for the registered users to communicate with each other.
 * The **Get Discount** button in the 15% discount section needs a discount message displayed in form of a popup with the discount code or message.
 * Add tests to get 100% coverage in all apps.
