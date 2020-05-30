@@ -15,7 +15,7 @@ class WeightLossAnalysisForm(forms.Form):
                                                 ('110-120 kg', '110-120 kg'),
                                                 ('+120 kg', '+120 kg')]
                                        )
-    expected_weight_loss = forms.ChoiceField(label='How much do you want to lose?',
+    expected_weight_loss = forms.ChoiceField(label='Expected weight loss?',
                                              choices=[('1-3 kg', '1-3 kg'),
                                                       ('3-6 kg', '3-6 kg'),
                                                       ('6-9 kg', '6-9 kg'),
@@ -31,10 +31,14 @@ class WeightLossAnalysisForm(forms.Form):
                                              ('50-60', '50-60'),
                                              ('60 +', '60 +')]
                                     )
-    training_level = forms.ChoiceField(label='What level of training do you prefer?',
+    training_level = forms.ChoiceField(label='Your current training level?',
                                        choices=[('lev_1', 'Starting Out'),
-                                                ('lev_2', 'Firm Tummy and Thighs'),
-                                                ('lev_3', 'Not so much time and quick results'),
+                                                ('lev_2',
+                                                 'Firm Tummy and Thighs'),
+                                                ('lev_3',
+                                                 'Fast results'),
                                                 ('lev_4', 'Want a challenge'),
-                                                ('lev_5', 'Pregnant or had a baby within 3 years')]
+                                                ('lev_5',
+                                                 'Pregnant or delivered \
+                                                 within 3 years')]
                                        )
