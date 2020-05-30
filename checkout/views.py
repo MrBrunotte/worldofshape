@@ -30,7 +30,7 @@ def check_input_fields(request, order_form):
         messages.error(request, 'first name is required')
         return False
     if firstName is None or firstName == "":
-        messages.error(request, 'first name is required')
+        messages.error(request, 'last name is required')
         return False
     if streetAddress1 is None or streetAddress1 == "":
         messages.error(request, 'street name is required')

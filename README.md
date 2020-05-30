@@ -251,6 +251,9 @@ When a product or meal is added they are displayed in the cart page.
 _**Checkout** page:_ 
 
 The checkout page summarizes the items and lets the user scroll down to make sure that the correct items are in the cart.
+
+If the cart is empty and the user clicks on the checkout button the user is redirected to the programs page with a message saying: _"Your cart is empty, please add items and checkout"_
+
 * The **Change Order** button redirects the user back to the cart to delete an item.
 * The user inserts the "Payment Details" and "Card Details" before submitting payment. 
   * If something with the payment is wrong the message "We Were Unable To Take Payment With That Card!" will be displayed and the user is redirected to the checkout page. 
@@ -427,7 +430,9 @@ Everything else was labeled **"valid CSS information"** by the validator!
 
 My Python code was checked with [PEP8 online](http://pep8online.com/)
 
-When testing I have ignored the code result W291 which is an indication of "trailing whitespace".
+All python code passed the requirements for PEP8!
+
+**Exception**: _Line 118 in the worldofshape settings.py file gives the Code E501 "line too long" message. I left this because the line is one of the AUTH_PASSWORDS_VALIDATORS and the line is not suitable for dividing to fit the PEP8 requirements._
 
 [Back to: _"Table of Contents"_](#World-of-Shape)
 
