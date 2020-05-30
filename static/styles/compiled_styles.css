@@ -1229,7 +1229,7 @@ p:last-of-type {
 	height: 100vh;
 	width: 100%;
 	overflow: hidden;
-	top: 70px;
+	/*top: 70px;*/
 }
 .wla_container {
 	top: 60px;

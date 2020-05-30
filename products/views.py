@@ -158,11 +158,10 @@ def correct_program(request):
 
     elif (request.POST.get('gender') == 'man') & \
             (request.POST.get('training_level') == 'lev_5'):
-        correct_products.append(Product.objects.get(id=7))
         messages.success(
-            request, f'Here are the best programs based on your choises!')
-        return render(request, 'products/correct_program.html',
-                      {'correct_products': correct_products})
+            request, f'Looks like you are a man! Are you really pregnant?')
+        return render(request, 'products/weight_analysis.html',
+                      {'form': form})
 
     else:
         messages.success(
