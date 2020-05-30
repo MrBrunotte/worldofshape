@@ -4,10 +4,10 @@ from users.views import register
 from django.contrib.auth.models import User
 
 """
-run with: 
-coverage run --source='users' manage.py test && coverage report && 
+run with:
+coverage run --source='users' manage.py test && coverage report &&
 coverage html
-Go to the folder 'htmlcov' and open 'index.html' in the browser. 
+Go to the folder 'htmlcov' and open 'index.html' in the browser.
 Go to the htmlcov file and run the index file to get the report.
 coverage report -m   To see missing lines
 pytest -v --cov=users
@@ -110,12 +110,12 @@ class LoginTest(BaseTest):
 
     def test_cant_login_with_no_username(self):
         response = self.client.post(
-            self.login_url, {'password': 'passworddd', 'username': ''}, 
+            self.login_url, {'password': 'passworddd', 'username': ''},
             format='text/html')
         self.assertEqual(response.status_code, 200)
 
     def test_cant_login_with_no_password(self):
         response = self.client.post(
-            self.login_url, {'username': 'passworddd', 'password': ''}, 
+            self.login_url, {'username': 'passworddd', 'password': ''},
             format='text/html')
         self.assertEqual(response.status_code, 200)
