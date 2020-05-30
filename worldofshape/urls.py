@@ -50,10 +50,12 @@ urlpatterns = [
     path('testimonials/', home_views.contact, name='testimonials'),
 
     # home app 404 error
-    path('404/', auth_views.LogoutView.as_view(template_name='home/404.html'), name='404'),
+    path('404/', auth_views.LogoutView.as_view(template_name='home/404.html'),
+         name='404'),
 
     # home app 500 error
-    path('500/', auth_views.LogoutView.as_view(template_name='home/500.html'), name='500'),
+    path('500/', auth_views.LogoutView.as_view(template_name='home/500.html'),
+         name='500'),
 
     # users app register view
     path('register/', user_views.register, name='register'),
@@ -62,32 +64,46 @@ urlpatterns = [
     path('profile/', user_views.profile, name='profile'),
 
     # users app login view
-    path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
+    path('login/',
+         auth_views.LoginView.as_view(template_name='users/login.html'),
+         name='login'),
 
     # users app logout view
-    path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
+    path('logout/',
+         auth_views.LogoutView.as_view(template_name='users/logout.html'),
+         name='logout'),
 
     # users app PasswordResetView to reset the password
     path('password-reset/', auth_views.PasswordResetView.as_view(
-        template_name='users/password_reset.html'), name='password_reset'),
+        template_name='users/password_reset.html'),
+        name='password_reset'),
 
-    # users app PasswordResetDoneView route for when the password request is done
-    path('password-reset/done', auth_views.PasswordResetDoneView.as_view(
-        template_name='users/password_reset_done.html'), name='password_reset_done'),
+    # users app PasswordResetDoneView route for when the password
+    # request is done
+    path('password-reset/done',
+         auth_views.PasswordResetDoneView.as_view(
+             template_name='users/password_reset_done.html'),
+         name='password_reset_done'),
 
-    # users app PasswordResetConfirmView Takes two url parameters: UIDB64 and token from link in email
-    path('password-reset-confirm/<uidb64>/<token>', auth_views.PasswordResetConfirmView.as_view(
-        template_name='users/password_reset_confirm.html'), name='password_reset_confirm'),
+    # users app PasswordResetConfirmView Takes two url parameters:
+    # UIDB64 and token
+    path('password-reset-confirm/<uidb64>/<token>', \
+         auth_views.PasswordResetConfirmView.as_view(
+             template_name='users/password_reset_confirm.html'),
+         name='password_reset_confirm'),
 
     # users app PasswordResetCompleteView
-    path('password-reset-complete/', auth_views.PasswordResetCompleteView.as_view(
-        template_name='users/password_reset_complete.html'), name='password_reset_complete'),
+    path('password-reset-complete/',
+         auth_views.PasswordResetCompleteView.as_view(
+             template_name='users/password_reset_complete.html'),
+         name='password_reset_complete'),
 
     # products app all programs
     path('programs/', include('products.urls')),
 
     # products app productdetail view single product
-    path('program/', products_views.ProductDetailView, name='product-detail'),
+    path('program/', products_views.ProductDetailView,
+         name='product-detail'),
 
     # meals app all meals
     path('meals/', include('meals.urls')),
