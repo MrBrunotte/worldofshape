@@ -53,7 +53,7 @@ def checkout(request):
     """
     This method gets the posted data in the orderform and pyamentform.
     If both forms are ok it is saved in order
-    it then gets the cart content and assigns the valut to cart, 
+    it then gets the cart content and assigns the valut to cart,
     it creates three starting variabls.
     A outer for loops gets the categori
     """
@@ -140,4 +140,6 @@ def checkout(request):
         payment_form = MakePaymentForm()
         order_form = OrderForm()
 
-    return render(request, "checkout/checkout.html", {'order_form': order_form, 'payment_form': payment_form, 'publishable': settings.STRIPE_PUBLISHABLE})
+    return render(request, "checkout/checkout.html",
+                  {'order_form': order_form, 'payment_form': payment_form,
+                   'publishable': settings.STRIPE_PUBLISHABLE})
