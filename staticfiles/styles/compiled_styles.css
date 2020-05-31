@@ -1548,6 +1548,20 @@ option {
 	font-size: 1.125rem;
 	font-weight: 600;
 }
+.alert-message,
+.block-message,
+.error {
+	position: relative;
+	margin: 0px 0 0 !important;
+	border: 1px solid transparent;
+	border-radius: 0 !important;
+	text-align: center;
+	text-transform: capitalize;
+	color: black;
+	background-color: rgb(255, 151, 17);
+	font-size: 1.125rem;
+	font-weight: 600;
+}
 .errorlist li {
 	font-size: 1rem;
 	color: rgb(255, 151, 17);
@@ -1661,63 +1675,7 @@ p:last-of-type {
 	border: solid 1px #FFFFFF;
 	margin-top: 47px;
 }
-/* TODO remove this?? Check if all pages work without this!
-.skills
-{
-	padding-top: 100px;
-	padding-bottom: 100px;
-}
-.skills_content
-{
-	padding-bottom: 14px;
-}
-.skills .section_title
-{
-	font-size: 48px;
-	margin-top: 6px;
-}
-.skills_text
-{
-	margin-top: 31px;
-}
-.progress_bar_container
-{
-	margin-top: 52px;
-}
 
-.pb_item
-{
-	display: block;
-	position: relative;
-	box-sizing: border-box;
-	margin-bottom: 20px;
-}
-.pb_item:last-child
-{
-	margin-bottom: 0px;
-}
-.pb_item h5
-{
-	font-size: 14px;
-	line-height: 0.75;
-	font-weight: 600;
-	margin-top: 33px;
-	color: #262626;
-}
-
-.progressbar-text
-{
-	top: 37px !important;
-	line-height: 0.75 !important;
-	font-size: 14px !important;
-	font-weight: 600 !important;
-	color: #262626 !important;
-}
-.skill_bars
-{
-	height: 4px;
-}
-*/
 .extra
 {
 	width: 100%;
